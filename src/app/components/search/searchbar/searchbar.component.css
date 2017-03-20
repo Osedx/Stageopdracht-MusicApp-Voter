@@ -1,0 +1,9 @@
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/searchbar/searchbar.component.scss */
+.searchbar {
+  width: 100%; }
+
+/* line 4, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/searchbar/searchbar.component.scss */
+.ui.input input:focus {
+  border-color: black; }
+
+/*# sourceMappingURL=searchbar.component.css.map */

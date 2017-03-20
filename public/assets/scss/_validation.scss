@@ -1,0 +1,26 @@
+.validation {
+    padding-right: 0;
+}
+
+.validation-message {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.has-error,
+.has-error {
+
+    .validation {
+        padding-right: 2rem;
+    }
+}
+
+.has-success .validation-message {
+    display: block;
+    color: $green;
+}
+
+.has-error .validation-message {
+    display: block;
+    color: $red
+}

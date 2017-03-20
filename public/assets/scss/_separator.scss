@@ -1,0 +1,35 @@
+.separator {
+    overflow: hidden;
+    display: block;
+
+    margin: 1.875rem 0;
+
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.separator:before,
+.separator:after {
+    content: "";
+
+    display: inline-block;
+    position: relative;
+
+    width: 50%;
+    height: 1px;
+
+    vertical-align: middle;
+
+    background-color: $light-grey;
+}
+
+.separator:before {
+    right: 0.5rem;
+    margin-left: -50%;
+}
+
+.separator:after {
+    left: 0.5rem;
+    margin-right: -50%;
+}

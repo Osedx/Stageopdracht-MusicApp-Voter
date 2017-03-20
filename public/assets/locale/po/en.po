@@ -1,0 +1,494 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Antwerpen Digipolis\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: District01 <jeroen.valcke@district01.be>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#, fuzzy
+msgid "De gebruikersnaam en/of passwoord is ongeldig!"
+msgstr "The username and/or password is incorrect!"
+
+msgid ""
+"De gebruiker is niet geactiveerd! Contacteer de administrator of probeer met "
+"een andere gebruiker opnieuw."
+msgstr ""
+"The user is not activated! Contact the administrator or try again with "
+"another user."
+
+msgid "De gebruiker kon niet aangemaakt worden! Probeer later opnieuw."
+msgstr "The user could not be created! Please try again later."
+
+#, fuzzy
+msgid ""
+"Er is een probleem opgetreden bij een externe partij! Probeer later opnieuw."
+msgstr "An error occurred with an external service! Please try again later."
+
+msgid ""
+"Er is een error voorgekomen bij het authenticeren! Probeer later opnieuw."
+msgstr "An error occurred while authenticating! Please try again later."
+
+msgid ""
+"Deze pagina is niet toegangkelijk in de geselecteerde taal. Gelieve de taal "
+"te veranderen naar 'NL' om deze pagina te bezichtigen"
+msgstr ""
+"This page is not accessible in your language. Please change your language to "
+"'NL' if you want to access it."
+
+msgid "Er is geen taal geselecteerd. Gelieve een taal te selecteren."
+msgstr "No language is selected. Please select one."
+
+#, fuzzy
+msgid "U bent ingeschreven voor de opdracht: {{ title }}."
+msgstr "An error occurred with an external service! Please try again later."
+
+#, fuzzy
+msgid ""
+"Er is een probleem opgetreden tijdens het inschrijven op de opdracht: "
+"{{ title }}."
+msgstr "An error occurred with an external service! Please try again later."
+
+msgid "U bent ingeschreven voor een {{ type }} moment op {{ time }}."
+msgstr ""
+
+msgid ""
+"Uw ingshrijving voor een {{ type }} moment op {{ time }} is niet geslaagd. "
+"Probeer later opnieuw."
+msgstr ""
+
+msgid "Pagina laden"
+msgstr "Loading page"
+
+msgid "Deadline voor indiening: {{item.deadline | safeDate : 'd MM yyyy'}}"
+msgstr "Deadline for submission : {{item.deadline | safeDate : 'd MM yyyy'}}"
+
+msgid "Meer weten"
+msgstr "Read more"
+
+msgid "Meer laden"
+msgstr "Read more"
+
+msgid "E-mail"
+msgstr "Email"
+
+msgid "Verzenden"
+msgstr "Send"
+
+msgid "We vallen je niet graag lastig, dus je kan uitschrijven wanneer je wil!"
+msgstr "We don't like to bother you, so you can always unsubscribe."
+
+msgid "Opnieuw proberen"
+msgstr "Try again"
+
+msgid "Opdrachten & uitdagingen"
+msgstr "Assignments & Challenges"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Een project van stad Antwerpen & Digipolis © 2016"
+msgstr "A project of the city Antwerp & Digipolis  © 2016"
+
+msgid "Antwerp City Platform"
+msgstr "Antwerp City Platform"
+
+msgid "Open menu"
+msgstr "Open menu"
+
+msgid "Aanmelden"
+msgstr "Sign in"
+
+msgid "Uitloggen"
+msgstr "Sign out"
+
+msgid "terug"
+msgstr "Back"
+
+msgid "Over deze opdracht"
+msgstr "About this assignment"
+
+msgid "Geen beschrijving"
+msgstr " No description"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Deadline eerste pitch:"
+msgstr ""
+
+msgid "Deadline offertetoelichting:"
+msgstr ""
+
+msgid "Deadline BAFO toelichting:"
+msgstr ""
+
+msgid "Bijlagen"
+msgstr "Attachements"
+
+msgid "bekijken"
+msgstr "Open"
+
+msgid "downloaden"
+msgstr "downloaden"
+
+msgid "Ik heb interesse"
+msgstr "I am interested"
+
+msgid "Hiervoor moet je aangemeld zijn"
+msgstr "You need to be signed in for this"
+
+msgid "Vragen"
+msgstr "Questions"
+
+msgid "Antwoorden op de meest gestelde vragen vind je"
+msgstr ""
+
+msgid ""
+". Mocht je alsnog een vraag willen stellen over\n"
+"            de opdracht of procedures,"
+msgstr ""
+
+msgid "."
+msgstr "."
+
+msgid "{{assignment.activeEvent.label}}"
+msgstr ""
+
+msgid ""
+"Je krijgt maximaal {{assignment.activeEvent.duration}} minuten voor je pitch-"
+"presentatie"
+msgstr "You get {{assignment.activeEvent.duration}}  minutes to pitch"
+
+msgid ""
+"Er zijn momenteel nog geen momenten beschikbaar om in te plannen. Gelieve "
+"later terug te komen."
+msgstr ""
+
+msgid "Reserveren"
+msgstr "Book"
+
+msgid "Nvt."
+msgstr ""
+
+msgid "Reeds bezet"
+msgstr "Taken"
+
+msgid "Ingepland"
+msgstr ""
+
+msgid "opdrachten"
+msgstr "assignments"
+
+msgid "Afgesloten"
+msgstr "Closed"
+
+msgid "Mijn"
+msgstr "MIne"
+
+#, fuzzy
+msgid "Er zijn momenteel geen {{assignmentType}} opdrachten beschikbaar."
+msgstr "There are no {{assignmentType}} assignments available at the moment."
+
+msgid "Your email"
+msgstr ""
+
+msgid "Bedrijfsnaam"
+msgstr "Company name"
+
+msgid "BTW-nummer"
+msgstr "BTW-number"
+
+msgid "Straat"
+msgstr "Street"
+
+msgid "Nummer"
+msgstr "Number"
+
+msgid "Postcode"
+msgstr "Postal code"
+
+msgid "Plaats"
+msgstr "Place"
+
+msgid "https://www.example.com"
+msgstr ""
+
+msgid "Domeinen"
+msgstr "Domains"
+
+msgid "Locaties"
+msgstr "Locations"
+
+msgid "{{ title ? 'Schrijf je in' : 'Registreer uw bedrijf' }}"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"Om in te kunnen schrijven voor een opdracht hebben we de gegevens van je "
+"bedrijf nodig."
+msgstr ""
+"We need your company information in order to let you subscribe to this "
+"assignment."
+
+msgid "Extra persoonlijke informatie"
+msgstr "Extra personal information"
+
+msgid "Your Email address"
+msgstr "Your email address"
+
+msgid "Bedrijfsinformatie"
+msgstr "Company information"
+
+msgid "Ik heb geen BTW-nummer"
+msgstr "I have no BTW-number"
+
+msgid "Optionele informatie"
+msgstr "Optional information"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Inschrijven"
+msgstr "Sign in"
+
+msgid "Deze pagina bestaat niet!"
+msgstr "This page does not exist!"
+
+msgid "U heeft een onbestaande pagina opgevraagd."
+msgstr "You requested a page which does not exist."
+
+msgid "Naar homepagina"
+msgstr "To homepage"
+
+msgid "Naar login pagina"
+msgstr "To login page"
+
+msgid "Gebruikersnaam"
+msgstr "Username"
+
+msgid "Wachtwoord"
+msgstr "Password"
+
+msgid "Meld je aan"
+msgstr "Sign in"
+
+msgid "via Twitter"
+msgstr "with Twitter"
+
+msgid "via A-profiel"
+msgstr "with A-profile"
+
+msgid "Of"
+msgstr "Or"
+
+msgid "Wachtwoord vergeten?"
+msgstr "Can't remember your password?"
+
+msgid "Annuleren"
+msgstr "Cancel"
+
+msgid "Nog geen profiel?"
+msgstr "No profile yet?"
+
+msgid "Registreren"
+msgstr "Register"
+
+msgid "Voornaam"
+msgstr "First name"
+
+msgid "Achternaam"
+msgstr "Last name"
+
+msgid "E-mailadres"
+msgstr "Email"
+
+msgid "Bevestig wachtwoord"
+msgstr "Confirm password"
+
+msgid "Telefoonnummer"
+msgstr "Phone number"
+
+msgid "Registreer je"
+msgstr "Register"
+
+msgid "Naam"
+msgstr "Name"
+
+msgid "Wil je graag eerst nog een paar vragen stellen? Dat kan in onze"
+msgstr "Would you like toe ask some questions first?"
+
+msgid "!"
+msgstr "!"
+
+msgid "Wat denk jij hiervan? Discussieer mee in de"
+msgstr "What do you think about this? Discuss with us about the"
+
+msgid "De vragen die jullie stelden…"
+msgstr "The questions you asked..."
+
+msgid ""
+"We kregen een aantal vragen over de opdrachten en uitdagingen. Mogelijk vind "
+"je hier het antwoord. Indien niet,"
+msgstr ""
+"We received several questions about the assignments and challenges. You can "
+"look here for answers. Contact us if you can't find your anwser here."
+
+msgid "…En onze antwoorden."
+msgstr "... and our anwers."
+
+msgid "naar boven"
+msgstr "To top"
+
+msgid "Interesse om mee te werken?"
+msgstr "Interested in collaborating?"
+
+msgid "Schrijf je in en je ontvangt als eerste onze uitdagingen en opdrachten."
+msgstr "Subscribe to our newsletter and receive challenges and assignments."
+
+msgid "Alle opdrachten"
+msgstr "All assignments"
+
+msgid "Op dit moment zijn er geen open opdrachten beschikbaar."
+msgstr "There are no assignments available at the moment."
+
+msgid "Benieuwd wanneer de volgende opdrachten eraan komen?"
+msgstr "Eager to know when the next assignment comes?"
+
+msgid "Blijf op de hoogte van nieuwe opdrachten zodra ze gepubliceerd worden!"
+msgstr ""
+"Stay informed about the newest assignments as soon as they are published!"
+
+msgid "Interesse?"
+msgstr "Interested?"
+
+msgid "Tools voor de digitale stad"
+msgstr "Tools for the digital city"
+
+msgid "Een groeiende community"
+msgstr "A growing community"
+
+msgid "Profiel"
+msgstr "Profile"
+
+msgid "PITCH FASE BEËINDIGD"
+msgstr ""
+
+msgid "WEERHOUDEN"
+msgstr ""
+
+msgid "GESLOTEN"
+msgstr ""
+
+msgid "INGESCHREVEN"
+msgstr ""
+
+msgid "INSCHRIJVING IN BEHANDELING"
+msgstr ""
+
+msgid "INSCHRIJVING VERLOPEN"
+msgstr ""
+
+msgid "INSCHRIJVING AFGELOPEN"
+msgstr ""
+
+msgid "PITCH"
+msgstr ""
+
+msgid "PITCH AFGEKEURD"
+msgstr ""
+
+msgid "PITCH GEPLAND"
+msgstr ""
+
+msgid "PITCH PLANNEN"
+msgstr ""
+
+msgid "PITCH BEOORDELING"
+msgstr ""
+
+msgid "OPEN"
+msgstr ""
+
+msgid "QUOTE"
+msgstr ""
+
+msgid "OFFERTE AFGEKEURD"
+msgstr ""
+
+msgid "OFFERTE GEPLAND"
+msgstr ""
+
+msgid "OFFERTE PLANNEN"
+msgstr ""
+
+msgid "OFFERTE BEOORDELING"
+msgstr ""
+
+msgid "OFFERTE FASE BEËINDIGD"
+msgstr ""
+
+msgid "BAFO"
+msgstr ""
+
+msgid "BAFO AFGEKEURD"
+msgstr ""
+
+msgid "BAFO GEPLAND"
+msgstr ""
+
+msgid "BAFO PLANNEN"
+msgstr ""
+
+msgid "BAFO BEOORDELING"
+msgstr ""
+
+msgid "BAFO FASE BEËINDIGD"
+msgstr ""
+
+msgid "Website laden"
+msgstr "Loading website"
+
+#~ msgid "Bijlagen (implementation blocked)"
+#~ msgstr "Attachments"
+
+#~ msgid "Pitch (implementation bocked)"
+#~ msgstr "Pitch"
+
+#~ msgid "Wijzigen of annuleren"
+#~ msgstr "Change or cancel"
+
+#~ msgid "Bezet"
+#~ msgstr "Taken"
+
+#~ msgid "Schrijf je in"
+#~ msgstr "Subscribe"
+
+#~ msgid "Opdracht: Magazijn Engine - Beheer van verbruiksartikelen"
+#~ msgstr "Assignment:  Magazijn Engine - Beheer van verbruiksartikelen"
+
+#~ msgid "We zijn er bijna..."
+#~ msgstr "We are almost there..."
+
+#~ msgid "We hebben je een e-mail gestuurd om je registratie te bevestigen."
+#~ msgstr "We sent an email to you where you can confirm your registration."
+
+#~ msgid ""
+#~ "Gelieve in de e-mail op de knop \"e-mailadres bevestigen\" te klikken om "
+#~ "de registratie af te ronden."
+#~ msgstr ""
+#~ "Please click the \"confirm email\" button to complete your registration."
+
+#~ msgid "Terug naar de homepage"
+#~ msgstr "Back to homepage"
+
+#~ msgid "Pitch"
+#~ msgstr "Pitch"

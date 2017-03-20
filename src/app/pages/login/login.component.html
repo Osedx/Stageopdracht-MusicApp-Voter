@@ -1,0 +1,26 @@
+<!--
+<img 
+    width="560"
+    height="315"
+    [src]="/public/app/assets/District01_logo.png"
+/>
+-->
+   <div class="modal-dialog">
+    <div class="loginmodal-container">
+        <h1>Sign in</h1>
+        <br>
+        <div *ngIf="showError" class="ui error message">{{errorMessage}}</div>
+        <div class="ui form segment">
+            <div *ngIf="clickedLogin" class="field">
+                <form class="form-signin ui" (submit)="loginWithEmail($event, email.value, password.value)">
+                    <input #email type="email" id="email" class="form-control" placeholder="email address">
+                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="wachtwoord" required="">
+                    <button class="login loginmodal-submit" type="submit">Login</button>
+                </form>
+            </div>
+            <button *ngIf="!clickedLogin" class="login loginmodal-submit" (click)="clickLogin()">Login</button>
+            <hr>
+            <button class="loginwithgoogle loginmodal-submit" (click)="loginWithGoogle()">Login met Google</button>
+        </div>
+    </div>
+</div>

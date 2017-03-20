@@ -1,0 +1,20 @@
+@import "../../../utilities/variables.scss";
+
+.thumbscontainer>.delete {
+    opacity: 1;
+    color: $dislike;
+    align-self: center;
+    &:active{
+        color: $dislikeactive;
+    }
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+.ui.list > .item .playlistflexcontainer > .infocontainer .like {
+    color: $like;
+}
+.ui.list > .item .playlistflexcontainer > .infocontainer .dislike {
+    color: $dislike;
+}

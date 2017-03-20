@@ -1,0 +1,14 @@
+.attachment {
+
+    &:not(:last-child) {
+        margin-bottom: 1.875rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .fa {
+        margin-right: 0.5rem;
+    }
+}

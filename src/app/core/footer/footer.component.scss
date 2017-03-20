@@ -1,0 +1,41 @@
+@import "../../utilities/variables.scss";
+
+
+.footer {
+    overflow: hidden;
+
+    color: $white;
+    background: #363636;
+}
+
+.footer-title {
+    margin-bottom: 1.875rem;
+}
+
+.footer-column {
+    margin-bottom: 1.875rem;
+}
+
+.footer-bottom {
+    position: relative;
+    height: 3rem;
+
+    padding: .5rem 0;
+
+    font-size: 0.75rem;
+    text-align: center;
+
+    color: $light-grey;
+    background: $black;
+}
+
+.footer-copyright {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    padding: 0 5rem;
+
+    transform: translate(-50%, -50%);
+}

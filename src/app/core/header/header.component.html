@@ -1,0 +1,74 @@
+<header>
+    <nav>
+        <!--
+    <div class="ui secondary pointing menu" *ngIf="isLoggedIn">
+      <a class="item"  [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/']">
+        Playlist
+      </a>
+      <a class="item"  [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/personal']">
+        Personal video's
+      </a>
+      <a class="item"  [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/add']">
+        Add video
+      </a>
+      <div class="right menu">
+      
+    <div class="ui hidden divider"></div>
+    <div class="ui floating dropdown button" (click)="dropdown()">
+        <div class="text">{{ user }}</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="ui item"><i class="home icon" (click)="logout()"></i> Home</a>
+            <a class="ui item"><i class="home icon" (click)="logout()"></i> Home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+-->
+        <!--   <sm-menu title="District01" class=" massive ui attached stackable menu" *ngIf="isLoggedIn">-->
+        <sm-menu title="D01" class=" massive" *ngIf="isLoggedIn">
+            <a sm-item icon="youtube play" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/']">
+                <div class="grid ui">
+                    <div class="computer only row">Playlist</div>
+                </div>
+            </a>
+            <a sm-item icon="user" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/personal']">
+                <div class="grid ui">
+                    <div class="computer only row">Personal video's</div>
+                </div>
+            </a>
+            <a sm-item icon="plus" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/add']">
+                <div class="grid ui">
+                    <div class="computer only row">Add video</div>
+                </div>
+            </a>
+
+            <div class="right menu">
+                <div class="ui computer only grid ">
+                    <sm-dropdown class="link right" title="{{user}}">
+                        <sm-item (click)="logout()">logout</sm-item>
+                    </sm-dropdown>
+                </div>
+                <div class="ui tablet mobile only row grid">
+                    <sm-dropdown class="link right" title=" ">
+                        <sm-item (click)="logout()">logout</sm-item>
+                    </sm-dropdown>
+                </div>
+            </div>
+        </sm-menu>
+
+        <!--
+   <sm-menu title="Angular2" class="inverted teal" logo="/assets/images/semantic.png">
+    <a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}</a>
+
+    <sm-menu class="menu right secondary">
+        <a sm-item href="#/elements/menu" 
+            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">Elliot Fu</a>
+        <a sm-item icon="sidebar big"></a>
+    </sm-menu>
+</sm-menu>
+-->
+
+    </nav>
+</header>

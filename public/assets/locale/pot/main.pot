@@ -1,0 +1,434 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "De gebruikersnaam en/of passwoord is ongeldig!"
+msgstr ""
+
+msgid ""
+"De gebruiker is niet geactiveerd! Contacteer de administrator of probeer "
+"met een andere gebruiker opnieuw."
+msgstr ""
+
+msgid "De gebruiker kon niet aangemaakt worden! Probeer later opnieuw."
+msgstr ""
+
+msgid "Er is een probleem opgetreden bij een externe partij! Probeer later opnieuw."
+msgstr ""
+
+msgid "Er is een error voorgekomen bij het authenticeren! Probeer later opnieuw."
+msgstr ""
+
+msgid ""
+"Deze pagina is niet toegangkelijk in de geselecteerde taal. Gelieve de taal "
+"te veranderen naar 'NL' om deze pagina te bezichtigen"
+msgstr ""
+
+msgid "Er is geen taal geselecteerd. Gelieve een taal te selecteren."
+msgstr ""
+
+msgid "U bent ingeschreven voor de opdracht: {{ title }}."
+msgstr ""
+
+msgid ""
+"Er is een probleem opgetreden tijdens het inschrijven op de opdracht: {{ "
+"title }}."
+msgstr ""
+
+msgid "U bent ingeschreven voor een {{ type }} moment op {{ time }}."
+msgstr ""
+
+msgid ""
+"Uw ingshrijving voor een {{ type }} moment op {{ time }} is niet geslaagd. "
+"Probeer later opnieuw."
+msgstr ""
+
+msgid "Pagina laden"
+msgstr ""
+
+msgid "Deadline voor indiening: {{item.deadline | safeDate : 'd MM yyyy'}}"
+msgstr ""
+
+msgid "Meer weten"
+msgstr ""
+
+msgid "Meer laden"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Verzenden"
+msgstr ""
+
+msgid "We vallen je niet graag lastig, dus je kan uitschrijven wanneer je wil!"
+msgstr ""
+
+msgid "Opnieuw proberen"
+msgstr ""
+
+msgid "Opdrachten & uitdagingen"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Een project van stad Antwerpen & Digipolis © 2016"
+msgstr ""
+
+msgid "Antwerp City Platform"
+msgstr ""
+
+msgid "Open menu"
+msgstr ""
+
+msgid "Aanmelden"
+msgstr ""
+
+msgid "Uitloggen"
+msgstr ""
+
+msgid "terug"
+msgstr ""
+
+msgid "Over deze opdracht"
+msgstr ""
+
+msgid "Geen beschrijving"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Deadline eerste pitch:"
+msgstr ""
+
+msgid "Deadline offertetoelichting:"
+msgstr ""
+
+msgid "Deadline BAFO toelichting:"
+msgstr ""
+
+msgid "Bijlagen"
+msgstr ""
+
+msgid "bekijken"
+msgstr ""
+
+msgid "downloaden"
+msgstr ""
+
+msgid "Ik heb interesse"
+msgstr ""
+
+msgid "Hiervoor moet je aangemeld zijn"
+msgstr ""
+
+msgid "Vragen"
+msgstr ""
+
+msgid "Antwoorden op de meest gestelde vragen vind je"
+msgstr ""
+
+msgid ""
+". Mocht je alsnog een vraag willen stellen over\n"
+"            de opdracht of procedures,"
+msgstr ""
+
+msgid "."
+msgstr ""
+
+msgid "{{assignment.activeEvent.label}}"
+msgstr ""
+
+msgid ""
+"Je krijgt maximaal {{assignment.activeEvent.duration}} minuten voor je "
+"pitch-presentatie"
+msgstr ""
+
+msgid ""
+"Er zijn momenteel nog geen momenten beschikbaar om in te plannen. Gelieve "
+"later terug te komen."
+msgstr ""
+
+msgid "Reserveren"
+msgstr ""
+
+msgid "Nvt."
+msgstr ""
+
+msgid "Reeds bezet"
+msgstr ""
+
+msgid "Ingepland"
+msgstr ""
+
+msgid "opdrachten"
+msgstr ""
+
+msgid "Afgesloten"
+msgstr ""
+
+msgid "Mijn"
+msgstr ""
+
+msgid "Er zijn momenteel geen {{assignmentType}} opdrachten beschikbaar."
+msgstr ""
+
+msgid "Your email"
+msgstr ""
+
+msgid "Bedrijfsnaam"
+msgstr ""
+
+msgid "BTW-nummer"
+msgstr ""
+
+msgid "Straat"
+msgstr ""
+
+msgid "Nummer"
+msgstr ""
+
+msgid "Postcode"
+msgstr ""
+
+msgid "Plaats"
+msgstr ""
+
+msgid "https://www.example.com"
+msgstr ""
+
+msgid "Domeinen"
+msgstr ""
+
+msgid "Locaties"
+msgstr ""
+
+msgid "{{ title ? 'Schrijf je in' : 'Registreer uw bedrijf' }}"
+msgstr ""
+
+msgid ""
+"Om in te kunnen schrijven voor een opdracht hebben we de gegevens van je "
+"bedrijf nodig."
+msgstr ""
+
+msgid "Extra persoonlijke informatie"
+msgstr ""
+
+msgid "Your Email address"
+msgstr ""
+
+msgid "Bedrijfsinformatie"
+msgstr ""
+
+msgid "Ik heb geen BTW-nummer"
+msgstr ""
+
+msgid "Optionele informatie"
+msgstr ""
+
+msgid "Website"
+msgstr ""
+
+msgid "Inschrijven"
+msgstr ""
+
+msgid "Deze pagina bestaat niet!"
+msgstr ""
+
+msgid "U heeft een onbestaande pagina opgevraagd."
+msgstr ""
+
+msgid "Naar homepagina"
+msgstr ""
+
+msgid "Naar login pagina"
+msgstr ""
+
+msgid "Gebruikersnaam"
+msgstr ""
+
+msgid "Wachtwoord"
+msgstr ""
+
+msgid "Meld je aan"
+msgstr ""
+
+msgid "via Twitter"
+msgstr ""
+
+msgid "via A-profiel"
+msgstr ""
+
+msgid "Of"
+msgstr ""
+
+msgid "Wachtwoord vergeten?"
+msgstr ""
+
+msgid "Annuleren"
+msgstr ""
+
+msgid "Nog geen profiel?"
+msgstr ""
+
+msgid "Registreren"
+msgstr ""
+
+msgid "Voornaam"
+msgstr ""
+
+msgid "Achternaam"
+msgstr ""
+
+msgid "E-mailadres"
+msgstr ""
+
+msgid "Bevestig wachtwoord"
+msgstr ""
+
+msgid "Telefoonnummer"
+msgstr ""
+
+msgid "Registreer je"
+msgstr ""
+
+msgid "Naam"
+msgstr ""
+
+msgid "Wil je graag eerst nog een paar vragen stellen? Dat kan in onze"
+msgstr ""
+
+msgid "!"
+msgstr ""
+
+msgid "Wat denk jij hiervan? Discussieer mee in de"
+msgstr ""
+
+msgid "De vragen die jullie stelden…"
+msgstr ""
+
+msgid ""
+"We kregen een aantal vragen over de opdrachten en uitdagingen. Mogelijk "
+"vind je hier het antwoord. Indien niet,"
+msgstr ""
+
+msgid "…En onze antwoorden."
+msgstr ""
+
+msgid "naar boven"
+msgstr ""
+
+msgid "Interesse om mee te werken?"
+msgstr ""
+
+msgid "Schrijf je in en je ontvangt als eerste onze uitdagingen en opdrachten."
+msgstr ""
+
+msgid "Alle opdrachten"
+msgstr ""
+
+msgid "Op dit moment zijn er geen open opdrachten beschikbaar."
+msgstr ""
+
+msgid "Benieuwd wanneer de volgende opdrachten eraan komen?"
+msgstr ""
+
+msgid "Blijf op de hoogte van nieuwe opdrachten zodra ze gepubliceerd worden!"
+msgstr ""
+
+msgid "Interesse?"
+msgstr ""
+
+msgid "Tools voor de digitale stad"
+msgstr ""
+
+msgid "Een groeiende community"
+msgstr ""
+
+msgid "Profiel"
+msgstr ""
+
+msgid "PITCH FASE BEËINDIGD"
+msgstr ""
+
+msgid "WEERHOUDEN"
+msgstr ""
+
+msgid "GESLOTEN"
+msgstr ""
+
+msgid "INGESCHREVEN"
+msgstr ""
+
+msgid "INSCHRIJVING IN BEHANDELING"
+msgstr ""
+
+msgid "INSCHRIJVING VERLOPEN"
+msgstr ""
+
+msgid "INSCHRIJVING AFGELOPEN"
+msgstr ""
+
+msgid "PITCH"
+msgstr ""
+
+msgid "PITCH AFGEKEURD"
+msgstr ""
+
+msgid "PITCH GEPLAND"
+msgstr ""
+
+msgid "PITCH PLANNEN"
+msgstr ""
+
+msgid "PITCH BEOORDELING"
+msgstr ""
+
+msgid "OPEN"
+msgstr ""
+
+msgid "QUOTE"
+msgstr ""
+
+msgid "OFFERTE AFGEKEURD"
+msgstr ""
+
+msgid "OFFERTE GEPLAND"
+msgstr ""
+
+msgid "OFFERTE PLANNEN"
+msgstr ""
+
+msgid "OFFERTE BEOORDELING"
+msgstr ""
+
+msgid "OFFERTE FASE BEËINDIGD"
+msgstr ""
+
+msgid "BAFO"
+msgstr ""
+
+msgid "BAFO AFGEKEURD"
+msgstr ""
+
+msgid "BAFO GEPLAND"
+msgstr ""
+
+msgid "BAFO PLANNEN"
+msgstr ""
+
+msgid "BAFO BEOORDELING"
+msgstr ""
+
+msgid "BAFO FASE BEËINDIGD"
+msgstr ""
+
+msgid "Website laden"
+msgstr ""

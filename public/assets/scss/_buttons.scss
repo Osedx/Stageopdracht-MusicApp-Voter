@@ -1,0 +1,23 @@
+// Give font-awesome icons in button some margin
+[class*="btn-"] .fa {
+    margin-right: 0.3125rem;
+}
+
+// Display two button next to each other both taking up 50% of the space
+.btn-group-half {
+    overflow: hidden;
+
+    button, .btn {
+        float: left;
+        display: block;
+        width: calc(50% - 0.46875rem);
+
+        &:first-child {
+            margin-right: 0.46875rem;
+        }
+
+        &:last-child {
+            margin-left: 0.46875rem;
+        }
+    }
+}

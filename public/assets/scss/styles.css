@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic");
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+html,
+body,
+.wrapper {
+  height: 100%; }
+
+/* line 7, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+body {
+  margin: 0; }
+
+/* line 13, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+section.underline:not(:last-child) {
+  border-bottom: 1px solid #bfbfbf; }
+
+/* line 19, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.wrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+
+/* line 26, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+main {
+  display: table-row;
+  height: 100%;
+  background-color: #363636; }
+  /* line 31, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+  main.overlay:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.64);
+    z-index: 2; }
+
+/* line 46, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.my-header,
+.my-footer {
+  display: table-row; }
+
+/* line 51, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.container {
+  max-width: 64rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  overflow: auto;
+  overflow-y: hidden; }
+  /* line 60, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+  .container.small {
+    max-width: 37.5rem; }
+  /* line 64, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+  .container.xsmall {
+    max-width: 21.875rem; }
+  /* line 68, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+  .container.no-padding {
+    padding: 0; }
+
+/* line 73, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.digits {
+  background-color: #363636; }
+
+/* line 77, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.digit {
+  margin-bottom: 1.875rem;
+  color: #ffffff;
+  text-align: center; }
+
+/* line 84, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.digit-number,
+.digit-title {
+  display: block; }
+
+/* line 89, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.digit-number {
+  font-size: 6rem; }
+
+/* line 93, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_main.scss */
+.digit-title {
+  text-transform: uppercase; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-bottom-none {
+  margin-bottom: 0; }
+
+/* line 6, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-top-none {
+  margin-top: 0; }
+
+/* line 10, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-left-none {
+  margin-left: 0; }
+
+/* line 14, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-right-none {
+  margin-right: 0; }
+
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-bottom-xs {
+  margin-bottom: 0.5rem; }
+
+/* line 22, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-top-xs {
+  margin-top: 0.5rem; }
+
+/* line 26, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-left-xs {
+  margin-left: 0.5rem; }
+
+/* line 30, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-right-xs {
+  margin-right: 0.5rem; }
+
+/* line 34, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-bottom-xlg {
+  margin-bottom: 3.75rem; }
+
+/* line 38, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-top-xlg {
+  margin-top: 3.75rem; }
+
+/* line 42, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-left-xlg {
+  margin-left: 3.75rem; }
+
+/* line 46, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.margin-right-xlg {
+  margin-right: 3.75rem; }
+
+/* line 51, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.padding-bottom-none {
+  padding-bottom: 0; }
+
+/* line 55, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.padding-top-none {
+  padding-top: 0; }
+
+/* line 59, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.padding-left-none {
+  padding-left: 0; }
+
+/* line 63, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.padding-right-none {
+  padding-right: 0; }
+
+/* line 68, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.float-left {
+  float: left; }
+
+/* line 72, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.float-right {
+  float: right; }
+
+/* line 77, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.round {
+  border-radius: 50%; }
+
+/* line 82, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* line 88, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.text-uppercase {
+  text-transform: uppercase; }
+
+/* line 93, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_helpers.scss */
+.no-overflow {
+  overflow: hidden; }
+
+/* line 3, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_attachments.scss */
+.attachment:not(:last-child) {
+  margin-bottom: 1.875rem; }
+
+/* line 7, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_attachments.scss */
+.attachment p {
+  margin-bottom: 0; }
+
+/* line 11, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_attachments.scss */
+.attachment .fa {
+  margin-right: 0.5rem; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_buttons.scss */
+[class*="btn-"] .fa {
+  margin-right: 0.3125rem; }
+
+/* line 7, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_buttons.scss */
+.btn-group-half {
+  overflow: hidden; }
+  /* line 10, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_buttons.scss */
+  .btn-group-half button, .btn-group-half .btn {
+    float: left;
+    display: block;
+    width: calc(50% - 0.46875rem); }
+    /* line 15, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_buttons.scss */
+    .btn-group-half button:first-child, .btn-group-half .btn:first-child {
+      margin-right: 0.46875rem; }
+    /* line 19, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_buttons.scss */
+    .btn-group-half button:last-child, .btn-group-half .btn:last-child {
+      margin-left: 0.46875rem; }
+
+/* line 6, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_callout.scss */
+.callout.fixed,
+.callout-danger.fixed,
+.callout-success.fixed,
+.callout-warning.fixed {
+  position: fixed;
+  top: 4.375rem;
+  right: 0.9375rem;
+  left: 0.9375rem;
+  padding-right: 3.375rem;
+  z-index: 1; }
+
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_callout.scss */
+.callout-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.7142857143rem 1.1428571429rem;
+  line-height: 1.5rem;
+  cursor: pointer; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_fonts.scss */
+.loginmodal-container h1, .loginmodal-submit, .ui.form input[type=email] {
+  font-family: 'Didact Gothic', sans-serif; }
+
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_inputs.scss */
+input:not(:focus) {
+  box-shadow: none; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_links.scss */
+a .fa {
+  margin-right: 0.5rem; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+.navigation {
+  width: 100%;
+  box-shadow: 0 -1px 0 #bfbfbf inset; }
+  /* line 6, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+  .navigation ul {
+    overflow: hidden;
+    padding: 0;
+    margin: auto; }
+  /* line 14, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+  .navigation li {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    list-style: none; }
+    /* line 21, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+    .navigation li.selected a {
+      box-shadow: 0 -1px 0 #bfbfbf inset; }
+  /* line 26, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+  .navigation a {
+    display: block;
+    padding: 0.9375rem;
+    transition: box-shadow 0.25s ease-out; }
+    /* line 32, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_navigation.scss */
+    .navigation a:hover {
+      text-decoration: none;
+      box-shadow: 0 -1px 0 #bfbfbf inset; }
+
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_separator.scss */
+.separator {
+  overflow: hidden;
+  display: block;
+  margin: 1.875rem 0;
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* line 12, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_separator.scss */
+.separator:before,
+.separator:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 1px;
+  vertical-align: middle;
+  background-color: #bfbfbf; }
+
+/* line 27, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_separator.scss */
+.separator:before {
+  right: 0.5rem;
+  margin-left: -50%; }
+
+/* line 32, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_separator.scss */
+.separator:after {
+  left: 0.5rem;
+  margin-right: -50%; }
+
+/* line 2, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_tables.scss */
+table.table-naked td {
+  border-top: none; }
+
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_validation.scss */
+.validation {
+  padding-right: 0; }
+
+/* line 5, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_validation.scss */
+.validation-message {
+  display: none;
+  margin-top: 0.5rem; }
+
+/* line 13, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_validation.scss */
+.has-error .validation,
+.has-error .validation {
+  padding-right: 2rem; }
+
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_validation.scss */
+.has-success .validation-message {
+  display: block;
+  color: #a0a050; }
+
+/* line 23, C:/Users/Osedx/Documents/Project - muziek webapp/district01/public/assets/scss/_validation.scss */
+.has-error .validation-message {
+  display: block;
+  color: #ff5050; }
+
+/*# sourceMappingURL=styles.css.map */

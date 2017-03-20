@@ -1,0 +1,71 @@
+@import "../../../utilities/variables.scss";
+
+.ui.list:last-child{
+    border-left: 5px solid #555555;
+    border-right: 5px solid #555555;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background: black;
+}
+.ui.modal {
+    width:88%;
+}
+.ui.modal>.actions {
+    padding:0;
+    background-color: black;
+}
+.ui.modal>.header {
+    padding: 0;
+    background-color: black;
+}
+
+.ui.modal>.content{
+    background-color: black;
+	position: relative;
+	padding-bottom: 56.25% !important;; /* 16:9 */
+	padding-top: 25px !important;
+	height: 0;
+    overflow: hidden;
+    & iframe, object, embed{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ui.modal{
+    left:0;
+    margin: 0 0 0 6%;
+}
+
+.ui.modal>.close{
+    display: none;
+}
+.fa{
+    color: white;
+    opacity: 0.4;
+        &:hover{
+        opacity: 0.45;  
+        cursor: pointer;
+    }
+        &:active{
+        opacity: 0.8;
+    }
+}
+.fa-window-maximize {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -21px;
+    transition:bottom 0.1s linear;
+        &:hover{
+        bottom: 52px;
+    } 
+}
+.fa-times {
+    position: fixed;
+    top:0;
+    right:0;
+}

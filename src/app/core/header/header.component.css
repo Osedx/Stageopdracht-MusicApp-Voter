@@ -1,0 +1,52 @@
+/* line 3, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.ui.secondary.pointing.menu {
+  padding: 10px 50px 10px 50px;
+  border-bottom: none; }
+  /* line 7, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+  .ui.secondary.pointing.menu .item, .ui.secondary.pointing.menu .item:hover {
+    color: #bfbfbf;
+    border-bottom: 2px solid #ffffff; }
+  /* line 11, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+  .ui.secondary.pointing.menu .item:hover {
+    color: #363636;
+    border-bottom-color: #bfbfbf; }
+
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.nav-top-toggle a {
+  color: #bfbfbf; }
+  /* line 21, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+  .nav-top-toggle a:hover {
+    color: #000000; }
+
+/* line 26, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.avatar {
+  cursor: pointer; }
+  /* line 30, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+  .avatar img {
+    height: 60px;
+    width: auto; }
+  /* line 35, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+  .avatar span {
+    margin-left: 0.8571428572rem; }
+
+/* line 39, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.row {
+  margin: 0 10px; }
+
+/* line 42, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.ui.grid + .grid, .ui.grid {
+  margin: 0; }
+
+/* line 45, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.ui.grid > * {
+  padding: 0; }
+
+/* line 48, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.right.item, .ui.secondary.pointing.menu .right.item:hover {
+  height: 100%; }
+
+/* line 51, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/header/header.component.scss */
+.ui.menu .item, .ui.secondary.pointing.menu .item:hover {
+  padding: 10px 15px; }
+
+/*# sourceMappingURL=header.component.css.map */

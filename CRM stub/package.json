@@ -1,0 +1,21 @@
+{
+  "name": "crm_stub",
+  "version": "1.0.0",
+  "description": "This is a temporary stub of the Digipolis CRM service.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jeroen valcke",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "express": "~4.14.0",
+    "glob": "~7.1.1",
+    "helmet": "~3.3.0",
+    "lodash": "~4.17.4",
+    "q": "~1.4.1",
+    "rootpath": "~0.1.2"
+  }
+}

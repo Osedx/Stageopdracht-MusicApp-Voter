@@ -1,0 +1,15 @@
+"use strict";
+
+module.exports =  {
+    server: {
+        apikey: "%%apikey%%",
+        tenant: "%%tenant%%",
+        proxyBaseUrl: "%%proxyBaseUrl%%",
+        proxySuffix: "%%proxySuffix%%",
+        port: %%port%%,
+        host: "%%host%%"
+    },
+    front: {
+        serverUrl: "%%serverUrl%%"
+    }
+};

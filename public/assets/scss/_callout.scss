@@ -1,0 +1,26 @@
+.callout,
+.callout-danger,
+.callout-success,
+.callout-warning {
+
+    &.fixed {
+        position: fixed;
+        top: 4.375rem;
+        right: 0.9375rem;
+        left: 0.9375rem;
+
+        padding-right: 3.375rem;
+
+        z-index: 1;
+    }
+}
+
+.callout-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 0.7142857143rem 1.1428571429rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+}

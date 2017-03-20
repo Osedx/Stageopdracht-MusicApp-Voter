@@ -1,0 +1,465 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Antwerpen Digipolis\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: District01 <jeroen.valcke@district01.be>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "De gebruikersnaam en/of passwoord is ongeldig!"
+msgstr "De gebruikersnaam en/of passwoord is ongeldig!"
+
+msgid ""
+"De gebruiker is niet geactiveerd! Contacteer de administrator of probeer met "
+"een andere gebruiker opnieuw."
+msgstr ""
+"De gebruiker is niet geactiveerd! Contacteer de administrator of probeer met "
+"een andere gebruiker opnieuw."
+
+msgid "De gebruiker kon niet aangemaakt worden! Probeer later opnieuw."
+msgstr "De gebruiker kon niet aangemaakt worden! Probeer later opnieuw."
+
+msgid ""
+"Er is een probleem opgetreden bij een externe partij! Probeer later opnieuw."
+msgstr ""
+"Er is een probleem opgetreden bij een externe partij! Probeer later opnieuw."
+
+msgid ""
+"Er is een error voorgekomen bij het authenticeren! Probeer later opnieuw."
+msgstr ""
+"Er is een error voorgekomen bij het authenticeren! Probeer later opnieuw."
+
+msgid ""
+"Deze pagina is niet toegangkelijk in de geselecteerde taal. Gelieve de taal "
+"te veranderen naar 'NL' om deze pagina te bezichtigen"
+msgstr ""
+"Deze pagina is niet toegangkelijk in de geselecteerde taal. Gelieve de taal "
+"te veranderen naar 'NL' om deze pagina te bezichtigen"
+
+msgid "Er is geen taal geselecteerd. Gelieve een taal te selecteren."
+msgstr "Er is geen taal geselecteerd. Gelieve een taal te selecteren."
+
+msgid "U bent ingeschreven voor de opdracht: {{ title }}."
+msgstr "U bent ingeschreven voor de opdracht: {{ title }}."
+
+msgid ""
+"Er is een probleem opgetreden tijdens het inschrijven op de opdracht: "
+"{{ title }}."
+msgstr ""
+"Er is een probleem opgetreden tijdens het inschrijven op de opdracht: "
+"{{ title }}."
+
+msgid "U bent ingeschreven voor een {{ type }} moment op {{ time }}."
+msgstr "U bent ingeschreven voor een {{ type }} moment op {{ time }}."
+
+msgid ""
+"Uw ingshrijving voor een {{ type }} moment op {{ time }} is niet geslaagd. "
+"Probeer later opnieuw."
+msgstr ""
+"Uw ingshrijving voor een {{ type }} moment op {{ time }} is niet geslaagd. "
+"Probeer later opnieuw."
+
+msgid "Pagina laden"
+msgstr "Pagina laden"
+
+msgid "Deadline voor indiening: {{item.deadline | safeDate : 'd MM yyyy'}}"
+msgstr "Deadline voor indiening: {{item.deadline | safeDate : 'd MM yyyy'}}"
+
+msgid "Meer weten"
+msgstr "Meer weten"
+
+msgid "Meer laden"
+msgstr "Meer laden"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Verzenden"
+msgstr "Verzenden"
+
+msgid "We vallen je niet graag lastig, dus je kan uitschrijven wanneer je wil!"
+msgstr ""
+"We vallen je niet graag lastig, dus je kan uitschrijven wanneer je wil!"
+
+msgid "Opnieuw proberen"
+msgstr "Opnieuw proberen"
+
+msgid "Opdrachten & uitdagingen"
+msgstr "Opdrachten & uitdagingen"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Een project van stad Antwerpen & Digipolis © 2016"
+msgstr "Een project van stad Antwerpen & Digipolis © 2016"
+
+msgid "Antwerp City Platform"
+msgstr "Antwerp City Platform"
+
+msgid "Open menu"
+msgstr "Open menu"
+
+msgid "Aanmelden"
+msgstr "Aanmelden"
+
+msgid "Uitloggen"
+msgstr "Uitloggen"
+
+msgid "terug"
+msgstr "terug"
+
+msgid "Over deze opdracht"
+msgstr "Over deze opdracht"
+
+msgid "Geen beschrijving"
+msgstr "Geen beschrijving"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Deadline eerste pitch:"
+msgstr "Deadline eerste pitch:"
+
+msgid "Deadline offertetoelichting:"
+msgstr "Deadline offertetoelichting:"
+
+msgid "Deadline BAFO toelichting:"
+msgstr "Deadline BAFO toelichting:"
+
+msgid "Bijlagen"
+msgstr "Bijlagen"
+
+msgid "bekijken"
+msgstr "bekijken"
+
+msgid "downloaden"
+msgstr "downloaden"
+
+msgid "Ik heb interesse"
+msgstr "Ik heb interesse"
+
+msgid "Hiervoor moet je aangemeld zijn"
+msgstr "Hiervoor moet je aangemeld zijn"
+
+msgid "Vragen"
+msgstr "Vragen"
+
+msgid "Antwoorden op de meest gestelde vragen vind je"
+msgstr "Antwoorden op de meest gestelde vragen vind je"
+
+msgid ""
+". Mocht je alsnog een vraag willen stellen over\n"
+"            de opdracht of procedures,"
+msgstr ""
+". Mocht je alsnog een vraag willen stellen over\n"
+"            de opdracht of procedures,"
+
+msgid "."
+msgstr "."
+
+msgid "{{assignment.activeEvent.label}}"
+msgstr "{{assignment.activeEvent.label}}"
+
+msgid ""
+"Je krijgt maximaal {{assignment.activeEvent.duration}} minuten voor je pitch-"
+"presentatie"
+msgstr ""
+"Je krijgt maximaal {{assignment.activeEvent.duration}} minuten voor je pitch-"
+"presentatie"
+
+msgid ""
+"Er zijn momenteel nog geen momenten beschikbaar om in te plannen. Gelieve "
+"later terug te komen."
+msgstr ""
+"Er zijn momenteel nog geen momenten beschikbaar om in te plannen. Gelieve "
+"later terug te komen."
+
+msgid "Reserveren"
+msgstr "Reserveren"
+
+msgid "Nvt."
+msgstr "Nvt."
+
+msgid "Reeds bezet"
+msgstr "Reeds bezet"
+
+msgid "Ingepland"
+msgstr "Ingepland"
+
+msgid "opdrachten"
+msgstr "opdrachten"
+
+msgid "Afgesloten"
+msgstr "Afgesloten"
+
+msgid "Mijn"
+msgstr "Mijn"
+
+msgid "Er zijn momenteel geen {{assignmentType}} opdrachten beschikbaar."
+msgstr "Er zijn momenteel geen {{assignmentType}} opdrachten beschikbaar."
+
+msgid "Your email"
+msgstr "Your email"
+
+msgid "Bedrijfsnaam"
+msgstr "Bedrijfsnaam"
+
+msgid "BTW-nummer"
+msgstr "BTW-nummer"
+
+msgid "Straat"
+msgstr "Straat"
+
+msgid "Nummer"
+msgstr "Nummer"
+
+msgid "Postcode"
+msgstr "Postcode"
+
+msgid "Plaats"
+msgstr "Plaats"
+
+msgid "https://www.example.com"
+msgstr "https://www.example.com"
+
+msgid "Domeinen"
+msgstr "Domeinen"
+
+msgid "Locaties"
+msgstr "Locaties"
+
+msgid "{{ title ? 'Schrijf je in' : 'Registreer uw bedrijf' }}"
+msgstr "{{ title ? 'Schrijf je in' : 'Registreer uw bedrijf' }}"
+
+msgid ""
+"Om in te kunnen schrijven voor een opdracht hebben we de gegevens van je "
+"bedrijf nodig."
+msgstr ""
+"Om in te kunnen schrijven voor een opdracht hebben we de gegevens van je "
+"bedrijf nodig."
+
+msgid "Extra persoonlijke informatie"
+msgstr "Extra persoonlijke informatie"
+
+msgid "Your Email address"
+msgstr "Your Email address"
+
+msgid "Bedrijfsinformatie"
+msgstr "Bedrijfsinformatie"
+
+msgid "Ik heb geen BTW-nummer"
+msgstr "Ik heb geen BTW-nummer"
+
+msgid "Optionele informatie"
+msgstr "Optionele informatie"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Inschrijven"
+msgstr "Inschrijven"
+
+msgid "Deze pagina bestaat niet!"
+msgstr "Deze pagina bestaat niet!"
+
+msgid "U heeft een onbestaande pagina opgevraagd."
+msgstr "U heeft een onbestaande pagina opgevraagd."
+
+msgid "Naar homepagina"
+msgstr "Naar homepagina"
+
+msgid "Naar login pagina"
+msgstr "Naar login pagina"
+
+msgid "Gebruikersnaam"
+msgstr "Gebruikersnaam"
+
+msgid "Wachtwoord"
+msgstr "Wachtwoord"
+
+msgid "Meld je aan"
+msgstr "Meld je aan"
+
+msgid "via Twitter"
+msgstr "via Twitter"
+
+msgid "via A-profiel"
+msgstr "via A-profiel"
+
+msgid "Of"
+msgstr "Of"
+
+msgid "Wachtwoord vergeten?"
+msgstr "Wachtwoord vergeten?"
+
+msgid "Annuleren"
+msgstr "Annuleren"
+
+msgid "Nog geen profiel?"
+msgstr "Nog geen profiel?"
+
+msgid "Registreren"
+msgstr "Registreren"
+
+msgid "Voornaam"
+msgstr "Voornaam"
+
+msgid "Achternaam"
+msgstr "Achternaam"
+
+msgid "E-mailadres"
+msgstr "E-mailadres"
+
+msgid "Bevestig wachtwoord"
+msgstr "Bevestig wachtwoord"
+
+msgid "Telefoonnummer"
+msgstr "Telefoonnummer"
+
+msgid "Registreer je"
+msgstr "Registreer je"
+
+msgid "Naam"
+msgstr "Naam"
+
+msgid "Wil je graag eerst nog een paar vragen stellen? Dat kan in onze"
+msgstr "Wil je graag eerst nog een paar vragen stellen? Dat kan in onze"
+
+msgid "!"
+msgstr "!"
+
+msgid "Wat denk jij hiervan? Discussieer mee in de"
+msgstr "Wat denk jij hiervan? Discussieer mee in de"
+
+msgid "De vragen die jullie stelden…"
+msgstr "De vragen die jullie stelden…"
+
+msgid ""
+"We kregen een aantal vragen over de opdrachten en uitdagingen. Mogelijk vind "
+"je hier het antwoord. Indien niet,"
+msgstr ""
+"We kregen een aantal vragen over de opdrachten en uitdagingen. Mogelijk vind "
+"je hier het antwoord. Indien niet,"
+
+msgid "…En onze antwoorden."
+msgstr "…En onze antwoorden."
+
+msgid "naar boven"
+msgstr "naar boven"
+
+msgid "Interesse om mee te werken?"
+msgstr "Interesse om mee te werken?"
+
+msgid "Schrijf je in en je ontvangt als eerste onze uitdagingen en opdrachten."
+msgstr ""
+"Schrijf je in en je ontvangt als eerste onze uitdagingen en opdrachten."
+
+msgid "Alle opdrachten"
+msgstr "Alle opdrachten"
+
+msgid "Op dit moment zijn er geen open opdrachten beschikbaar."
+msgstr "Op dit moment zijn er geen open opdrachten beschikbaar."
+
+msgid "Benieuwd wanneer de volgende opdrachten eraan komen?"
+msgstr "Benieuwd wanneer de volgende opdrachten eraan komen?"
+
+msgid "Blijf op de hoogte van nieuwe opdrachten zodra ze gepubliceerd worden!"
+msgstr "Blijf op de hoogte van nieuwe opdrachten zodra ze gepubliceerd worden!"
+
+msgid "Interesse?"
+msgstr "Interesse?"
+
+msgid "Tools voor de digitale stad"
+msgstr "Tools voor de digitale stad"
+
+msgid "Een groeiende community"
+msgstr "Een groeiende community"
+
+msgid "Profiel"
+msgstr "Profiel"
+
+msgid "PITCH FASE BEËINDIGD"
+msgstr "PITCH FASE BEËINDIGD"
+
+msgid "WEERHOUDEN"
+msgstr "WEERHOUDEN"
+
+msgid "GESLOTEN"
+msgstr "GESLOTEN"
+
+msgid "INGESCHREVEN"
+msgstr "INGESCHREVEN"
+
+msgid "INSCHRIJVING IN BEHANDELING"
+msgstr "INSCHRIJVING IN BEHANDELING"
+
+msgid "INSCHRIJVING VERLOPEN"
+msgstr "INSCHRIJVING VERLOPEN"
+
+msgid "INSCHRIJVING AFGELOPEN"
+msgstr "INSCHRIJVING AFGELOPEN"
+
+msgid "PITCH"
+msgstr "PITCH"
+
+msgid "PITCH AFGEKEURD"
+msgstr "PITCH AFGEKEURD"
+
+msgid "PITCH GEPLAND"
+msgstr "PITCH GEPLAND"
+
+msgid "PITCH PLANNEN"
+msgstr "PITCH PLANNEN"
+
+msgid "PITCH BEOORDELING"
+msgstr "PITCH BEOORDELING"
+
+msgid "OPEN"
+msgstr "OPEN"
+
+msgid "QUOTE"
+msgstr "QUOTE"
+
+msgid "OFFERTE AFGEKEURD"
+msgstr "OFFERTE AFGEKEURD"
+
+msgid "OFFERTE GEPLAND"
+msgstr "OFFERTE GEPLAND"
+
+msgid "OFFERTE PLANNEN"
+msgstr "OFFERTE PLANNEN"
+
+msgid "OFFERTE BEOORDELING"
+msgstr "OFFERTE BEOORDELING"
+
+msgid "OFFERTE FASE BEËINDIGD"
+msgstr "OFFERTE FASE BEËINDIGD"
+
+msgid "BAFO"
+msgstr "BAFO"
+
+msgid "BAFO AFGEKEURD"
+msgstr "BAFO AFGEKEURD"
+
+msgid "BAFO GEPLAND"
+msgstr "BAFO GEPLAND"
+
+msgid "BAFO PLANNEN"
+msgstr "BAFO PLANNEN"
+
+msgid "BAFO BEOORDELING"
+msgstr "BAFO BEOORDELING"
+
+msgid "BAFO FASE BEËINDIGD"
+msgstr "BAFO FASE BEËINDIGD"
+
+msgid "Website laden"
+msgstr "Website laden"

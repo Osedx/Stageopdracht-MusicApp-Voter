@@ -1,0 +1,473 @@
+[{
+        "applicationDeadline": "2016-08-20T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "4",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "0",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "contract": "A000203",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "Event Handler",
+        "internalDescription": "In traditionele toepassingen gebeurt de communicatie tussen de componenten en de gegevensbronnen vooral synchroon tijdens de toepassingsprocessen. Onze nieuwe toepassingen worden gebouwd als een suite van modulaire componenten (microservices). Naast de traditionele directe communicatie (al dan niet via de ESB of API manager) denken we ook aan een ‘lossere’ communicatiekoppeling op basis van messages/events en queues. \nDe opdracht omvat de ontwikkeling van een Event Handler die toelaat om:\nde nodige queues te definiëren en messages/events te publiceren en erop te abonneren. De functionaliteiten moeten via een API én via een gebruiksvriendelijke UI aangeboden worden.\nde registraties configuraties op te slaan in een datastore voor de verwerking van de messages/events. \nEen implementatie van de engine op onze WSO2 service bus lijkt ons aangewezen, maar alternatieve voorstellen zijn mogelijk.",
+        "type": "0",
+        "publishingStartDate": "2016-08-11T00:00:00Z",
+        "description": "In traditionele toepassingen gebeurt de communicatie tussen de componenten en de gegevensbronnen vooral synchroon tijdens de toepassingsprocessen. Onze nieuwe toepassingen worden gebouwd als een suite van modulaire componenten (microservices). Naast de traditionele directe communicatie (al dan niet via de ESB of API manager) denken we ook aan een ‘lossere’ communicatiekoppeling op basis van messages/events en queues. \nDe opdracht omvat de ontwikkeling van een Event Handler die toelaat om:\nde nodige queues te definiëren en messages/events te publiceren en erop te abonneren. De functionaliteiten moeten via een API én via een gebruiksvriendelijke UI aangeboden worden.\nde registraties/configuraties op te slaan in een datastore voor de verwerking van de messages/events. \nEen implementatie van de engine op onze WSO2 service bus lijkt ons aangewezen, maar alternatieve voorstellen zijn mogelijk. \n"
+    },
+    {
+        "applicationDeadline": "2015-10-05T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "5",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "2",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "contract": "A000130",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "IoT & Big Data uitdaging",
+        "internalDescription": "Om volop in zetten op het Internet of Things en big data, hebben we een future proof architectuur nodig voor de verzameling, verwerking, opslag, raadpleging, analyse en visualisatie van small en big data. De architectuur moet o.a. toelaten om: de stedelijk gerelateerde sensor-, log- en andere big data meteen te verwerken in analytische modellen\ndata te bewaren voor later gebruik; real time data van en voor apps van derden te verwerken; nieuwe inzichten te verwerven uit ruwe, eventueel verrijkte data via de connectiviteits-, verwerkings- en analysemogelijkheden; de informatie al dan niet publiek te ontsluiten via een presentatielaag die bestaat uit een gamma een interactieve analyse-, rapporterings- en visualisatiemogelijkheden; … We zoeken advies en begeleiding om dit architectuurplaatje uit te tekenen. Heb je ervaring met IoT en big data analytics? Ideeën voor zo’n architectuur en een concreet implementatieplan? De basisingrediënten voor zo’n oplossing of de oplossing in huis?",
+        "type": "0",
+        "publishingStartDate": "2015-10-05T00:00:00Z",
+        "description": "Om volop in zetten op het Internet of Things en big data, hebben we een future proof architectuur nodig voor de verzameling, verwerking, opslag, raadpleging, analyse en visualisatie van small en big data. De architectuur moet o.a. toelaten om: de stedelijk gerelateerde sensor-, log- en andere big data meteen te verwerken in analytische modellen\ndata te bewaren voor later gebruik; real time data van en voor apps van derden te verwerken; nieuwe inzichten te verwerven uit ruwe, eventueel verrijkte data via de connectiviteits-, verwerkings- en analysemogelijkheden; de informatie al dan niet publiek te ontsluiten via een presentatielaag die bestaat uit een gamma een interactieve analyse-, rapporterings- en visualisatiemogelijkheden; … We zoeken advies en begeleiding om dit architectuurplaatje uit te tekenen. Heb je ervaring met IoT en big data analytics? Ideeën voor zo’n architectuur en een concreet implementatieplan? De basisingrediënten voor zo’n oplossing of de oplossing in huis?"
+    },
+    {
+        "applicationDeadline": "2016-08-26T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "6",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "3",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "documents": [{
+            "name": "ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx",
+            "description": "?",
+            "size": 194000,
+            "ref": "http://localhost:4999/assets/documents/ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx"
+        }],
+        "contract": "A000071",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "Notification engine",
+        "internalDescription": "De realisatie van een innovatieve generieke component waardoor het mogelijk wordt om voor elke activiteit binnen de groep stad Antwerpen een gepersonaliseerde Notificatie te sturen rekening houdend met de wensen van elke digitale inwoner. Een notificatie is een kort bericht, dat dient om de gebruiker (burger/medewerker/bedrijf/bezoeker) te verwittigen dat er voor hem interessante informatie beschikbaar is i.v.m. activiteiten en dienstverlening. De engine wordt gevoed middels API’s en levert via API’s informatie vanuit en naar alle mogelijk toepassingen van de groep stad Antwerpen.",
+        "type": "1",
+        "publishingStartDate": "2016-06-08T00:00:00Z",
+        "description": "De realisatie van een innovatieve generieke component waardoor het mogelijk wordt om voor elke activiteit binnen de groep stad Antwerpen een gepersonaliseerde Notificatie te sturen rekening houdend met de wensen van elke digitale inwoner. Een notificatie is een kort bericht, dat dient om de gebruiker (burger/medewerker/bedrijf/bezoeker) te verwittigen dat er voor hem interessante informatie beschikbaar is i.v.m. activiteiten en dienstverlening. De engine wordt gevoed middels API’s en levert via API’s informatie vanuit en naar alle mogelijk toepassingen van de groep stad Antwerpen."
+    },
+    {
+        "applicationDeadline": "2016-08-19T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "7",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "0",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "documents": [{
+            "name": "FinalAPIDesignenStyleGuidelines.pdf",
+            "description": "?",
+            "size": 4648000,
+            "ref": "http://localhost:4999/assets/documents/FinalAPIDesignenStyleGuidelines.pdf"
+        }],
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "contract": "A000180",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "Output Generator engine",
+        "internalDescription": "Doel van de opdracht is om een generieke component te ontwikkelen voor het creëren van documenten en communicatieartikelen. De focus ligt op aflevering van output via digitale kanalen (pdf, tablet-friendly content, webcontent, e-mail,...), maar printen moet ook mogelijk zijn. Elke afnemer kan de elementen (documenten, flows, templates, inputkanalen,...) in de oplossing aanpassen volgens zijn behoefte. Als input kan zowel bestaande input uit randsystemen worden opgehaald, als ad hoc input worden toegevoegd.",
+        "type": "2",
+        "publishingStartDate": "2016-08-11T00:00:00Z",
+        "description": "Doel van de opdracht is om een generieke component te ontwikkelen voor het creëren van documenten en communicatieartikelen. De focus ligt op aflevering van output via digitale kanalen (pdf, tablet-friendly content, webcontent, e-mail,...), maar printen moet ook mogelijk zijn. Elke afnemer kan de elementen (documenten, flows, templates, inputkanalen,...) in de oplossing aanpassen volgens zijn behoefte. Als input kan zowel bestaande input uit randsystemen worden opgehaald, als ad hoc input worden toegevoegd."
+    },
+    {
+        "applicationDeadline": "2016-09-02T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "8",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "2",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "documents": [{
+            "name": "FinalAPIDesignenStyleGuidelines.pdf",
+            "description": "?",
+            "size": 4648000,
+            "ref": "http://localhost:4999/assets/documents/FinalAPIDesignenStyleGuidelines.pdf"
+        }, {
+            "name": "ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx",
+            "description": "?",
+            "size": 194000,
+            "ref": "http://localhost:4999/assets/documents/ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx"
+        }],
+        "contract": "A000115",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "Payment engine",
+        "internalDescription": "Digitale betalingen via het internet, een smartphone, vingerafdruk, selfie enzovoort vervangen hoe langer hoe meer de cash betalingen. Een Payment engine ondersteunt idealiter verschillende vormen van cashless betalingen. Toepassingen - en uiteraard ook de toekomstige diensten van de stad - waar een betaling aan de orde is (webshop, kassa, betaling van facturen, e.a.), kunnen de engine aanspreken via API’s. De innovaties in het cashless betalen volgen elkaar in een snel tempo op en een consolidatie is nog niet in zicht. We verwachten dan ook dat de engine snel mee kan evolueren met de nieuwe trends.",
+        "type": "1",
+        "publishingStartDate": "2016-08-11T00:00:00Z",
+        "description": "Digitale betalingen via het internet, een smartphone, vingerafdruk, selfie enzovoort vervangen hoe langer hoe meer de cash betalingen. Een Payment engine ondersteunt idealiter verschillende vormen van cashless betalingen. Toepassingen - en uiteraard ook de toekomstige diensten van de stad - waar een betaling aan de orde is (webshop, kassa, betaling van facturen, e.a.), kunnen de engine aanspreken via API’s. De innovaties in het cashless betalen volgen elkaar in een snel tempo op en een consolidatie is nog niet in zicht. We verwachten dan ook dat de engine snel mee kan evolueren met de nieuwe trends."
+    },
+    {
+        "applicationDeadline": "2016-08-26T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "9",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "3",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "contract": "A000116",
+        "lead": "15",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "title": "User Management engine",
+        "internalDescription": "Tot nog toe beheerden we identiteiten en toegangsrechten op verschillende manieren (soms binnen een toepassing zelf, soms centraal), met een wildgroei aan rollen en autorisaties die verspreid zitten over verschillende systemen tot gevolg. Ook de diversiteit aan gebruikers neemt steeds maar toe. Eenzelfde applicatie moet niet alleen bereikbaar zijn voor medewerkers, maar ook voor burgers, mandaathouders van organisaties, enz. en dit telkens met andere toegangsrechten. De eindgebruiker wil ook zelf bepalen in welke hoedanigheid hij optreedt, wil zijn identiteit kunnen beheren en kiezen hoe hij zich authentificeert (via userid en paswoord aangevuld met token, sms, paswoordvragen, eID,…). Voor het beheer van identiteiten en toegangsrechten betekent dat onder meer dat er sprake is van een user-centric beheer op basis van het A-profiel. Via de User Management engine willen we op een gecentraliseerde, beveiligde en ‘traceerbare’ manier diensten of gegevens ter beschikking stellen die een groot aantal potentiële gebruikers kunnen consulteren. De generieke engine is aanspreekbaar en integreerbaar via API’s: de ‘consumers’ die er gebruik van maken, moeten dus geen eigen systeem voor identificatie- en toegangsbeheer ontwikkelen en beheren.",
+        "type": "1",
+        "publishingStartDate": "2016-08-13T00:00:00Z",
+        "description": "Tot nog toe beheerden we identiteiten en toegangsrechten op verschillende manieren (soms binnen een toepassing zelf, soms centraal), met een wildgroei aan rollen en autorisaties die verspreid zitten over verschillende systemen tot gevolg. Ook de diversiteit aan gebruikers neemt steeds maar toe. Eenzelfde applicatie moet niet alleen bereikbaar zijn voor medewerkers, maar ook voor burgers, mandaathouders van organisaties, enz. en dit telkens met andere toegangsrechten. De eindgebruiker wil ook zelf bepalen in welke hoedanigheid hij optreedt, wil zijn identiteit kunnen beheren en kiezen hoe hij zich authentificeert (via userid en paswoord aangevuld met token, sms, paswoordvragen, eID,&hellip;). Voor het beheer van identiteiten en toegangsrechten betekent dat onder meer dat er sprake is van een user-centric beheer op basis van het A-profiel. Via de User Management engine willen we op een gecentraliseerde, beveiligde en &lsquo;traceerbare&rsquo; manier diensten of gegevens ter beschikking stellen die een groot aantal potenti&euml;le gebruikers kunnen consulteren. De generieke engine is aanspreekbaar en integreerbaar via API&rsquo;s: de &lsquo;consumers&rsquo; die er gebruik van maken, moeten dus geen eigen systeem voor identificatie- en toegangsbeheer ontwikkelen en beheren."
+    },
+    {
+        "applicationDeadline": "2017-10-10T00:00:00Z",
+        "offerDeadline": "2017-10-10T00:00:00Z",
+        "pitchDeadline": "2017-10-09T00:00:00Z",
+        "id": "10",
+        "product": {
+            "id": "15",
+            "title": "Dossier & Datastore engine",
+            "code": "Dossier",
+            "status": "0",
+            "provider": "232",
+            "owner": null,
+            "description": "dossiers (v2) en data",
+            "productType": "2",
+            "productDomain": null
+        },
+        "documents": [{
+            "name": "FinalAPIDesignenStyleGuidelines.pdf",
+            "description": "?",
+            "size": 4648000,
+            "ref": "http://localhost:4999/assets/documents/FinalAPIDesignenStyleGuidelines.pdf"
+        }, {
+            "name": "ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx",
+            "description": "?",
+            "size": 194000,
+            "ref": "http://localhost:4999/assets/documents/ACPaaS_Handleiding_inschrijven_fastlaneprocedures.docx"
+        }],
+        "pitchEvent": {
+            "id": 1,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-10T10:00:00Z",
+                "provider": "1",
+                "remarks": "test",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:00:00Z",
+                "provider": "2",
+                "remarks": "bla",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-10T9:30:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "offerEvent": {
+            "id": 2,
+            "duration": 1800000,
+            "timeslots": [{
+                "time": "2017-10-15T10:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T9:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            },
+            {
+                "time": "2017-10-15T11:00:00Z",
+                "provider": null,
+                "remarks": "",
+                "result": "NOT SPECIFIED"
+            }]
+        },
+        "contract": "A000*",
+        "title": "IOT Instroom data",
+        "publishingStartDate": "2016-08-05T00:00:00Z",
+        "type": "0",
+        "pitchPublishingDate": "0000-00-00T00:00:00Z",
+        "internalDescription": "",
+        "description": "Instroom data"
+    }
+]

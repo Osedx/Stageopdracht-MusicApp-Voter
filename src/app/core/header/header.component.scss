@@ -1,0 +1,53 @@
+@import "../../utilities/variables.scss";
+
+.ui.secondary.pointing.menu{
+    padding: 10px 50px 10px 50px;
+    border-bottom: none;
+    
+    .item {
+        color:$light-grey;
+        border-bottom: 2px solid $white;
+    }
+    .item:hover{
+        @extend .item;
+        color:$dark-grey;
+        border-bottom-color: $light-grey;
+    }
+}
+
+.nav-top-toggle a {
+    color: $light-grey;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.avatar {
+
+    cursor: pointer;
+
+    img {
+        height: 60px;
+        width: auto;
+    }
+
+    span {
+        margin-left: 0.8571428572rem;
+    }
+}
+.row{
+    margin: 0 10px;
+}
+.ui.grid+.grid, .ui.grid{
+    margin:0;
+}
+.ui.grid>*{
+    padding:0;
+}
+.right.item{
+    height: 100%;
+}
+.ui.menu .item{
+    padding:10px 15px;
+}

@@ -1,0 +1,21 @@
+/* line 3, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/personalvideos/personalvideo/personalvideo.component.scss */
+.thumbscontainer > .delete {
+  opacity: 1;
+  color: #b35252;
+  align-self: center; }
+  /* line 7, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/personalvideos/personalvideo/personalvideo.component.scss */
+  .thumbscontainer > .delete:active {
+    color: #9d3232; }
+  /* line 10, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/personalvideos/personalvideo/personalvideo.component.scss */
+  .thumbscontainer > .delete:hover {
+    opacity: 0.9; }
+
+/* line 15, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/personalvideos/personalvideo/personalvideo.component.scss */
+.ui.list > .item .playlistflexcontainer > .infocontainer .like {
+  color: #72b654; }
+
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/personalvideos/personalvideo/personalvideo.component.scss */
+.ui.list > .item .playlistflexcontainer > .infocontainer .dislike {
+  color: #b35252; }
+
+/*# sourceMappingURL=personalvideo.component.css.map */

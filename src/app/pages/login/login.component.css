@@ -1,0 +1,83 @@
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.loginmodal-container {
+  max-width: 350px;
+  width: 100% !important;
+  margin: 50px auto auto;
+  overflow: hidden;
+  font-family: roboto; }
+
+/* line 8, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.loginmodal-container h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto; }
+
+/* line 14, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.loginmodal-submit {
+  width: 100%;
+  padding: 15px 0px;
+  border: 1px solid black;
+  color: #000000;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  font-family: roboto;
+  font-size: 21px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }
+  /* line 24, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+  .loginmodal-submit:hover {
+    border: 0px;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    background-color: lightgrey;
+    border: 1px solid black; }
+  /* line 30, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+  .loginmodal-submit:focus {
+    outline: none; }
+
+/* line 35, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s; }
+
+/* line 44, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.loginwithgoogle {
+  background-color: #ffffff; }
+
+/* line 47, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.login {
+  background-color: lightblue; }
+  /* line 49, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+  .login:hover {
+    background-color: #86bed0; }
+
+/* line 53, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+hr {
+  margin: 25px 0; }
+
+/* line 56, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+#password {
+  margin-bottom: 25px; }
+
+/* line 60, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+#email {
+  margin-bottom: 5px; }
+
+/* line 64, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+.ui.segment {
+  background-color: #f4f4f4; }
+
+/* line 67, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+#email + .error {
+  background-color: #fff6f6;
+  color: #9f3a38; }
+
+/* line 72, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/pages/login/login.component.scss */
+#email + .error:focus {
+  border-color: #9f3a38; }
+
+/*# sourceMappingURL=login.component.css.map */

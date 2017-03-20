@@ -1,0 +1,23 @@
+<div class="videolistflexcontainer">
+     <img class="ui tiny left floated image" src="{{video.thumbnailUrl}}" (click)="modal.show()" (click)="onClickThumb()">
+    <div class="infocontainer">
+       <div content info>
+        <div class="header">
+          {{video.title}}
+        </div>
+        <div class="info">
+        <div  class="description">
+          <a href="http://youtube.com/channel/{{video.channelId}}" target="_blank"><b>
+            {{video.channelTitle}}
+              </b></a>
+        </div>
+        <div  class="description">
+          {{video.publishedAt}}
+        </div>
+        </div>
+        </div>
+    <div class="right floated content">
+        <div class="ui button" (click)="add()" [ngClass]="{'disabled': clicked}" >Add</div>
+    </div>
+    </div>
+</div>

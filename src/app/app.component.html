@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <my-header class="my-header"></my-header>
+    <main [class.overlay]="isOverlayEnabled">
+
+        <!-- Loader -->
+        <div *ngIf="isRouterChanging" class="margin-top-lg text-center">
+            <div class="loader-lg"></div>
+            <p class="margin-top text-muted" translate>Pagina laden</p>
+        </div>
+
+        <router-outlet></router-outlet>
+
+    </main>
+    <my-footer class="my-footer"></my-footer>
+</div>

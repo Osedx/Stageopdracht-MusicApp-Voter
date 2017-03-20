@@ -1,0 +1,20 @@
+{
+  "name": "music-app-v1",
+  "description": "District01 - muziekapp",
+  "main": "app.js",
+  "authors": [
+    "Shaunie Van Hove"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      
+  }
+}

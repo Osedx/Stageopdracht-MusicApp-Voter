@@ -1,0 +1,9 @@
+{
+    "ignore": [
+        "node_modules",
+        "/public/**/*.*",
+        "/src/**/*.*",
+        "/config/webpack/**/*.*",
+        "/npm_scripts/**/*.*"
+    ]
+}

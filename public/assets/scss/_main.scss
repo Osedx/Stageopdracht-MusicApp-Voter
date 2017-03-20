@@ -1,0 +1,95 @@
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    &.underline {
+        &:not(:last-child) {
+            border-bottom: 1px solid $light-grey;
+        }
+    }
+}
+
+.wrapper {
+    display: table;
+    table-layout: fixed;
+
+    width: 100%;
+}
+
+main {
+    display: table-row;
+    height: 100%;
+    background-color: $dark-grey;
+
+    &.overlay:before {
+        content: "";
+
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background: rgba($black, 0.64);
+
+        z-index: 2;
+    }
+}
+
+.my-header,
+.my-footer {
+    display: table-row;
+}
+
+.container {
+    max-width: 64rem;
+
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    overflow: auto;
+    overflow-y: hidden;
+
+    &.small {
+        max-width: 37.5rem;
+    }
+
+    &.xsmall {
+        max-width: 21.875rem;
+    }
+
+    &.no-padding {
+        padding: 0;
+    }
+}
+
+.digits {
+    background-color: $dark-grey;
+}
+
+.digit {
+    margin-bottom: 1.875rem;
+
+    color: $white;
+    text-align: center;
+}
+
+.digit-number,
+.digit-title {
+    display: block;
+}
+
+.digit-number {
+    font-size: 6rem;
+}
+
+.digit-title {
+    text-transform: uppercase;
+}

@@ -1,0 +1,45 @@
+[{
+    "id": 1,
+    "duration": 1800000,
+    "timeslots": [{
+            "time": "2017-10-10T10:00:00Z",
+            "provider": "1",
+            "remarks": "test",
+            "result": "NOT SPECIFIED"
+        },
+        {
+            "time": "2017-10-10T9:00:00Z",
+            "provider": "2",
+            "remarks": "bla",
+            "result": "NOT SPECIFIED"
+        },
+        {
+            "time": "2017-10-10T9:30:00Z",
+            "provider": null,
+            "remarks": "",
+            "result": "NOT SPECIFIED"
+        }
+    ]
+},
+{
+    "id": 2,
+    "duration": 1800000,
+    "timeslots": [{
+        "time": "2017-10-15T10:00:00Z",
+        "provider": null,
+        "remarks": "",
+        "result": "NOT SPECIFIED"
+    },
+    {
+        "time": "2017-10-15T9:00:00Z",
+        "provider": null,
+        "remarks": "",
+        "result": "NOT SPECIFIED"
+    },
+    {
+        "time": "2017-10-15T11:00:00Z",
+        "provider": null,
+        "remarks": "",
+        "result": "NOT SPECIFIED"
+    }]
+}]
