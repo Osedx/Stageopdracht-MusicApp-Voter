@@ -27,7 +27,6 @@ app.use(morgan("dev"));
     res.header("Access-Control-Allow-Headers", "Content-Type");
 //    res.header("Content-Type", "application/json", "charset": "UTF-8" );
     next();
-
  });
 
 // Database
