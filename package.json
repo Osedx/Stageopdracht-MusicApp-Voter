@@ -9,7 +9,7 @@
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
     "start": "./node_modules/.bin/nps",
-    "postinstall": "bower install"
+    "postinstall": "bower install && node ./npm_scripts/build.js"
   },
   "repository": {
     "type": "git",
