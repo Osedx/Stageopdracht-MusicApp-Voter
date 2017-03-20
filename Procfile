@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/nps
+web: npm start
