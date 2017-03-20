@@ -8,7 +8,8 @@
     "extract_pot": "node npm_scripts/extract_pot.js",
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
-    "start": "./node_modules/.bin/nps"
+    "start": "./node_modules/.bin/nps",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@angular/router": "~3.4.0",
     "angular2-masonry": "~0.3.1",
     "angularfire2": "^2.0.0-beta.8",
+    "body-parser": "^1.17.1",
     "core-js": "~2.4.1",
     "crypto-js": "~3.1.9-1",
     "express": "~4.14.0",

@@ -32,7 +32,15 @@ app.use(morgan("dev"));
 
 // Database
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/test");
+//mongoose.connect("mongodb://localhost:27017/test");
+
+ process.env.MONGOLAB_URI="mongodb://Osedx:azerty123@ds019624.mlab.com:19624/heroku_469576p2";
+ 
+mongoose.connect(process.env.MONGOLAB_URI, function (error) {
+    if (error) console.error(error);
+    else console.log("mongo connected");
+});
+
 var db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
