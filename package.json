@@ -52,9 +52,8 @@
     "rootpath": "~0.1.2",
     "rxjs": "~5.0.3",
     "slick-carousel": "~1.6.0",
-    "zone.js": "0.7.6"
-  },
-  "devDependencies": {
+    "zone.js": "0.7.6",
+      
     "@biesbjerg/ng2-translate-extract": "~0.3.5",
     "@types/core-js": "~0.9.35",
     "@types/cryptojs": "~3.1.29",
@@ -95,5 +94,7 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "~1.16.2",
     "webpack-merge": "^1.0.2"
+  },
+  "devDependencies": {
   }
 }
