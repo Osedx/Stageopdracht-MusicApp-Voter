@@ -9,8 +9,7 @@
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
     "start": "./node_modules/.bin/nps",
-    "postinstall": "bower install",
-    "heroku-prebuild" : "node ./npm_scripts/build.js"
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
