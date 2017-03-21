@@ -1,6 +1,10 @@
 {
   "name": "music-app-v1",
   "version": "1.0.0",
+"engines": {
+    "node": "6.10.0",
+    "npm": "4.3.0"
+  },
   "description": "Music app",
   "main": "app.js",
   "scripts": {
