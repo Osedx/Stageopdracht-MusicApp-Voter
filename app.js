@@ -152,8 +152,8 @@ db.once("open", function() {
     require("app/routes")(app);
 
     // Start the server
-    app.listen(config.server.port, function() {
-        console.log("app listening at http://localhost:%s running in %s mode.", config.server.port, process.env.NODE_ENV); // eslint-disable-line no-console
+    app.listen(process.env.PORT || 3016, function() {
+        console.log("app listening at http://localhost:%s running in %s mode.", process.env.PORT || 3016, process.env.NODE_ENV); // eslint-disable-line no-console
     });
 
 });
