@@ -1,8 +1,8 @@
 {
   "name": "music-app-v1",
   "version": "1.0.0",
-"engines": {
-    "node": "6.10.0",
+  "engines": {
+    "node": "v6.10.0",
     "npm": "4.3.0"
   },
   "description": "Music app",
@@ -13,7 +13,7 @@
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
     "start": "node app",
-    "postinstall": "bower install && ./npm_scripts/build.js"
+    "postinstall": "bower install && ./node_modules/.bin/nps"
   },
   "repository": {
     "type": "git",
@@ -92,7 +92,7 @@
     "ts-loader": "~1.3.0",
     "tslint": "~4.2.0",
     "tslint-loader": "~3.3.0",
-    "typescript": "^2.0.8",
+    "typescript": "^2.2.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "~1.16.2",
     "webpack-merge": "^1.0.2",
