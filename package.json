@@ -8,7 +8,7 @@
     "extract_pot": "node npm_scripts/extract_pot.js",
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
-    "start": "node npm_scripts/start.js",
+    "start": "node app",
     "postinstall": "bower install"
   },
   "repository": {
