@@ -4,23 +4,24 @@
   border-right: 5px solid #555555;
   border-radius: 5px;
   margin-bottom: 25px;
-  background: black; }
+  background: black;
+}
 
-/* line 10, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 12, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal {
   width: 88%; }
 
-/* line 13, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 15, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal > .actions {
   padding: 0;
   background-color: black; }
 
-/* line 17, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 19, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal > .header {
   padding: 0;
   background-color: black; }
 
-/* line 22, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 24, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal > .content {
   background-color: black;
   position: relative;
@@ -29,7 +30,7 @@
   padding-top: 25px !important;
   height: 0;
   overflow: hidden; }
-  /* line 29, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+  /* line 31, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
   .ui.modal > .content iframe, .ui.modal > .content object, .ui.modal > .content embed {
     position: absolute;
     top: 0;
@@ -37,39 +38,39 @@
     width: 100%;
     height: 100%; }
 
-/* line 38, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 40, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal {
   left: 0;
   margin: 0 0 0 6%; }
 
-/* line 43, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 45, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .ui.modal > .close {
   display: none; }
 
-/* line 46, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 48, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .fa {
   color: white;
   opacity: 0.4; }
-  /* line 49, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+  /* line 51, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
   .fa:hover {
     opacity: 0.45;
     cursor: pointer; }
-  /* line 53, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+  /* line 55, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
   .fa:active {
     opacity: 0.8; }
 
-/* line 57, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 59, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .fa-window-maximize {
   position: fixed;
   bottom: 50px;
   left: 50%;
   margin-left: -21px;
   transition: bottom 0.1s linear; }
-  /* line 63, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+  /* line 65, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
   .fa-window-maximize:hover {
     bottom: 52px; }
 
-/* line 67, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
+/* line 69, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
 .fa-times {
   position: fixed;
   top: 0;

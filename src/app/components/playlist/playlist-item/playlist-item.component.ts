@@ -5,6 +5,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { PlaylistComponent} from "../playlist/playlist.component";
 import { NgSemanticModule } from "ng-semantic";
 import { DataService } from "../../../services/data.service";
+import { SettingService } from "../../services/settings.service";
 import { Rating } from "../../../components/models/rating.model";
 import { AF } from "../../../providers/af";
 
@@ -26,7 +27,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     thumbsdowndisabled : Boolean;
 
 
-    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF ) {}
+    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF, private settingService : SettingService ) {}
 
     ngOnDestroy() {
             if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
@@ -57,7 +58,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 this.thumbsdownactive = true;
                 this.thumbsupdisabled = true;
                 this.playlistitem.rating -= 1;
-            if (this.playlistitem.rating <= -3) {
+            if (this.playlistitem.rating <= - this.settingService.deleteByDislikes) {
                 this.deleteFromPlaylist();
             }
                 else {

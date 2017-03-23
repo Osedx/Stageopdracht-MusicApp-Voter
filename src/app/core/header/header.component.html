@@ -27,18 +27,23 @@
     </div>
 -->
         <!--   <sm-menu title="District01" class=" massive ui attached stackable menu" *ngIf="isLoggedIn">-->
-        <sm-menu title="D01" class=" massive" *ngIf="isLoggedIn">
-            <a sm-item icon="youtube play" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/']">
+        <sm-menu *ngIf="isLoggedIn">
+            <a>
+                <div class="grid ui">
+                    <img src="../../assets/logo_label.svg" height="60px"/>
+                </div>
+            </a>
+            <a sm-item icon="large youtube play" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/']">
                 <div class="grid ui">
                     <div class="computer only row">Playlist</div>
                 </div>
             </a>
-            <a sm-item icon="user" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/personal']">
+            <a sm-item icon="large user" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/personal']">
                 <div class="grid ui">
                     <div class="computer only row">Personal video's</div>
                 </div>
             </a>
-            <a sm-item icon="plus" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/add']">
+            <a sm-item icon="large plus" [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="['active']" [routerLink]="['/add']">
                 <div class="grid ui">
                     <div class="computer only row">Add video</div>
                 </div>
