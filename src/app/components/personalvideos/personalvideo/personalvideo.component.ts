@@ -27,4 +27,8 @@ export class PersonalVideoComponent {
                 error => { console.log(error); }
               );
         }
+    onClickThumb() {
+        this.playlistState.activeVideo = this.playlistitem;
+        this.playlistState.isPlaying = true;
+    }
 }

@@ -21,9 +21,9 @@ constructor(private videoListState : VideoListState, private dataService : DataS
         this.clicked = true;
        this.dataService.addPlaylistItem({"_id" : this.video.videoId, "title" : this.video.title, "thumbnailurl" : this.video.thumbnailUrl, "channeltitle" : this.video.channelTitle, "channelid" : this.video.channelId, "description" : this.video.description, "uploader" : this.afService.displayName, "uploaderid" : this.afService.uid, "rating" : 0 }).subscribe(
         res => {
-            console.log( res.json() );
+//            console.log( res.json() );
             const newPlaylistItem = res.json();
-            console.log(newPlaylistItem + "added successfully to database.", "success");
+//            console.log(newPlaylistItem + "added successfully to database.", "success");
       },
       error => console.log(error)
     );
@@ -31,5 +31,6 @@ constructor(private videoListState : VideoListState, private dataService : DataS
     onClickThumb() {
     this.videoListState.activeVideo = this.video;
     this.videoListState.isPlaying = true;
+    console.log(this.videoListState.activeVideo);
   }
 }

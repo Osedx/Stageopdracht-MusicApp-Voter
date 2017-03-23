@@ -2,24 +2,24 @@
     <div class="number">{{index +1}}</div>
     <img class="ui tiny left floated image playlistimage" src="{{playlistitem.thumbnailurl}}" (click)="modal.show()" (click)="onClickThumb()">
     <div class="infocontainer">
-    <div class="content">
-        <div class="header">
-          {{playlistitem.title}}
+        <div class="content">
+            <div class="header">
+                {{playlistitem.title}}
+            </div>
+            <div class="info">
+                <div class="description" *ngIf="afService?.uid !== playlistitem.uploaderid">
+                    Added by {{playlistitem.uploader}}
+                </div>
+                <div class="description" *ngIf="afService?.uid === playlistitem.uploaderid">
+                    Added by yourself
+                </div>
+            </div>
+            <div class="right floated content">
+            </div>
         </div>
-        <div class="info">
-        <div  class="description" *ngIf="afService?.uid !== playlistitem.uploaderid">
-          Added by {{playlistitem.uploader}}
-        </div>
-        <div  class="description" *ngIf="afService?.uid === playlistitem.uploaderid">
-          Added by yourself
-        </div>
-        </div>
-        <div class="right floated content">
+        <div class="thumbscontainer">
+            <i class="fa fa-thumbs-down fa-2x thumbs" aria-hidden="true" (click)="thumbsdown()" [ngClass]="{'thumbsdownactive': thumbsdownactive, 'thumbsdisabled': thumbsdowndisabled}"></i>
+            <i class="fa fa-thumbs-up fa-2x thumbs" aria-hidden="true" (click)="thumbsup()" [ngClass]="{'thumbsupactive': thumbsupactive, 'thumbsdisabled': thumbsupdisabled}"></i>
+            <div class="number">{{playlistitem.rating}}</div>
         </div>
     </div>
-    <div class="thumbscontainer">
-        <i class="fa fa-thumbs-down fa-2x thumbs" aria-hidden="true" (click)="thumbsdown()" [ngClass]="{'thumbsdownactive': thumbsdownactive, 'thumbsdisabled': thumbsdowndisabled}"></i>
-        <i class="fa fa-thumbs-up fa-2x thumbs" aria-hidden="true" (click)="thumbsup()" [ngClass]="{'thumbsupactive': thumbsupactive, 'thumbsdisabled': thumbsupdisabled}"></i>
-        <div class="number">{{playlistitem.rating}}</div>
-    </div>
-</div>

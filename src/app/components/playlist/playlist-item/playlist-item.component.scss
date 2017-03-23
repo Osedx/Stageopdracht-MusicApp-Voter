@@ -43,9 +43,7 @@
     z-index: 1;
     color: white;
     float:left;
-    position: relative;
-    top: 33px;
-    left:0;
+    align-self: center;
     margin: 0 5px;
 }
 .ui.list>.item [class*="playlistimage"]{

@@ -91,13 +91,13 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 this.deleteRating();
             }
         }}
-
+    // update the rating of the playlist
         updatePlaylist() {
         this.dataService.updatePlaylist(this.playlistitem).subscribe(
             res => { console.log("item updated successfully.", "success"); },
             error => { console.log(error); }
         ); }
-
+    // create a new rating in the database
         createRating(rating : String) {
             this.dataService.addRating({ "userid" : this.afService.uid, "playlistitemid" : this.playlistitem._id, "rating" : rating }).subscribe(
             res => {
@@ -108,12 +108,12 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
           error => console.log(error)
         );
         }
-
+    // calls the methods for deleting the playlistitem and associated ratings
         deleteFromPlaylist() {
             this.deletePlaylistItem(this.playlistitem._id);
             this.deleteRatings(this.playlistitem._id);
         }
-
+    // delete the playlistitem by id
         deletePlaylistItem(id : String) {
              this.dataService.deletePlaylistItem(id).subscribe(
                 res => { this.playlistState.playList.splice(this.index, 1);
@@ -124,8 +124,8 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 error => { console.log(error); }
               );
         }
-
-    deleteRatings(id : String) {
+    // delete all ratings with the given playlistitemid
+        deleteRatings(id : String) {
              this.dataService.deleteRatings(id).subscribe(
                 res => {
                 console.log(this.rating);
@@ -134,7 +134,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 error => { console.log(error); }
               );
         }
-
+    // delete the rating with the given playlistitemid of the logged in user
         deleteRating() {
               this.dataService.deleteRating(this.playlistitem).subscribe(
                 res => {
@@ -146,18 +146,18 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 error => { console.log(error); }
               );
         }
-
+    // get the ratings from the logged in user
         getRatings(userid : String, playlistitemid : String) {
         this.dataService.getRatings(userid, playlistitemid).subscribe(
                 data => {
                 this.rating = data.json();
                 this.setRating();
                 },
-    error => { console.log(error); }
+                error => { console.log(error); }
             );
 
         }
-
+    // set thumbs active or disabled
         setRating() {
         if ( this.afService.uid === this.playlistitem.uploaderid) {
                                     this.thumbsupdisabled = true;

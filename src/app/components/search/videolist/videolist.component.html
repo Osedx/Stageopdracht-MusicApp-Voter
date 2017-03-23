@@ -1,20 +1,13 @@
 <sm-modal #myModalNormal>
     <modal-content>
-          <iframe *ngIf="videoListState.activeVideo" 
-                 #videoplayer
-                  width="560"
-                  height="315"
-                  frameborder="0"
-                  allowfullscreen
-                  allowscriptaccess="always"
-                  [src]="videoListState.activeVideo?.videoId +'?enablejsapi=1&version=3&playerapiid=ytplayer' | youtubeSafeUrl">
-          </iframe>
+        <iframe *ngIf="videoListState.activeVideo" #videoplayer width="560" height="315" frameborder="0" allowfullscreen allowscriptaccess="always" [src]="videoListState.activeVideo?.videoId +'?enablejsapi=1&version=3&playerapiid=ytplayer' | youtubeSafeUrl">
+        </iframe>
         <i (click)="stop()" (click)="myModalNormal.hide()" class="fa fa-times fa-2x" aria-hidden="true"></i>
     </modal-content>
-</sm-modal> 
+</sm-modal>
 <div class="ui relaxed divided list">
-  <div class="item" *ngFor="let v of videoListState.videoList" [class.playing] = "v === videoListState.activeVideo">
-      <app-videolist-item [modal]="myModalNormal" [video]="v"></app-videolist-item>
-  </div>
+    <div class="item" *ngFor="let v of videoListState.videoList" [class.playing]="v === videoListState.activeVideo">
+        <app-videolist-item [modal]="myModalNormal" [video]="v"></app-videolist-item>
+    </div>
 </div>
 <i (click)="myModalNormal.show()" *ngIf="videoListState.isPlaying" class="fa fa-window-maximize fa-3x" aria-hidden="true"></i>
