@@ -63,7 +63,7 @@ db.once("open", function() {
   });
     
   app.get("/toplist", function(req, res) {
-    PlaylistDatabase.find({}, null,  {sort: {"rating": -1 }}, function(err, docs) {
+    PlaylistDatabase.find({}, null, function(err, docs) {
       if(err) return console.error(err);
         console.log(docs);
       res.json(docs);
@@ -164,7 +164,7 @@ db.once("open", function() {
       if(err) return console.error(err);
       res.sendStatus(200);
     });
-  });  
+  });
     
    app.delete("/ratings/:playlistitemid", function(req, res) {
     RatingDatabase.remove({playlistitemid: req.params.playlistitemid}, function(err) {

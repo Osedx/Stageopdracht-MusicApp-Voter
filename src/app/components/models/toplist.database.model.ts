@@ -8,7 +8,6 @@ var toplistSchema = mongoose.Schema({
     channeltitle : String,
     channelid : String,
     description : String,
-    rating : Number,
     expire_at: {type: Date, default: Date.now, expires: 604800 * aantalWeken} 
 });
 

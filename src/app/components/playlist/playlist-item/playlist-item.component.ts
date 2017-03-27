@@ -102,7 +102,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         ); }
     // add to song to toplist
         addToToplist() {
-            this.dataService.addToplistItem({"_id" : this.playlistitem._id, "title" : this.playlistitem.title, "thumbnailurl" : this.playlistitem.thumbnailurl, "channeltitle" : this.playlistitem.channeltitle, "channelid" : this.playlistitem.channelid, "description" : this.playlistitem.description, "rating" : this.playlistitem.rating}).subscribe(
+            this.dataService.addToplistItem({"_id" : this.playlistitem._id, "title" : this.playlistitem.title, "thumbnailurl" : this.playlistitem.thumbnailurl, "channeltitle" : this.playlistitem.channeltitle, "channelid" : this.playlistitem.channelid, "description" : this.playlistitem.description}).subscribe(
             res => {
                 const newToplistItem = res.json();
                 console.log(newToplistItem);
@@ -189,4 +189,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 }
             }
         }
+    addFromToplist() {
+    
+}
 }
