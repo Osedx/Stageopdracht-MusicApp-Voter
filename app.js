@@ -45,6 +45,7 @@ mongoose.Promise = global.Promise;
 
 // Models
 var PlaylistDatabase = require("./src/app/components/models/playlist.database.model.ts");
+var ToplistDatabase = require("./src/app/components/models/toplist.database.model.ts");
 var RatingDatabase = require("./src/app/components/models/rating.database.model.ts");
 
 db.on("error", console.error.bind(console, "connection error:"));
@@ -54,6 +55,14 @@ db.once("open", function() {
   // APIs
   // select all
   app.get("/playlist", function(req, res) {
+    PlaylistDatabase.find({}, null,  {sort: {"rating": -1 }}, function(err, docs) {
+      if(err) return console.error(err);
+        console.log(docs);
+      res.json(docs);
+    });
+  });
+    
+  app.get("/toplist", function(req, res) {
     PlaylistDatabase.find({}, null,  {sort: {"rating": -1 }}, function(err, docs) {
       if(err) return console.error(err);
         console.log(docs);
@@ -76,11 +85,30 @@ db.once("open", function() {
       res.json(count);
     });
   });
+    
+  // count all
+  app.get("/toplist/count", function(req, res) {
+    ToplistDatabase.count(function(err, count) {
+      if(err) return console.error(err);
+      res.json(count);
+    });
+  });
 
   // create
   app.post("/playlistitem", function(req, res) {
     console.log(req.body);
     var obj = new PlaylistDatabase(req.body);
+    console.log(obj);
+    obj.save(function(err, obj) {
+      if(err) return console.error(err);
+      res.status(200).json(obj);
+    });
+  });
+
+  // create
+  app.post("/toplistitem", function(req, res) {
+    console.log(req.body);
+    var obj = new ToplistDatabase(req.body);
     console.log(obj);
     obj.save(function(err, obj) {
       if(err) return console.error(err);

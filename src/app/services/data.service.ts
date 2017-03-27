@@ -26,6 +26,11 @@ export class DataService {
     return this.http.post("/playlistitem", JSON.stringify(playlistitem), this.options);
   }
 
+  addToplistItem(toplistitem : any) : Observable<any> {
+    console.log(JSON.stringify(toplistitem));
+    return this.http.post("/toplistitem", JSON.stringify(toplistitem), this.options);
+  }
+
   updatePlaylist(playlistitem : any) : Observable<any> {
     return this.http.put(`/playlistitem/${playlistitem._id}`, JSON.stringify(playlistitem), this.options);
   }
@@ -40,6 +45,8 @@ export class DataService {
   }
 
   deleteRating(rating : any) : Observable<any> {
+    console.log("delete - ratingid: " + rating._id);
+    console.log("delete - playlistitemid: " + rating.playlistitemid);
     return this.http.delete(`/rating/${rating._id}`, this.options);
   }
 
@@ -49,6 +56,6 @@ export class DataService {
   }
 
 getRatings(userid : String, playlistitemid : String) : Observable<any> {
-    return this.http.get(`/rating/${userid}/${playlistitemid}`, this.options);
-  }
+        return this.http.get(`/rating/${userid}/${playlistitemid}`, this.options);
+    }
 }

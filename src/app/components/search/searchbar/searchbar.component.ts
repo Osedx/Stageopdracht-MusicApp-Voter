@@ -1,4 +1,4 @@
-import {Component, ViewChild } from "@angular/core";
+import {Component, ViewChild, OnInit } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { VideoListState } from "../../services/videolist-state.service";
 import { SearchService } from "../../services/search.service";
@@ -13,7 +13,7 @@ import { FormControl } from "@angular/forms";
   styleUrls: ["./searchbar.component.scss"]
 })
 
-export class SearchbarComponent {
+export class SearchbarComponent implements OnInit {
     search = new FormControl();
     videoList : Video[] = [];
     videoListShort : Video[] = [];
@@ -22,6 +22,9 @@ export class SearchbarComponent {
     @ViewChild("name") vc : any;
 
 constructor(private SearchService : SearchService, private videoListState : VideoListState ) {
+    this.videoListState.searched = false;
+}
+ngOnInit() {
    this.search.valueChanges
        .debounceTime(200)
        .switchMap(query => this.SearchService.fetchShortVideos(query))
@@ -38,6 +41,7 @@ constructor(private SearchService : SearchService, private videoListState : Vide
             });
             if (this.first) {
                 this.videoListState.videoList = [];
+                this.videoListState.searched = true;
                 this.first = false;
                     }
             else this.first = true;
@@ -59,6 +63,7 @@ constructor(private SearchService : SearchService, private videoListState : Vide
         });
             if (this.first) {
                 this.videoListState.videoList = [];
+                this.videoListState.searched = true;
                 this.first = false;
             }
             else this.first = true;

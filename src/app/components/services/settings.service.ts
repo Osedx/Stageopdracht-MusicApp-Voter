@@ -3,12 +3,13 @@ import { APP_CONFIG, IAppConfig } from "../../app.config";
 
 @Injectable()
 export class SettingService {
-    deleteByDislikes : number;
-    resetSongsAfterDays : number;
+    removeAfterDislikes : number;
+    addToToplist : number;
+    addFromToplist : number;
 
     constructor(@Inject(APP_CONFIG) private config : IAppConfig) {
-             // You can use config.apiEndpoint now
-    this.deleteByDislikes = config.deleteByDislikes;
-    this.resetSongsAfterDays = config.resetSongsAfterDays;
+    this.removeAfterDislikes = config.removeAfterDislikes;
+    this.addToToplist = config.addToToplist;
+    this.addFromToplist = config.addFromToplist;
     }
 }

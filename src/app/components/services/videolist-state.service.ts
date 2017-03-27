@@ -8,6 +8,7 @@ export class VideoListState {
     videoList : Video[] = [];
     activeVideo : Video;
     isPlaying = false;
+    searched = false;
 
   constructor() {
   }
