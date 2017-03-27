@@ -189,7 +189,4 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 }
             }
         }
-    addFromToplist() {
-    
-}
 }
