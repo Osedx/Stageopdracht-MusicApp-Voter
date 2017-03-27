@@ -63,7 +63,7 @@ db.once("open", function() {
   });
     
   app.get("/toplist", function(req, res) {
-    PlaylistDatabase.find({}, null, function(err, docs) {
+    ToplistDatabase.find({}, null, function(err, docs) {
       if(err) return console.error(err);
         console.log(docs);
       res.json(docs);

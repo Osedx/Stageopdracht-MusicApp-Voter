@@ -48,7 +48,6 @@ export class PlaylistComponent implements OnInit {
                 console.log(data[randomIndex]);
                 console.log(this.playlistState.playList);
                 this.addToPlaylist(data[randomIndex]);
-                this.playlistState.playList[this.lengthPlaylist] = data[randomIndex];
                 console.log(this.playlistState.playList);
                 }
             },
@@ -58,6 +57,7 @@ export class PlaylistComponent implements OnInit {
             res => {
                 const newPlaylistItem = res.json();
                 console.log(newPlaylistItem);
+                this.playlistState.playList[this.lengthPlaylist] = newPlaylistItem;
           },
           error => console.log(error)
         );
