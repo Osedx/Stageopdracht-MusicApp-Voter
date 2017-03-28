@@ -16,11 +16,6 @@ export class DataService {
     return this.http.get("/playlist").map(res => res.json());
   }
 
-  getToplist() : Observable<any> {
-          return this.http.get("https://musicwebapp.herokuapp.com/toplist")
-          .map((res) => res.json());
-  }
-
   getOwnPlaylist(id : String) : Observable<any> {
     console.log(id);
     return this.http.get(`/personalvideos/${id}`, this.options);

@@ -12,9 +12,11 @@ var compress = require("compression");
 var morgan = require("morgan"); // logger
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose"); //database
+var cors = require('cors') //middleware
 
 
 app.use(compress());
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,7 +59,6 @@ db.once("open", function() {
   app.get("/playlist", function(req, res) {
     PlaylistDatabase.find({}, null,  {sort: {"rating": -1 }}, function(err, docs) {
       if(err) return console.error(err);
-        console.log(docs);
       res.json(docs);
     });
   });
@@ -65,7 +66,6 @@ db.once("open", function() {
   app.get("/toplist", function(req, res) {
     ToplistDatabase.find({}, null, function(err, docs) {
       if(err) return console.error(err);
-        console.log(docs);
       res.json(docs);
     });
   });
@@ -96,9 +96,7 @@ db.once("open", function() {
 
   // create
   app.post("/playlistitem", function(req, res) {
-    console.log(req.body);
     var obj = new PlaylistDatabase(req.body);
-    console.log(obj);
     obj.save(function(err, obj) {
       if(err) return console.error(err);
       res.status(200).json(obj);
@@ -107,9 +105,7 @@ db.once("open", function() {
 
   // create
   app.post("/toplistitem", function(req, res) {
-    console.log(req.body);
     var obj = new ToplistDatabase(req.body);
-    console.log(obj);
     obj.save(function(err, obj) {
       if(err) return console.error(err);
       res.status(200).json(obj);
@@ -117,9 +113,7 @@ db.once("open", function() {
   });
     
   app.post("/rating", function(req, res) {
-    console.log(req.body);
     var obj = new RatingDatabase(req.body);
-    console.log(obj);
     obj.save(function(err, obj) {
       if(err) return console.error(err);
       res.status(200).json(obj);
@@ -138,7 +132,6 @@ db.once("open", function() {
   app.get("/rating/:userid/:playlistitemid", function(req, res) {
     RatingDatabase.findOne({"userid": req.params.userid, "playlistitemid": req.params.playlistitemid }, function(err, obj) {
       if(err) return console.error(err);
-      console.log(obj);
       res.json(obj);
     });
   });
