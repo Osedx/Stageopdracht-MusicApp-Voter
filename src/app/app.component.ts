@@ -1,8 +1,8 @@
 import { Component, ElementRef, EventEmitter, Renderer } from "@angular/core";
 import { Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationError }  from "@angular/router";
 
-import "../../bower_components/jquery/dist/jquery.min.js";
-import "../../bower_components/semantic/dist/semantic.min.js";
+// import "../../bower_components/jquery/dist/jquery.min.js";
+// import "../../bower_components/semantic/dist/semantic.min.js";
 import "../../public/assets/scss/styles.scss";
 
 @Component({

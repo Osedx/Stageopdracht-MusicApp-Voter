@@ -96,6 +96,11 @@ b{
 .invisible {
     visibility: hidden;
 }
+.deletedtext {
+    color: $dislike;
+    align-self: center;
+    margin-right: 1em;
+}
 @media (max-width: 400px) {
    .ui.tiny.playlistimage {
     width: 60px;

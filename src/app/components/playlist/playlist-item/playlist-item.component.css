@@ -107,20 +107,26 @@ b {
 .invisible {
   visibility: hidden; }
 
+/* line 99, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+.deletedtext {
+  color: #b35252;
+  align-self: center;
+  margin-right: 1em; }
+
 @media (max-width: 400px) {
-  /* line 100, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+  /* line 105, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .ui.tiny.playlistimage {
     width: 60px; }
-  /* line 103, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+  /* line 108, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .ui.list {
     font-size: 0.8em; }
-  /* line 106, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+  /* line 111, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .playlistflexcontainer {
     max-height: 50px; }
-  /* line 109, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+  /* line 114, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .ui.list > .item .header {
     line-height: 1.3em; }
-  /* line 112, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
+  /* line 117, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .number {
     top: 15px; } }
 

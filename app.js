@@ -5,6 +5,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || "local";
 require("rootpath")();
 var express = require("express");
 var app = express();
+var http = require("http");
+var server = http.createServer(app);
 var path = require("path");
 var config = require("config/main");
 // var proxy = require("app/middleware/proxy");
@@ -12,8 +14,8 @@ var compress = require("compression");
 var morgan = require("morgan"); // logger
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose"); //database
-var cors = require('cors') //middleware
-
+var cors = require("cors"); //middleware
+var io = require("socket.io").listen(server);
 
 app.use(compress());
 app.use(cors());
@@ -31,8 +33,8 @@ app.use(morgan("dev"));
     next();
  });
 
-// Database
-var mongoose = require("mongoose");
+// Connecting database
+
 //mongoose.connect("mongodb://localhost:27017/test");
 
  process.env.MONGOLAB_URI="mongodb://Osedx:azerty123@ds019624.mlab.com:19624/heroku_469576p2";
@@ -73,7 +75,6 @@ db.once("open", function() {
   app.get("/personalvideos/:id", function(req, res) {
     PlaylistDatabase.find({ uploaderid: req.params.id }, null,  {sort: {"rating": -1 }}, function(err, obj) {
       if(err) return console.error(err);
-      console.log(obj);
       res.json(obj);
     });
   });
@@ -172,48 +173,25 @@ db.once("open", function() {
     // Load all custom routes
     require("app/routes")(app);
 
-    // Start the server
-    app.listen(process.env.PORT || 3016, function() {
-        console.log("app listening at http://localhost:%s running in %s mode.", process.env.PORT || 3016, process.env.NODE_ENV); // eslint-disable-line no-console
-    });
-
 });
 
-//// Setup dumb proxy
-// app.use("/proxy", function(req, res, next) {
-//    var options = {
-//        target: config.server.proxyBaseUrl + config.server.proxySuffix,
-//        changeOrigin: true,
-//        headers: {
-//            host: config.server.host,
-//            apikey: config.server.apikey,
-//            tenant: config.server.tenant
-//        }
-//    };
-//
-//    proxy(req, res, options);
-// });
-//
-//// Setup proxy for files
-// app.use([
-//    "/files",
-//    "/file",
-//    "/" + config.server.proxySuffix + "files",
-//    "/" + config.server.proxySuffix + "file"
-//],
-//    function(req, res, next) {
-//        var options = {
-//            target: config.server.proxyBaseUrl + config.server.proxySuffix + "files/",
-//            changeOrigin: true,
-//            headers: {
-//                host: config.server.host,
-//                apikey: config.server.apikey,
-//                tenant: config.server.tenant
-//            }
-//        };
-//
-//        proxy(req, res, options);
-//    });
+// Start the server
+    server.listen(process.env.PORT || 3016, function() {
+        console.log("app listening at http://localhost:%s running in %s mode.", process.env.PORT || 3016, process.env.NODE_ENV); // eslint-disable-line no-console
+});
 
+//io.set("origins", "*:*");
+
+io.sockets.on("connection", function (socket) {
+    console.log("New user connected: " +socket.id);
+    socket.on("disconnect", function(){
+    console.log("The user is disconnected"); });
+    socket.on("updateplaylist", function(id){
+        socket.broadcast.emit("playlistisupdated", id);
+    });
+    socket.on("deletefromplaylist", function(id){
+        socket.broadcast.emit("itemdeleted", id);
+    });
+});
 
 exports = module.exports = app;

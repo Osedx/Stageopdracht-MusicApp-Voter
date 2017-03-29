@@ -1,0 +1,39 @@
+/* line 4, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+.footer {
+  overflow: hidden;
+  color: #ffffff;
+  background: #363636; }
+
+/* line 11, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+.footer-title {
+  margin-bottom: 1.875rem; }
+
+/* line 15, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+.footer-column {
+  margin-bottom: 1.875rem; }
+
+/* line 19, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+.footer-bottom {
+  position: relative;
+  height: 3rem;
+  padding: .5rem 0;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #bfbfbf;
+  background: #000000; }
+
+/* line 32, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+.footer-copyright {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 5rem;
+  transform: translate(-50%, -50%); }
+
+@media (max-width: 990px) {
+  /* line 44, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/core/footer/footer.component.scss */
+  .footer {
+    display: none; } }
+
+/*# sourceMappingURL=footer.component.css.map */

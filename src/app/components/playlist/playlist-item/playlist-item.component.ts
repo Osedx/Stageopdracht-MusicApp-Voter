@@ -8,6 +8,7 @@ import { DataService } from "../../../services/data.service";
 import { SettingService } from "../../services/settings.service";
 import { Rating } from "../../../components/models/rating.model";
 import { AF } from "../../../providers/af";
+import { SocketService } from "../../../services/socket.service";
 
 @Component({
   selector: "app-playlist-item",
@@ -15,6 +16,7 @@ import { AF } from "../../../providers/af";
   styleUrls: ["playlist-item.component.scss"]
 })
 export class PlaylistItemComponent implements OnDestroy, OnInit {
+    private host : string = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
     clicked : boolean;
     @Input() playlistitem : Playlist;
     @Input() index : number;
@@ -25,9 +27,11 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     thumbsupdisabled : Boolean;
     thumbsdownactive : Boolean;
     thumbsdowndisabled : Boolean;
+    deleted = false;
 
 
-    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF, private settingService : SettingService ) {}
+    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF, private settingService : SettingService, private socketService : SocketService ) {
+    }
 
     ngOnDestroy() {
             if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
@@ -38,7 +42,6 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         this.thumbsupdisabled = false;
         this.thumbsdownactive = false;
         this.thumbsdowndisabled = false;
-//        console.log(this.playlistitem);
             if (typeof this.afService.uid !== "undefined") {
             this.getRatings(this.afService.uid, this.playlistitem._id);
             }
@@ -61,9 +64,10 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
             if (this.playlistitem.rating <= -this.settingService.removeAfterDislikes) {
                 this.deleteFromPlaylist();
             }
-                else {
+            else {
                 this.updatePlaylist();
-                this.createRating("disliked"); }
+                this.createRating("disliked");
+            }
             }
             else {
                 this.thumbsdownactive = false;
@@ -97,7 +101,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     // update the rating of the playlist
         updatePlaylist() {
         this.dataService.updatePlaylist(this.playlistitem).subscribe(
-            res => { console.log("item updated successfully.", "success"); },
+            res => { this.socketService.socket.emit("updateplaylist", this.afService.uid); },
             error => { console.log(error); }
         ); }
     // add to song to toplist
@@ -129,9 +133,10 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     // delete the playlistitem by id
         deletePlaylistItem(id : String) {
              this.dataService.deletePlaylistItem(id).subscribe(
-                res => { this.playlistState.playList.splice(this.index, 1);
-                    console.log(this.index);
-                    console.log(this.playlistitem);
+                res => {
+//                  this.playlistState.playList.splice(this.index, 1);
+                    this.playlistitem.isdeleted = true;
+                    this.socketService.socket.emit("deletefromplaylist", this.playlistitem._id);
                     console.log("playlistitem succesfully deleted from database.", "success");
                 },
                 error => { console.log(error); }

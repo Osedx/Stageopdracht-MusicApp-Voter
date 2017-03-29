@@ -39,3 +39,9 @@
 
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 990px) {
+    .footer {
+        display:none;
+    }
+}

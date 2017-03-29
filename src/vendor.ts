@@ -15,9 +15,10 @@ import "rxjs";
 // Other
 import "lodash";
 import "angular2-masonry";
-import "ng2-translate";
+// import "ng2-translate";
 // import "jquery";
 import "../bower_components/jquery/dist/jquery.min.js";
 import "../bower_components/semantic/dist/semantic.min.js";
+import "../node_modules/socket.io-client/dist/socket.io.min.js";
 
 import "slick-carousel";

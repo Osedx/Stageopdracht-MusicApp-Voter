@@ -1,1 +1,27 @@
-// @import "../../search/videolist/videolist.component.scss";
+.ui.message {
+    width: 100%;
+}
+
+.ui.message p:first-child {
+    display: inline;
+    padding-right: 5%;
+}
+.fa-refresh {
+    display: inline;
+    color:black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.fa-refresh {
+    display: inline;
+    color:black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.fa-refresh:hover{
+    opacity: 0.65;
+    cursor: pointer;
+}

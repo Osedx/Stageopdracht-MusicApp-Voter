@@ -1,2 +1,31 @@
+/* line 1, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist/playlist.component.scss */
+.ui.message {
+  width: 100%; }
+
+/* line 5, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist/playlist.component.scss */
+.ui.message p:first-child {
+  display: inline;
+  padding-right: 5%; }
+
+/* line 9, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist/playlist.component.scss */
+.fa-refresh {
+  display: inline;
+  color: black;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+
+/* line 16, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist/playlist.component.scss */
+.fa-refresh {
+  display: inline;
+  color: black;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+
+/* line 24, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist/playlist.component.scss */
+.fa-refresh:hover {
+  opacity: 0.65;
+  cursor: pointer; }
 
 /*# sourceMappingURL=playlist.component.css.map */
