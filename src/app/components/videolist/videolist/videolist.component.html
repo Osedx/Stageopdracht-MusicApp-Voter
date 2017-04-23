@@ -1,0 +1,9 @@
+<div class='title ui raised segment'>Videos</div>
+<div class="ui relaxed divided list" *ngIf="!notFound">
+    <div class="item" *ngFor="let v of playlistState.playList; let i = index">
+        <app-video [playlistitem]="v" [index]="i"></app-video>
+    </div>
+</div>
+<div *ngIf="notFound" class="notFound">
+        No music videos found.
+</div>

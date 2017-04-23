@@ -12,5 +12,5 @@ export interface IAppConfig {
 
 export const AppConfig : IAppConfig = {
     removeAfterDislikes : 3,
-    addToToplist : 1,
+    addToToplist : 3,
 };

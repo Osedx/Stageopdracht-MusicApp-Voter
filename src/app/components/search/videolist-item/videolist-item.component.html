@@ -17,7 +17,8 @@
         </div>
         </div>
     <div class="right floated content">
-        <div class="ui button" (click)="add()" [ngClass]="{'disabled': clicked}" >Add</div>
+        <div *ngIf="!clicked" class="ui button" (click)="add()" [ngClass]="{'disabled': clicked}" >Add</div>
+        <div *ngIf="clicked" class="ui button" [ngClass]="{'disabled': clicked}">Added</div>
     </div>
     </div>
 </div>

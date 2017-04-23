@@ -21,13 +21,15 @@ export class SearchbarComponent implements OnInit {
     first = true;
     @ViewChild("name") vc : any;
 
-constructor(private SearchService : SearchService, private videoListState : VideoListState ) {
+constructor(private searchService : SearchService, private videoListState : VideoListState ) {
     this.videoListState.searched = false;
+    this.videoListState.notFound = false;
 }
 ngOnInit() {
    this.search.valueChanges
-       .debounceTime(200)
-       .switchMap(query => this.SearchService.fetchShortVideos(query))
+       .debounceTime(400)
+       .switchMap(query => {
+        return this.searchService.fetchShortVideos(query); })
         .subscribe(data => {
         this.videoListShort = data.items.map((item : any) => {
         return new Video(
@@ -46,10 +48,13 @@ ngOnInit() {
                     }
             else this.first = true;
                 this.videoListState.videoList = this.videoListState.videoList.concat(this.videoListShort);
+                if (this.videoListState.videoList.length === 0) this.videoListState.notFound = true;
+                else this.videoListState.notFound = false;
             });
    this.search.valueChanges
-    .debounceTime(200)
-    .switchMap(query => this.SearchService.fetchMediumVideos(query))
+    .debounceTime(400)
+       .switchMap(query => {
+       return this.searchService.fetchMediumVideos(query); })
     .subscribe(data => {
         this.videoListMedium = data.items.map((item : any) => {
           return new Video(
@@ -68,6 +73,9 @@ ngOnInit() {
             }
             else this.first = true;
                 this.videoListState.videoList = this.videoListState.videoList.concat(this.videoListMedium);
+                if (this.videoListState.videoList.length === 0) this.videoListState.notFound = true;
+                else this.videoListState.notFound = false;
+    console.log(this.searchService.seeking);
       });
 }
     ngAfterViewInit() {

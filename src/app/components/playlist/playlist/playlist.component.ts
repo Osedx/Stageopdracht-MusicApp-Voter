@@ -15,7 +15,7 @@ export class PlaylistComponent implements OnInit {
 
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
     messageUpdate = false;
-
+    notFound = false;
     constructor( private playlistState : PlaylistState, private dataservice : DataService,
     private socketService : SocketService, private afService : AF ) {
         this.playlistState.playList = [];
@@ -38,7 +38,10 @@ export class PlaylistComponent implements OnInit {
     getPlaylist() {
         this.dataservice.getPlaylist().subscribe(
             data => {
-            this.playlistState.playList = data;  },
+            this.playlistState.playList = data;
+            if (this.playlistState.playList.length === 0) this.notFound = true;
+            else this.notFound = false;
+            },
     error => { console.log(error); } ); }
     stop() {
         if (typeof this.playlistplayer === "undefined") return;

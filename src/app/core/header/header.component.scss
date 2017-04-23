@@ -1,5 +1,13 @@
 @import "../../utilities/variables.scss";
 
+.navigation {
+    width: 100%;
+}
+
+.ui.menu .item.nav-item>i.icon {
+    margin: auto;
+}
+
 .ui.secondary.pointing.menu{
     padding: 10px 50px 10px 50px;
     border-bottom: none;
@@ -50,4 +58,20 @@
 }
 .ui.menu .item{
     padding:10px 15px;
+}
+.loginlogo {
+    margin: auto;
+}
+@media (max-width: 500px) {
+        .ui.menu .nav-item {
+        width: -webkit-calc(25% - 15px);
+        width:    -moz-calc(25% - 15px);
+        width:         calc(25% - 15px);
+    }
+    .link.right, .ui.tablet.mobile.only.row.grid {
+        width: 100%;
+    }
+    .ui.dropdown>.text {
+        display: none;
+    }
 }

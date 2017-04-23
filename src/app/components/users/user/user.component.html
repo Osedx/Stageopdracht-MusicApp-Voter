@@ -1,0 +1,47 @@
+<sm-modal title="Update user" class="basic" #updateModal>
+    <modal-content>
+        <div class="usermodal-container">
+            <form class="form ui" (submit)="updateUser($event, name.value, role.value)" id="user_modal">
+                <div class="field">
+                    <label>Name</label>
+                    <input #name type="text" id="name" class="form-control" placeholder="name" required="" #name value="{{user.name}}">
+                </div>
+                <div class="field">
+                    <label>Role</label>
+                    <select #role class="ui fluid search dropdown" id="role"  class="form-control" type="select">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button class="user usermodal-submit" type="submit" (click)="updateModal.hide()">Update user</button>
+            </form>
+        </div>
+    </modal-content>
+</sm-modal>
+<sm-modal title="Remove user" class="basic" #removeModal>
+    <modal-content>
+        <div class="buttonContainer">
+            <button class="ui button positief" (click)="removeUser()" (click)="removeModal.hide()">Yes</button>
+            <button class="ui button negatief" (click)="removeModal.hide()">No</button>
+        </div>
+    </modal-content>
+</sm-modal>
+<div class="playlistflexcontainer">
+    <div class="infocontainer">
+        <div class="content">
+            <div class="header">
+                {{user.name}}
+            </div>
+            <div class="info">
+                <div class="description">{{user.email}}</div>
+                <div class="description">( {{user.role}} )</div>
+            </div>
+        </div>
+        <div class="thumbscontainer">
+            <i class="fa fa-pencil fa-2x adminicons" aria-hidden="true" (click)="updateModal.show()"></i>
+            <i class="fa fa-ban fa-2x adminicons" aria-hidden="true" (click)="updateUserStatus()"
+            *ngIf="!isAdmin" [ngClass]="{'blocked': isBlocked}"></i>
+            <i class="fa fa-trash fa-2x adminicons" aria-hidden="true" (click)="removeModal.show()" *ngIf="!isAdmin"></i>
+        </div>
+</div>
+</div>

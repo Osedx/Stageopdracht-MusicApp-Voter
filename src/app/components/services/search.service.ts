@@ -10,6 +10,7 @@ import "rxjs/add/operator/map";
 
 @Injectable()
 export class SearchService {
+    seeking = false;
   constructor(private http : Http, @Inject(VideoListState) private videoListState : VideoListState) {}
     fetchShortVideos(query : string) {
     if (query === "") {

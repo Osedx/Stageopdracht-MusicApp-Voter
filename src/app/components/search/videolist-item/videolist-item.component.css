@@ -11,44 +11,44 @@
   padding: 2px;
   color: white; }
 
-/* line 16, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 15, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .ui.list > .item .description {
   color: #e7e7e7; }
 
-/* line 19, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 18, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .ui.divided.list > .item {
   padding: 0 0 0 5px;
   border-top: white 1px solid; }
 
-/* line 24, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 23, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .ui.button {
   display: inline;
   position: relative;
   top: 33px;
   background-color: white; }
 
-/* line 31, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 30, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .info {
   width: 75%;
   display: inline; }
 
-/* line 35, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 34, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .ui.tiny.image {
   width: 105px; }
 
-/* line 38, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 37, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .ui.tiny.image:hover {
   filter: brightness(1) invert(0.2);
   cursor: pointer; }
 
-/* line 42, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 41, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .videolistflexcontainer {
   max-height: 70px;
   display: flex;
   justify-content: space-between;
   flex-direction: row; }
 
-/* line 48, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
+/* line 47, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist-item/videolist-item.component.scss */
 .info {
   width: 100%; }
 

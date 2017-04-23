@@ -1,0 +1,32 @@
+@import "../../../utilities/variables.scss";
+
+.adminicons {
+    align-self: center;
+    padding: 5px;
+}
+.ui.button.positief {
+    padding: 10px 20px 10px 20px;
+    margin-right: 15px;
+    top:0;
+    opacity: 1;
+    background-color: $like;
+    &:active{
+        background-color: $likeactive;
+    } 
+}
+.ui.button.negatief {
+    padding: 10px 20px 10px 20px;
+    opacity: 1;
+    top:0;
+    background-color: $dislike;
+    &:active{
+        background-color: $dislikeactive;
+    }
+}
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+.blocked {
+    color : $dislike;
+}

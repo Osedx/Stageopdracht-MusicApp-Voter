@@ -46,7 +46,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
             this.getRatings(this.afService.uid, this.playlistitem._id);
             }
             else {
-            this._subscription = this.afService.changeId.subscribe((userid : String) => {
+            this._subscription = this.afService.changeId.subscribe((userid : string) => {
             this.getRatings(userid, this.playlistitem._id);
             }); }}
 
@@ -115,7 +115,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         );
         }
     // create a new rating in the database
-        createRating(rating : String) {
+        createRating(rating : string) {
             this.dataService.addRating({ "userid" : this.afService.uid, "playlistitemid" : this.playlistitem._id, "rating" : rating }).subscribe(
             res => {
                 this.rating = res.json();
@@ -131,7 +131,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
             this.deleteRatings(this.playlistitem._id);
         }
     // delete the playlistitem by id
-        deletePlaylistItem(id : String) {
+        deletePlaylistItem(id : string) {
              this.dataService.deletePlaylistItem(id).subscribe(
                 res => {
 //                  this.playlistState.playList.splice(this.index, 1);
@@ -143,7 +143,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
               );
         }
     // delete all ratings with the given playlistitemid
-        deleteRatings(id : String) {
+        deleteRatings(id : string) {
              this.dataService.deleteRatings(id).subscribe(
                 res => {
                 console.log(this.rating);
@@ -165,7 +165,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
               );
         }
     // get the ratings from the logged in user
-        getRatings(userid : String, playlistitemid : String) {
+        getRatings(userid : string, playlistitemid : string) {
         this.dataService.getRatings(userid, playlistitemid).subscribe(
                 data => {
                 this.rating = data.json();

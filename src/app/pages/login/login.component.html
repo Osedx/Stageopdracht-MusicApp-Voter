@@ -1,11 +1,24 @@
-<!--
-<img 
-    width="560"
-    height="315"
-    [src]="/public/app/assets/District01_logo.png"
-/>
--->
+<sm-modal title="Reset password" class="basic" #resetModal>
+    <modal-content>
+        <div class="resetmodal-container">
+            <form class="form ui" (submit)="resetPassword($event, email.value)" id="user_modal">
+                <div class="field">
+                    <label>E-mail</label>
+                    <input #email type="email" id="email" class="form-control" placeholder="e-mail" required="">
+                </div>
+                <button class="reset resetmodal-submit" type="submit" (click)="resetModal.hide()">Send e-mail</button>
+            </form>
+        </div>
+    </modal-content>
+</sm-modal>
    <div class="modal-dialog">
+    <div class="ui positive message" *ngIf="messageSuccess">
+          <i class="close icon" (click)="closeSuccess()"></i>
+          <div class="header">
+            Successfull
+          </div>
+          <p>{{message}}.</p>
+    </div>
     <div class="loginmodal-container">
         <h1>Sign in</h1>
         <br>
@@ -13,9 +26,10 @@
         <div class="ui form segment">
             <div *ngIf="clickedLogin" class="field">
                 <form class="form-signin ui" (submit)="loginWithEmail($event, email.value, password.value)">
-                    <input #email type="email" id="email" class="form-control" placeholder="email address">
-                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="wachtwoord" required="">
+                    <input #email type="email" id="email" class="form-control" placeholder="e-mail">
+                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="password" required="">
                     <button class="login loginmodal-submit" type="submit">Login</button>
+                    <div class="reset loginmodal-submit" (click)="resetModal.show()">Reset password</div>
                 </form>
             </div>
             <button *ngIf="!clickedLogin" class="login loginmodal-submit" (click)="clickLogin()">Login</button>

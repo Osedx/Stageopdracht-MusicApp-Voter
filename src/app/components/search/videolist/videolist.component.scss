@@ -9,6 +9,19 @@
     height: 100vh;
     overflow-y: scroll;
 }
+.ui.list:first-child {
+    margin: 0;
+}
+.title.ui.raised.segment {
+    margin: 1em 0 0 0;
+    text-align: center;
+    color: white;
+    background-color: #555555;
+}
+.ui.list {
+    margin-top:0;
+}
+
 .ui.modal {
     width:88%;
 }
@@ -70,4 +83,7 @@
     position: fixed;
     top:0;
     right:0;
+}
+.ui.list.searchlist {
+    margin-top:0;
 }

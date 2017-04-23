@@ -13,6 +13,7 @@ import { AF } from "../../../providers/af";
 export class PersonalVideoListComponent implements OnInit {
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
     _subscription : any;
+    notFound = false;
     constructor( private playlistState : PlaylistState, private dataservice : DataService, private afService : AF) {
         this.playlistState.playList = [];
     }
@@ -21,16 +22,19 @@ export class PersonalVideoListComponent implements OnInit {
             this.getOwnPlaylist(this.afService.uid);
         }
         else {
-            this._subscription = this.afService.changeId.subscribe((userid : String) => {
+            this._subscription = this.afService.changeId.subscribe((userid : string) => {
             this.getOwnPlaylist(userid);
         }); }
         this.playlistState.activeVideo = undefined;
     }
-    getOwnPlaylist(id : String) {
+    getOwnPlaylist(id : string) {
         this.dataservice.getOwnPlaylist(id).subscribe(
             data => {
             console.log("Own videos " + data.json());
-            this.playlistState.playList = data.json();  },
+            this.playlistState.playList = data.json();
+               if (this.playlistState.playList.length === 0) this.notFound = true;
+                else this.notFound = false;
+            },
     error => { console.log(error); } ); }
     stop() {
         if (typeof this.playlistplayer === "undefined") return;

@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit, ElementRef } from "@angular/core";
 import { Video } from "../../models/video.model";
 import * as moment from "moment";
 import { VideoListState } from "../../services/videolist-state.service";
+import { SearchService } from "../../services/search.service";
 import { NgSemanticModule } from "ng-semantic";
 
 @Component({
@@ -13,7 +14,7 @@ export class VideoListComponent implements OnInit {
     @ViewChild("videoplayer") videoplayer : ElementRef;
 //    videoListShort : Video[] = [];
 //    videoListMedium : Video[] = [];
-    constructor(private videoListState : VideoListState) {
+constructor(private videoListState : VideoListState, private searchService : SearchService) {
         this.videoListState.videoList = [];
     }
     ngOnInit() {

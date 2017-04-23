@@ -1,0 +1,46 @@
+<sm-modal title="Add user" class="basic" #myModal>
+    <modal-content>
+        <div class="usermodal-container">
+            <form class="form ui" (submit)="addUser($event, name.value, email.value, password.value)" id="user_modal">
+                <div class="field">
+                    <label>Name</label>
+                    <input #name type="text" id="name" class="form-control" placeholder="name" required="" #name>
+                </div>
+                <div class="field">
+                    <label>E-mail</label> 
+                    <input #email type="email" id="email" class="form-control" placeholder="e-mail" #email>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="password" required="" #password>
+                </div>
+                <button class="user usermodal-submit" type="submit" (click)="myModal.hide()">Add user</button>
+            </form>
+        </div>
+    </modal-content>
+</sm-modal>
+  
+<div class='title ui raised segment'>Users</div>
+<!--
+    <div class="ui positive message" *ngIf="messageSuccess">
+          <i class="close icon" (click)="closeSuccess()"></i>
+          <div class="header">
+            Successfull
+          </div>
+          <p>{{message}}.</p>
+        </div>
+-->
+        <div class="ui negative message" *ngIf="messageFailed">
+          <i class="close icon" (click)="closeFailed()"></i>
+          <div class="header">
+            Failed
+          </div>
+          <p>{{message}}</p>
+    </div>
+   <div class="ui relaxed divided list">
+    <div class="item" *ngFor="let u of userlistState.userList; let i = index">
+        <app-user [user]="u" [index]="i"></app-user>
+    </div>
+</div>
+
+<i (click)="myModal.show()" class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>

@@ -5,9 +5,13 @@
         <i (click)="stop()" (click)="myModalNormal.hide()" class="fa fa-times fa-2x" aria-hidden="true"></i>
     </modal-content>
 </sm-modal>
+<div class='title ui raised segment'>Own videos</div>
 <div class="ui relaxed divided list">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i"></app-personalvideo>
     </div>
+</div>
+<div *ngIf="notFound" class="notFound">
+    No music videos found.
 </div>
 <i (click)="myModalNormal.show()" *ngIf="playlistState.isPlaying" class="fa fa-window-maximize fa-3x" aria-hidden="true"></i>

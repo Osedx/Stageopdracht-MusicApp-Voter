@@ -1,6 +1,9 @@
-import { Component, NgModule } from "@angular/core";
+import { Component, NgModule, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { CanActivateLoginViaAuthGuard } from "../../providers/login-activate.guard";
+import { CanActivateAdminViaAuthGuard } from "../../providers/admin-activate.guard";
+import { DataService } from "../../services/data.service";
 
 // Provider
 import {AF} from "../../providers/af";
@@ -11,49 +14,76 @@ import {AF} from "../../providers/af";
     styleUrls: ["./header.component.scss"]
 })
 
-export class HeaderComponent {
-    public isLoggedIn : boolean;
+export class HeaderComponent implements OnInit {
     public user : string;
 
-  constructor(public afService : AF, private router : Router) {
-    // This asynchronously checks if our user is logged it and will automatically
-    // redirect them to the Login page when the status changes.
-    // This is just a small thing that Firebase does that makes it easy to use.
+constructor(public afService : AF, private router : Router, private dataService : DataService,
+            private canActivateLoginViaAuthGuard : CanActivateLoginViaAuthGuard,
+            private canActivateAdminViaAuthGuard : CanActivateAdminViaAuthGuard) {}
+
+ngOnInit() {
     this.afService.af.auth.subscribe(
       (auth) => {
         if (auth == null) {
-          console.log("Niet ingelogd.");
+        this.canActivateLoginViaAuthGuard.isLoggedIn = false;
           this.router.navigate(["login"]);
-          this.isLoggedIn = false;
         }
         else {
-          console.log("Succesvol ingelogd.");
           // Set the Display Name and Email show it
           if (auth.google) {
-        console.log(auth.auth.displayName);
             this.afService.displayName = auth.auth.displayName;
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
-            console.log(auth.auth);
             this.user = this.afService.displayName.split(" ", 1)[0];
-              console.log(this.user);
           }
           else {
-            this.user = "Gebruiker";
             this.afService.displayName = auth.auth.displayName;
+            if (this.afService.displayName) {
+                this.user = this.afService.displayName.split(" ", 1)[0];
+            }
+            else {
+              this.user = "Interim";
+            }
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
           }
-          this.isLoggedIn = true;
+            const comp = this;
+            auth.auth.getToken(true).then(function(idToken) {
+                comp.getUser(idToken);
+                comp.afService.tokenId = idToken;
+                }).catch(function(error) {
+                console.log(error);
+            });
+          this.canActivateLoginViaAuthGuard.isLoggedIn = true;
           this.router.navigate([""]);
         }
         }
         );
     }
-      logout() {
-        this.isLoggedIn = false;
+    // get user from database with role
+    getUser(idToken : string) {
+        this.dataService.getUser(idToken).subscribe(
+            data => {
+                if (data.json() == null) this.addUser(idToken);
+                else this.canActivateAdminViaAuthGuard.role = data.json().role; },
+            error => {
+            console.log(error); }
+        );
+    }
+    addUser(idToken) {
+        this.dataService.addUser({ "_id" : this.afService.uid, "name" : this.afService.displayName, "email" : this.afService.email }, idToken).subscribe(
+            res => {
+                this.canActivateAdminViaAuthGuard.role = res.json().role;
+                console.log("User successfully added to datbase.", "success");
+          },
+          error => console.log(error)
+        );
+    }
+    // log the user out
+    logout() {
+        this.canActivateLoginViaAuthGuard.isLoggedIn = false;
         this.afService.logout();
-      }
+    }
 }

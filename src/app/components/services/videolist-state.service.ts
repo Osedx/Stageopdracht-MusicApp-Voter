@@ -9,6 +9,7 @@ export class VideoListState {
     activeVideo : Video;
     isPlaying = false;
     searched = false;
+    notFound = false;
 
   constructor() {
   }

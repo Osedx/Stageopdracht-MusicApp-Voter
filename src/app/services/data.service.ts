@@ -13,49 +13,78 @@ export class DataService {
   constructor(private http : Http) { }
 
   getPlaylist() : Observable<any> {
-    return this.http.get("/playlist").map(res => res.json());
+    return this.http.get("/api/playlist").map(res => res.json());
   }
 
-  getOwnPlaylist(id : String) : Observable<any> {
-    console.log(id);
-    return this.http.get(`/personalvideos/${id}`, this.options);
+  getUserStatus(idtoken, id) : Observable<any> {
+    return this.http.get(`/api/userstatus/${idtoken}/${id}`).map(res => res.json());
+  }
+
+  getAllUsers(id) : Observable<any> {
+    return this.http.get(`/api/users/${id}`).map(res => res.json());
+  }
+
+  getOwnPlaylist(id : string) : Observable<any> {
+    return this.http.get(`/api/personalvideos/${id}`, this.options);
   }
 
   addPlaylistItem(playlistitem : any) : Observable<any> {
-    console.log(JSON.stringify(playlistitem));
-    return this.http.post("/playlistitem", JSON.stringify(playlistitem), this.options);
+    return this.http.post("/api/playlistitem", JSON.stringify(playlistitem), this.options);
   }
 
   addToplistItem(toplistitem : any) : Observable<any> {
-    console.log(JSON.stringify(toplistitem));
-    return this.http.post("/toplistitem", JSON.stringify(toplistitem), this.options);
+    return this.http.post("/api/toplistitem", JSON.stringify(toplistitem), this.options);
   }
 
   updatePlaylist(playlistitem : any) : Observable<any> {
-    return this.http.put(`/playlistitem/${playlistitem._id}`, JSON.stringify(playlistitem), this.options);
+    return this.http.put(`/api/playlistitem/${playlistitem._id}`, JSON.stringify(playlistitem), this.options);
   }
 
-  deletePlaylistItem(id : String) : Observable<any> {
-    return this.http.delete(`/playlistitem/${id}`, this.options);
+  updateUser(tokenid : string, user : any) : Observable<any> {
+    console.log(user);
+    return this.http.put(`/api/user/${tokenid}/${user._id}`, JSON.stringify(user), this.options);
+  }
+
+  updateUserStatus(tokenid : string, user : any) : Observable<any> {
+    console.log(JSON.stringify(user));
+    return this.http.put(`/api/userstatus/${tokenid}/${user._id}`, JSON.stringify(user), this.options);
+  }
+
+  deletePlaylistItem(id : string) : Observable<any> {
+    return this.http.delete(`/api/playlistitem/${id}`, this.options);
   }
 
   addRating(rating : any) : Observable<any> {
     console.log(JSON.stringify(rating));
-    return this.http.post("/rating", JSON.stringify(rating), this.options);
+    return this.http.post("/api/rating", JSON.stringify(rating), this.options);
+  }
+
+  addUser(user : any, idToken : string) : Observable<any> {
+    console.log(JSON.stringify(user));
+    return this.http.post(`/api/user/${idToken}`, JSON.stringify(user), this.options);
+  }
+
+ addUserToFirebase(user : any) : Observable<any> {
+    return this.http.post("/api/userfirebase/", JSON.stringify(user), this.options);
   }
 
   deleteRating(rating : any) : Observable<any> {
-    console.log("delete - ratingid: " + rating._id);
-    console.log("delete - playlistitemid: " + rating.playlistitemid);
-    return this.http.delete(`/rating/${rating._id}`, this.options);
+    return this.http.delete(`/api/rating/${rating._id}`, this.options);
   }
 
-  deleteRatings(id : String) : Observable<any> {
-    console.log(id);
-    return this.http.delete(`/ratings/${id}`, this.options);
+  deleteRatings(id : string) : Observable<any> {
+    return this.http.delete(`/api/ratings/${id}`, this.options);
   }
 
-getRatings(userid : String, playlistitemid : String) : Observable<any> {
-        return this.http.get(`/rating/${userid}/${playlistitemid}`, this.options);
+  deleteUser(tokenid : string, id : string) : Observable<any> {
+    return this.http.delete(`/api/user/${tokenid}/${id}`, this.options);
+  }
+
+  getRatings(userid : string, playlistitemid : string) : Observable<any> {
+        return this.http.get(`/api/rating/${userid}/${playlistitemid}`, this.options);
+    }
+
+  getUser(id : string) : Observable<any> {
+        return this.http.get(`/api/user/${id}`, this.options);
     }
 }

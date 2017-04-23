@@ -43,11 +43,24 @@
 }
 .loginwithgoogle{
   background-color: #ffffff;
+    &:hover{
+        background-color: #e3e3e3;  
+    } 
 }
 .login{
-  background-color: lightblue;
+    background-color: black;
+    color: white;
     &:hover{
-        background-color: #86bed0;  
+        background-color: #2a2a2a;  
+    }
+}
+.reset{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0px;
+        &:hover{
+        cursor: pointer;
+        background-color: white;  
     }
 }
 hr{

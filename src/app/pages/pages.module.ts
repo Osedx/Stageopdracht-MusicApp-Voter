@@ -3,6 +3,7 @@ import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { Router } from "@angular/router";
+import { VideolistPageModule }  from "./videos/videolistpage.module";
 
 // import { ComponentsModule } from "../components";
 import { DirectivesModule } from "../directives";
@@ -12,6 +13,7 @@ import { PersonalModule } from "./personal/personal.module";
 import { AddModule } from "./add/add.module";
 import { LoginComponent} from "./login/login.component";
 import { PlaylistPageModule } from "./playlist/playlistpage.module";
+import { UserlistPageModule } from "./users/userlistpage.module";
 
 import { PagesRoutingModule } from "./pages.routing.module";
 
@@ -20,6 +22,9 @@ import { AngularFireModule } from "angularfire2";
 import {AF} from "../providers/af";
 
 import { NgSemanticModule } from "ng-semantic";
+
+import { CanActivateAdminViaAuthGuard } from "../providers/admin-activate.guard";
+import { CanActivateLoginViaAuthGuard } from "../providers/login-activate.guard";
 
 // Must export the config
 export const firebaseConfig = {
@@ -39,6 +44,8 @@ export const firebaseConfig = {
         CommonModule,
         HttpModule,
         PagesRoutingModule,
+        VideolistPageModule,
+        UserlistPageModule,
         AngularFireModule.initializeApp(firebaseConfig),
 
 //        ComponentsModule,
@@ -46,9 +53,9 @@ export const firebaseConfig = {
         PipesModule
     ],
     declarations: [
-        LoginComponent
+        LoginComponent,
     ],
-    providers: [AF],
+    providers: [AF, CanActivateLoginViaAuthGuard, CanActivateAdminViaAuthGuard],
     exports: [
         RouterModule
     ]

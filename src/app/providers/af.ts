@@ -1,6 +1,6 @@
 // src/app/providers/af.ts
-import { Injectable } from "@angular/core";
-import { AngularFire, AuthProviders, AuthMethods } from "angularfire2";
+import { Injectable, Inject } from "@angular/core";
+import { AngularFire, AuthProviders, AuthMethods, FirebaseApp  } from "angularfire2";
 import { Subject }    from "rxjs/Subject";
 
 @Injectable()
@@ -8,8 +8,11 @@ export class AF {
   public displayName : string;
   public email : string;
   public uid : string;
+  public tokenId : string;
   public changeId : Subject<string> = new Subject<string>();
-  constructor(public af : AngularFire) {}
+  constructor(public af : AngularFire, @Inject(FirebaseApp) fa : any) {
+    this.auth = fa.auth();
+  }
 
   loginWithGoogle() {
     return this.af.auth.login({
@@ -21,12 +24,15 @@ export class AF {
     return this.af.auth.login({
         email: email,
         password: password,
-      },
-      {
+    },
+    {
         provider: AuthProviders.Password,
         method: AuthMethods.Password,
-      });
+    });
   }
+    sendReset(email) {
+    return this.auth.sendPasswordResetEmail(email);
+    }
 
   /**
    * Logs out the current user
