@@ -26,6 +26,7 @@ constructor(public afService : AF, private router : Router) {}
         this.router.navigate([""]);
     });
   }
+
    loginWithEmail(event : Event, email : string, password : string) {
     event.preventDefault();
     this.afService.loginWithEmail(email, password).then(() => {

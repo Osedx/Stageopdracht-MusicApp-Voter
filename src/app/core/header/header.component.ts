@@ -43,7 +43,7 @@ ngOnInit() {
                 this.user = this.afService.displayName.split(" ", 1)[0];
             }
             else {
-              this.user = "Interim";
+              this.user = "Anonymous";
             }
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
