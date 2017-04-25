@@ -5,7 +5,7 @@
   border-radius: 5px;
   margin-bottom: 25px;
   background: black;
-  height: 100vh;
+  height: calc(100vh - 124px);
   overflow-y: scroll; }
 
 /* line 12, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/search/videolist/videolist.component.scss */
