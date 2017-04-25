@@ -7,7 +7,7 @@ var baseUrl = path.resolve(__dirname, "../");
 
 Utils.log.lined("STARTING WEBPACK BUILD...");
 
-process.env.NODE_ENV = process.env.NODE_ENV || "local";
+process.env.NODE_ENV = process.env.NODE_ENV || "server";
 
 Utils.npmExec.spawnSyncOut("webpack", "--progress".split(" "), { cwd: baseUrl, stdio: [0, 1, 2] });
 
