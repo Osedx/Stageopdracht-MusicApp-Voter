@@ -15,6 +15,7 @@ export class PersonalVideoListComponent implements OnInit {
     _subscription : any;
     notFound = false;
     constructor( private playlistState : PlaylistState, private dataservice : DataService, private afService : AF) {
+        this.playlistState.isPlaying = false;
         this.playlistState.playList = [];
     }
     ngOnInit() {

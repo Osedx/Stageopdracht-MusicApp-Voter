@@ -20,7 +20,6 @@ constructor(private videoListState : VideoListState, private searchService : Sea
     ngOnInit() {
     this.videoListState.activeVideo = undefined;
     this.videoListState.isPlaying = false;
-    this.videoListState.isPlaying = false;
     }
     stop() {
         if (typeof this.videoplayer === "undefined") return;

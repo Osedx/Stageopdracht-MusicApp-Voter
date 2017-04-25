@@ -15,6 +15,13 @@
 }
 
 .ui.list>.item .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    font-size: 1em;
+    line-height: 1.2em;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
     color: #e7e7e7;
 }
 .ui.divided.list>.item{
@@ -103,13 +110,13 @@ b{
 }
 @media (max-width: 400px) {
    .ui.tiny.playlistimage {
-    width: 60px;
+    width: 105px;
     }
     .ui.list {
     font-size: 0.8em;
     }
     .playlistflexcontainer{
-    max-height: 50px;
+    max-height: 70px;
     }
     .ui.list > .item .header {
         line-height: 1.3em;

@@ -18,6 +18,7 @@ export class PlaylistComponent implements OnInit {
     notFound = false;
     constructor( private playlistState : PlaylistState, private dataservice : DataService,
     private socketService : SocketService, private afService : AF ) {
+        this.playlistState.isPlaying = false;
         this.playlistState.playList = [];
         socketService.socket.on("playlistisupdated", (userid) => {
             this.messageUpdate = true;
