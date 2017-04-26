@@ -1,7 +1,7 @@
 .loginmodal-container {
   max-width: 350px;
   width: 100% !important;
-  margin: 50px auto auto;
+  margin: 125px auto auto;
   overflow: hidden;
   font-family: roboto;
 }
@@ -43,6 +43,7 @@
 }
 .loginwithgoogle{
   background-color: #ffffff;
+  position: relative;
     &:hover{
         background-color: #e3e3e3;  
     } 
@@ -53,6 +54,17 @@
     &:hover{
         background-color: #2a2a2a;  
     }
+}
+
+.fa.fa-google {
+    color: white;
+    background-color: black;
+    opacity: 1;
+    padding: 10px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 2px;
 }
 .reset{
     text-align: center;
@@ -78,10 +90,14 @@ hr{
     background-color: #f4f4f4;
 }
 #email+.error {
+    font-family: 'Didact Gothic', sans-serif;
     background-color: #fff6f6;
     color: #9f3a38;
 }
 
 #email+.error:focus {
     border-color: #9f3a38;
+}
+.ui.message {
+        font-family: 'Didact Gothic', sans-serif;
 }

@@ -111,7 +111,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 "channelid" : this.playlistitem.channelid, "description" : this.playlistitem.description}).subscribe(
             res => {
                 const newToplistItem = res.json();
-                console.log(newToplistItem);
+//                console.log(newToplistItem);
           },
         error => {console.log(error); }
         );

@@ -4,6 +4,7 @@ import { Playlist } from "../../models/playlist.model";
 import { DataService } from "../../../services/data.service";
 import { SocketService } from "../../../services/socket.service";
 import { PlaylistState } from "../../services/playlist-state.service";
+import { AF } from "../../../providers/af";
 
 @Component({
   selector: "app-video",
@@ -15,14 +16,14 @@ export class VideoComponent {
     @Input() index : number;
 
     constructor( private dataService : DataService, private socketService : SocketService,
-    private playlistState : PlaylistState) {}
+    private playlistState : PlaylistState, private afService : AF) {}
 
     deletePlaylistItem() {
         this.dataService.deletePlaylistItem(this.playlistitem._id).subscribe (
             res => { this.playlistState.playList.splice(this.index, 1);
                 this.socketService.socket.emit("deletefromplaylist", this.playlistitem._id);
-                console.log("personal video succesfully deleted from database.", "success"); },
-                error => { console.log(error); }
+//                console.log("personal video succesfully deleted from database.", "success");
+            }, error => { console.log(error); }
               );
         }
 }

@@ -41,12 +41,12 @@ export class DataService {
   }
 
   updateUser(tokenid : string, user : any) : Observable<any> {
-    console.log(user);
+//    console.log(user);
     return this.http.put(`/api/user/${tokenid}/${user._id}`, JSON.stringify(user), this.options);
   }
 
   updateUserStatus(tokenid : string, user : any) : Observable<any> {
-    console.log(JSON.stringify(user));
+//    console.log(JSON.stringify(user));
     return this.http.put(`/api/userstatus/${tokenid}/${user._id}`, JSON.stringify(user), this.options);
   }
 
@@ -55,12 +55,12 @@ export class DataService {
   }
 
   addRating(rating : any) : Observable<any> {
-    console.log(JSON.stringify(rating));
+//    console.log(JSON.stringify(rating));
     return this.http.post("/api/rating", JSON.stringify(rating), this.options);
   }
 
   addUser(user : any, idToken : string) : Observable<any> {
-    console.log(JSON.stringify(user));
+//    console.log(JSON.stringify(user));
     return this.http.post(`/api/user/${idToken}`, JSON.stringify(user), this.options);
   }
 

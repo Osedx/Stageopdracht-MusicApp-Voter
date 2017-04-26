@@ -20,13 +20,14 @@
     border-top: white 1px solid;
 }
 
-.ui.button{
-    display:inline;
-    position:relative;
-    top: 33px;
-    background-color: white;
+.ui.button.add{
+    bottom: 0;
+    align-self: center;
 }
-
+.addcontainer {
+    margin: 0 0 0 1em;
+    display: flex;
+}
 .info{
     width: 75%;
     display: inline;

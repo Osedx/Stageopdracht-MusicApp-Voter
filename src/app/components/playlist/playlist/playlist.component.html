@@ -5,11 +5,11 @@
         <i (click)="stop()" (click)="myModalNormal.hide()" class="fa fa-times fa-2x" aria-hidden="true"></i>
     </modal-content>
 </sm-modal>
-<div class='title ui raised segment'>Playlist</div>
 <div class="ui message" *ngIf="messageUpdate">
   <p>The playlist is no longer up to date.</p>
   <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
 </div>
+<div class='title ui raised segment'>Playlist</div>
 <div class="ui relaxed divided list">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-playlist-item [modal]="myModalNormal" [playlistitem]="p" [index]="i"></app-playlist-item>

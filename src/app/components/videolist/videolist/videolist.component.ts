@@ -17,10 +17,10 @@ getAllVideos() {
         this.dataservice.getPlaylist().subscribe(
             data => {
             this.playlistState.playList = data;
-    console.log(this.playlistState.playList.length);
+//    console.log(this.playlistState.playList.length);
             if (this.playlistState.playList.length === 0) this.notFound = true;
             else this.notFound = false;
-            console.log("Videolist " + data);  },
-    error => { console.log(error); } );
+//            console.log("Videolist " + data);
+            }, error => { console.log(error); } );
     }
 }

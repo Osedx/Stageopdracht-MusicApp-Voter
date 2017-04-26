@@ -46,3 +46,18 @@
 .ui.form input[type=password].error:focus {
     border-color: #9f3a38;
 }
+
+.userlistcontainer {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.ui.relaxed.divided.list.users {
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+}
+
+.fa-plus-circle {
+    position: absolute;
+    right: 1px;
+}

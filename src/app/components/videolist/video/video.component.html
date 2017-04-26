@@ -5,6 +5,18 @@
             <div class="header">
                 {{playlistitem.title}}
             </div>
+                <div class="description" *ngIf="afService?.uid !== playlistitem.uploaderid && playlistitem.uploader && playlistitem.uploader !== 'Toplist'">
+                    Added by {{playlistitem.uploader}}
+                </div>
+                <div class="description" *ngIf="afService?.uid === playlistitem.uploaderid && playlistitem.uploader  && playlistitem.uploader !== 'Toplist'">
+                    Added by yourself
+                </div>
+                <div  class="description" *ngIf="!playlistitem.uploader">
+                    Added by Anonymous
+                </div>
+                <div  class="description" *ngIf="playlistitem.uploader && playlistitem.uploader === 'Toplist'">
+                    Added from {{playlistitem.uploader}}
+                </div>
             <div class="info">
                 <div class="description like" *ngIf="playlistitem.rating > 1">{{playlistitem.rating}} Likes</div>
                 <div class="description like" *ngIf="playlistitem.rating == 1">{{playlistitem.rating}} Like</div>

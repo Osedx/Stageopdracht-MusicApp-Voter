@@ -25,7 +25,8 @@ constructor( private dataservice : DataService, private afService : AF, private 
         this.dataservice.getAllUsers(this.afService.tokenId).subscribe(
             data => {
             this.userlistState.userList = data;
-            console.log("Users " + data);  },
+//            console.log("Users " + data);
+            },
     error => { console.log(error); } ); }
 
     addUser(event : Event, name : string, email : string, password : string) {

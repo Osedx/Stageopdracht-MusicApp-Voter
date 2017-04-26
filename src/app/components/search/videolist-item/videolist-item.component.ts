@@ -34,6 +34,6 @@ private afService : AF, private socketService : SocketService ) {}
     onClickThumb() {
     this.videoListState.activeVideo = this.video;
     this.videoListState.isPlaying = true;
-    console.log(this.videoListState.activeVideo);
+//    console.log(this.videoListState.activeVideo);
   }
 }

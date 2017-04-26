@@ -57,7 +57,7 @@ ngOnInit() {
                 console.log(error);
             });
           this.canActivateLoginViaAuthGuard.isLoggedIn = true;
-          this.router.navigate([""]);
+//          this.router.navigate([""]);
         }
         }
         );
@@ -76,7 +76,7 @@ ngOnInit() {
         this.dataService.addUser({ "_id" : this.afService.uid, "name" : this.afService.displayName, "email" : this.afService.email }, idToken).subscribe(
             res => {
                 this.canActivateAdminViaAuthGuard.role = res.json().role;
-                console.log("User successfully added to datbase.", "success");
+//                console.log("User successfully added to database.", "success");
           },
           error => console.log(error)
         );

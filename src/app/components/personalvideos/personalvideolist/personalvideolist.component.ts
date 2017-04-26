@@ -31,7 +31,7 @@ export class PersonalVideoListComponent implements OnInit {
     getOwnPlaylist(id : string) {
         this.dataservice.getOwnPlaylist(id).subscribe(
             data => {
-            console.log("Own videos " + data.json());
+//            console.log("Own videos " + data.json());
             this.playlistState.playList = data.json();
                if (this.playlistState.playList.length === 0) this.notFound = true;
                 else this.notFound = false;

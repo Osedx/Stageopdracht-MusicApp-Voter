@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import {AF} from "../../providers/af";
+import { CanActivateLoginViaAuthGuard } from "../../providers/login-activate.guard";
 
 import {Router} from "@angular/router";
 import "rxjs/add/operator/catch";
@@ -17,13 +18,20 @@ export class LoginComponent {
   public error : any;
   public clickedLogin = false;
 
-constructor(public afService : AF, private router : Router) {}
+constructor(public afService : AF, private router : Router, private canActivateLoginViaAuthGuard : CanActivateLoginViaAuthGuard) {}
   loginWithGoogle() {
     this.afService.loginWithGoogle().then((data) => {
       // Send them to the homepage if they are logged in
-      let district01 = /.*@district01.be/;
-        console.log(district01.test(data.auth.email));
+    let district01 = /.*@district01.be/;
+    if (district01.test(data.auth.email)) {
         this.router.navigate([""]);
+    }
+    else {
+        this.canActivateLoginViaAuthGuard.isLoggedIn = false;
+        this.afService.logout();
+        this.showError = true;
+        this.errorMessage = "Only District01 accounts allowed with Google login, please ask an Administrator to add an account for you.";
+    }
     });
   }
 
@@ -31,14 +39,12 @@ constructor(public afService : AF, private router : Router) {}
     event.preventDefault();
     this.afService.loginWithEmail(email, password).then(() => {
       // Send them to the homepage if they are logged in
-      console.log(email);
       this.router.navigate([""]);
     })
       .catch((error) => {
           this.error = error;
           this.showError = true;
           this.errorMessage = error.message;
-//          this.errorMessage = "Incorrect password";
       });
   }
     resetPassword(event : Event, email : string) {
@@ -47,12 +53,19 @@ constructor(public afService : AF, private router : Router) {}
           // Send them to the homepage if they are logged in
         this.message = "E-mail successfully send!";
         this.messageSuccess = true;
-        });
+        }).catch((error) => {
+          this.error = error;
+          this.showError = true;
+          this.errorMessage = error.message;
+      });
     }
     clickLogin() {
         this.clickedLogin = true;
     }
     closeSuccess() {
         this.messageSuccess = false;
+    }
+    closeFailed() {
+        this.showError = false;
     }
 }

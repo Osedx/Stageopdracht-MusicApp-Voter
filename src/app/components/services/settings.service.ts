@@ -5,9 +5,11 @@ import { APP_CONFIG, IAppConfig } from "../../app.config";
 export class SettingService {
     removeAfterDislikes : number;
     addToToplist : number;
+    maxSongSearch : number;
 
     constructor(@Inject(APP_CONFIG) private config : IAppConfig) {
     this.removeAfterDislikes = config.removeAfterDislikes;
     this.addToToplist = config.addToToplist;
+    this.maxSongSearch = config.maxSongSearch;
     }
 }

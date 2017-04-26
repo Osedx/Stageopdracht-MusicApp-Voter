@@ -12,17 +12,23 @@
     </modal-content>
 </sm-modal>
    <div class="modal-dialog">
-    <div class="ui positive message" *ngIf="messageSuccess">
-          <i class="close icon" (click)="closeSuccess()"></i>
-          <div class="header">
-            Successfull
-          </div>
-          <p>{{message}}.</p>
-    </div>
     <div class="loginmodal-container">
         <h1>Sign in</h1>
         <br>
-        <div *ngIf="showError" class="ui error message">{{errorMessage}}</div>
+        <div class="ui negative message" *ngIf="showError">
+            <i class="close icon" (click)="closeFailed()"></i>
+            <div class="header">
+                Failed to login
+            </div>
+            <p>{{errorMessage}}</p>
+        </div>
+        <div class="ui positive message" *ngIf="messageSuccess">
+              <i class="close icon" (click)="closeSuccess()"></i>
+              <div class="header">
+                Successfull
+              </div>
+              <p>{{message}}.</p>
+        </div>
         <div class="ui form segment">
             <div *ngIf="clickedLogin" class="field">
                 <form class="form-signin ui" (submit)="loginWithEmail($event, email.value, password.value)">
@@ -34,7 +40,9 @@
             </div>
             <button *ngIf="!clickedLogin" class="login loginmodal-submit" (click)="clickLogin()">Login</button>
             <hr>
-            <button class="loginwithgoogle loginmodal-submit" (click)="loginWithGoogle()">Login met Google</button>
+            <button class="loginwithgoogle loginmodal-submit" (click)="loginWithGoogle()">
+            <i class="fa fa-google" aria-hidden="true"></i> Login met Google
+            </button>
         </div>
     </div>
 </div>

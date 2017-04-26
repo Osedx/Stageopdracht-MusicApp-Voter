@@ -30,7 +30,7 @@ export class UserComponent implements OnInit {
         this.dataService.deleteUser(this.afService.tokenId, this.user._id).subscribe(
             res => {
                 this.userlistState.userList.splice(this.index, 1);
-                console.log("User succesfully deleted.", "success");
+//                console.log("User succesfully deleted.", "success");
                 },
                 error => { console.log(error); }
         );
@@ -46,7 +46,7 @@ export class UserComponent implements OnInit {
                         else {this.isAdmin = false; }
                         },
                     error => {
-                    console.log("failed to update user");
+//                    console.log("failed to update user");
                     }
         );
     }
@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
         this.isBlocked = !this.isBlocked;
         this.dataService.updateUserStatus(this.afService.tokenId, {"_id" : this.user._id, "disabled" : this.isBlocked}).subscribe(
                     res => {
-                        console.log(this.isBlocked);
+//                        console.log(this.isBlocked);
                         },
                     error => { console.log(error); }
         );

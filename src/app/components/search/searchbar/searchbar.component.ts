@@ -75,7 +75,6 @@ ngOnInit() {
                 this.videoListState.videoList = this.videoListState.videoList.concat(this.videoListMedium);
                 if (this.videoListState.videoList.length === 0) this.videoListState.notFound = true;
                 else this.videoListState.notFound = false;
-    console.log(this.searchService.seeking);
       });
 }
     ngAfterViewInit() {

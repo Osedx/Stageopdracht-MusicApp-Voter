@@ -7,20 +7,19 @@
                     <input #name type="text" id="name" class="form-control" placeholder="name" required="" #name>
                 </div>
                 <div class="field">
-                    <label>E-mail</label> 
+                    <label>E-mail</label>
                     <input #email type="email" id="email" class="form-control" placeholder="e-mail" #email>
                 </div>
                 <div class="field">
                     <label>Password</label>
-                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="password" required="" #password>
+                    <input [ngClass]="{'error': showError}" #password type="password" id="password" class="form-control" placeholder="password" required="" #password>
                 </div>
                 <button class="user usermodal-submit" type="submit" (click)="myModal.hide()">Add user</button>
             </form>
         </div>
     </modal-content>
 </sm-modal>
-  
-<div class='title ui raised segment'>Users</div>
+
 <!--
     <div class="ui positive message" *ngIf="messageSuccess">
           <i class="close icon" (click)="closeSuccess()"></i>
@@ -30,17 +29,20 @@
           <p>{{message}}.</p>
         </div>
 -->
-        <div class="ui negative message" *ngIf="messageFailed">
-          <i class="close icon" (click)="closeFailed()"></i>
-          <div class="header">
+<div class='userlistcontainer'>
+    <div class="ui negative message" *ngIf="messageFailed">
+        <i class="close icon" (click)="closeFailed()"></i>
+        <div class="header">
             Failed
-          </div>
-          <p>{{message}}</p>
+        </div>
+        <p>{{message}}</p>
     </div>
-   <div class="ui relaxed divided list">
-    <div class="item" *ngFor="let u of userlistState.userList; let i = index">
-        <app-user [user]="u" [index]="i"></app-user>
+    <div class='title ui raised segment'>Users</div>
+    <div class="ui relaxed divided list users">
+        <div class="item" *ngFor="let u of userlistState.userList; let i = index">
+            <app-user [user]="u" [index]="i"></app-user>
+        </div>
     </div>
-</div>
 
-<i (click)="myModal.show()" class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+    <i (click)="myModal.show()" class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+</div>

@@ -23,8 +23,8 @@ export class PersonalVideoComponent {
         this.dataService.deletePlaylistItem(this.playlistitem._id).subscribe(
             res => { this.playlistState.playList.splice(this.index, 1);
                 this.socketService.socket.emit("deletefromplaylist", this.playlistitem._id);
-                console.log("personal video succesfully deleted from database.", "success"); },
-                error => { console.log(error); }
+//                console.log("personal video succesfully deleted from database.", "success");
+            }, error => { console.log(error); }
               );
         }
     onClickThumb() {

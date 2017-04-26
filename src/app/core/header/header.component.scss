@@ -3,7 +3,11 @@
 .navigation {
     width: 100%;
 }
-
+.ui.menu {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
 .ui.menu .item.nav-item>i.icon {
     margin: auto;
 }

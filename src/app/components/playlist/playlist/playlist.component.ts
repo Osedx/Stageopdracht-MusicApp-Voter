@@ -25,11 +25,11 @@ export class PlaylistComponent implements OnInit {
             if (userid === afService.uid) this.refreshList();
         });
     socketService.socket.on("itemdeleted", (id) => {
-        console.log("delete: " + id);
+//        console.log("delete: " + id);
     for (let i = playlistState.playList.length - 1; i >= 0; i-- ) {
     if (playlistState.playList[i]) {
     if (playlistState.playList[i]._id === id) {
-    console.log("delete true");
+//    console.log("delete true");
         playlistState.playList[i].isdeleted = true;
     }}}});
     }

@@ -8,7 +8,7 @@
             <div class="info">
                 <div class="description like" *ngIf="playlistitem.rating > 1">{{playlistitem.rating}} Likes</div>
                 <div class="description like" *ngIf="playlistitem.rating == 1">{{playlistitem.rating}} Like</div>
-                <div class="description" *ngIf="playlistitem.rating == 0">No likes yet</div>
+                <div class="description" *ngIf="playlistitem.rating == 0">No likes</div>
                 <div class="description dislike" *ngIf="playlistitem.rating == -1">{{playlistitem.rating | absolute}} Dislike</div>
                 <div class="description dislike" *ngIf="playlistitem.rating < -1">{{playlistitem.rating | absolute}} Dislikes</div>
             </div>

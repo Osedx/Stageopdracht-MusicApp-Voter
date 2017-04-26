@@ -5,6 +5,7 @@ import { Subject }    from "rxjs/Subject";
 
 @Injectable()
 export class AF {
+  private auth : any;
   public displayName : string;
   public email : string;
   public uid : string;

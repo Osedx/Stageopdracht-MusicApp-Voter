@@ -8,7 +8,7 @@ var userSchema = new mongoose.Schema({
 });
 
 userSchema.pre("save", function(next){
-    this.role = "admin";
+    this.role = "user";
     next();
 });
 
