@@ -1,3 +1,5 @@
+@import "../../../utilities/variables.scss";
+
 .ui.list>.item .header {
     overflow: hidden;
    text-overflow: ellipsis;
@@ -23,6 +25,12 @@
 .ui.button.add{
     bottom: 0;
     align-self: center;
+    opacity: 1;
+    color: white;
+    background-color: $like;
+        &:active{
+        background-color: $likeactive;
+    }
 }
 .addcontainer {
     margin: 0 0 0 1em;

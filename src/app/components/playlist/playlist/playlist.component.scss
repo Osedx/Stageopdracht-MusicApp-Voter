@@ -1,10 +1,11 @@
 .ui.message {
     width: 100%;
 }
-
-.ui.message p:first-child {
-    display: inline;
-    padding-right: 5%;
+.ui.message {
+    width: 100%;
+}
+.ui.message:first-child {
+    margin-top:5px;
 }
 .fa-refresh {
     display: inline;

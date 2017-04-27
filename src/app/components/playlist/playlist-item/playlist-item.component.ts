@@ -23,10 +23,10 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     @Input() modal : NgSemanticModule;
     rating : Rating;
     _subscription : any;
-    thumbsupactive : Boolean;
-    thumbsupdisabled : Boolean;
-    thumbsdownactive : Boolean;
-    thumbsdowndisabled : Boolean;
+    thumbsupactive : Boolean = false;
+    thumbsupdisabled : Boolean = true;
+    thumbsdownactive : Boolean = false;
+    thumbsdowndisabled : Boolean = true;
     deleted = false;
 
 
@@ -38,10 +38,6 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     }
 
     ngOnInit() {
-        this.thumbsupactive = false;
-        this.thumbsupdisabled = false;
-        this.thumbsdownactive = false;
-        this.thumbsdowndisabled = false;
             if (typeof this.afService.uid !== "undefined") {
             this.getRatings(this.afService.uid, this.playlistitem._id);
             }
@@ -179,21 +175,20 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         }
     // set thumbs active or disabled
         setRating() {
-        if ( this.afService.uid === this.playlistitem.uploaderid) {
-                                    this.thumbsupdisabled = true;
-                                    this.thumbsdowndisabled = true;
-        }
-        else if (this.rating != null) {
+        if (this.rating != null) {
             if (typeof this.rating.rating === "string" || this.rating.rating instanceof String) {
                     if (this.rating.rating === "liked") {
+                        this.thumbsupdisabled = false;
                         this.thumbsupactive = true;
-                        this.thumbsdowndisabled = true;
                     }
                     else if (this.rating.rating === "disliked") {
+                        this.thumbsdowndisabled = false;
                         this.thumbsdownactive = true;
-                        this.thumbsupdisabled = true;
                     }
                 }
+            } else {
+                this.thumbsupdisabled = false;
+                this.thumbsdowndisabled = false;
             }
         }
 }
