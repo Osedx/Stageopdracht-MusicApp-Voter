@@ -33,7 +33,7 @@
             <div *ngIf="clickedLogin" class="field">
                 <form class="form-signin ui" (submit)="loginWithEmail($event, email.value, password.value)">
                     <input #email type="email" id="email" class="form-control" placeholder="e-mail">
-                    <input [ngClass]= "{'error': showError}" #password type="password" id="password" class="form-control" placeholder="password" required="">
+                    <input [ngClass]= "{'error': showErrorEmail}" #password type="password" id="password" class="form-control" placeholder="password" required="">
                     <button class="login loginmodal-submit" type="submit">Login</button>
                     <div class="reset loginmodal-submit" (click)="resetModal.show()">Reset password</div>
                 </form>

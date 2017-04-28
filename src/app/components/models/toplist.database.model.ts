@@ -8,7 +8,7 @@ var toplistSchema = mongoose.Schema({
     channeltitle : String,
     channelid : String,
     description : String,
-    expire_at: {type: Date, default: Date.now, expires: 604800 * aantalWeken} 
+    createdAt: { type: Date, expires:  604800 * aantalWeken }
 });
 
 var ToplistDatabase = mongoose.model("Toplist", toplistSchema);

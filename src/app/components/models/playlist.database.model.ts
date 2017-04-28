@@ -12,7 +12,7 @@ var playlistSchema = mongoose.Schema({
     uploader : String,
     uploaderid : String,
     rating : Number,
-    expire_at: {type: Date, default: Date.now, expires: 86400 * amountDays} 
+    createdAt: { type: Date, expires: 86400 * amountDays }
 });
 
 var PlaylistDatabase = mongoose.model("Playlist", playlistSchema);

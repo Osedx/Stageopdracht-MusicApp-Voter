@@ -15,6 +15,7 @@ export class LoginComponent {
   errorMessage : String;
   message : string;
   messageSuccess = false;
+  showErrorEmail = false;
   public error : any;
   public clickedLogin = false;
 
@@ -44,6 +45,7 @@ constructor(public afService : AF, private router : Router, private canActivateL
       .catch((error) => {
           this.error = error;
           this.showError = true;
+          this.showErrorEmail = true;
           this.errorMessage = error.message;
       });
   }
@@ -67,5 +69,6 @@ constructor(public afService : AF, private router : Router, private canActivateL
     }
     closeFailed() {
         this.showError = false;
+        this.showErrorEmail = false;
     }
 }

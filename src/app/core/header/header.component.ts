@@ -15,7 +15,9 @@ import {AF} from "../../providers/af";
 })
 
 export class HeaderComponent implements OnInit {
+    private district01 = /.*@district01.be/;
     public user : string;
+    public allowed : boolean;
 
 constructor(public afService : AF, private router : Router, private dataService : DataService,
             private canActivateLoginViaAuthGuard : CanActivateLoginViaAuthGuard,
@@ -29,6 +31,7 @@ ngOnInit() {
           this.router.navigate(["login"]);
         }
         else {
+          this.allowed = true;
           // Set the Display Name and Email show it
           if (auth.google) {
             this.afService.displayName = auth.auth.displayName;
@@ -36,6 +39,7 @@ ngOnInit() {
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
             this.user = this.afService.displayName.split(" ", 1)[0];
+            if (!this.district01.test(auth.auth.email)) this.allowed = false;
           }
           else {
             this.afService.displayName = auth.auth.displayName;
@@ -48,7 +52,8 @@ ngOnInit() {
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
-          }
+            }
+            if(this.allowed) {
             const comp = this;
             auth.auth.getToken(true).then(function(idToken) {
                 comp.getUser(idToken);
@@ -56,8 +61,8 @@ ngOnInit() {
                 }).catch(function(error) {
                 console.log(error);
             });
-          this.canActivateLoginViaAuthGuard.isLoggedIn = true;
-//          this.router.navigate([""]);
+            this.canActivateLoginViaAuthGuard.isLoggedIn = true;
+            }
         }
         }
         );
