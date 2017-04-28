@@ -8,6 +8,7 @@ export class PlaylistState {
     playList : Playlist[] = [];
     activeVideo : Playlist;
     isPlaying = false;
+    showUpdateButton = false;
 
   constructor() {
   }

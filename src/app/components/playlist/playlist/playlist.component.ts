@@ -21,8 +21,8 @@ export class PlaylistComponent implements OnInit {
         this.playlistState.isPlaying = false;
         this.playlistState.playList = [];
         socketService.socket.on("playlistisupdated", (userid) => {
-            this.messageUpdate = true;
-            if (userid === afService.uid) this.refreshList();
+        if (userid === afService.uid) this.getPlaylist();
+        else this.messageUpdate = true;
         });
     socketService.socket.on("itemdeleted", (id) => {
 //        console.log("delete: " + id);
@@ -51,6 +51,7 @@ export class PlaylistComponent implements OnInit {
         this.playlistState.isPlaying = false;
     }
     refreshList() {
+        this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
         this.getPlaylist();
     }

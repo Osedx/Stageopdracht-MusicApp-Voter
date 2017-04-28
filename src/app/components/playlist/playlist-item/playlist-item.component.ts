@@ -97,7 +97,10 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     // update the rating of the playlist
         updatePlaylist() {
         this.dataService.updatePlaylist(this.playlistitem).subscribe(
-            res => { this.socketService.socket.emit("updateplaylist", this.afService.uid); },
+            res => {
+            this.socketService.socket.emit("updateplaylist", this.afService.uid);
+            this.playlistState.showUpdateButton = true;
+            },
             error => { console.log(error); }
         ); }
     // add to song to toplist
