@@ -4,6 +4,7 @@
     opacity: 1;
     color: $dislike;
     align-self: center;
+    margin-right: 5px;
     &:active{
         color: $dislikeactive;
     }

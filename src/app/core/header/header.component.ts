@@ -53,7 +53,7 @@ ngOnInit() {
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
             }
-            if(this.allowed) {
+            if (this.allowed) {
             const comp = this;
             auth.auth.getToken(true).then(function(idToken) {
                 comp.getUser(idToken);
