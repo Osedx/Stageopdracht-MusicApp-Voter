@@ -1,5 +1,5 @@
 /* line 3, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
-.ui.list > .item .header {
+.ui.list .item .header {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -17,7 +17,7 @@
   color: #e7e7e7; }
 
 /* line 20, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
-.ui.divided.list > .item {
+.ui.divided.list .item {
   padding: 0 0 0 5px;
   border-top: white 1px solid; }
 
@@ -124,7 +124,7 @@ b {
   .playlistflexcontainer {
     max-height: 50px; }
   /* line 114, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
-  .ui.list > .item .header {
+  .ui.list .item .header {
     line-height: 1.3em; }
   /* line 117, C:/Users/Osedx/Documents/Project - muziek webapp/district01/src/app/components/playlist/playlist-item/playlist-item.component.scss */
   .number {
