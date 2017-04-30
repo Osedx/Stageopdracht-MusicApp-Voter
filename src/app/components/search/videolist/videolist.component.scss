@@ -6,7 +6,7 @@
     border-radius: 5px;
     margin-bottom: 0;
     background: black;
-    height: calc(100vh - 128px);
+    height: calc(100vh - 125px);
     overflow-y: scroll;
 }
 .ui.list:first-child {
@@ -86,7 +86,7 @@
 }
 .ui.list.searchlist {
     margin-top:0;
-    height: calc(100vh - 138px);
+    height: calc(100vh - 135px);
 }
 
 ::-webkit-scrollbar {
