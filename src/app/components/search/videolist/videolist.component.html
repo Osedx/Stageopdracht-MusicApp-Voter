@@ -7,7 +7,12 @@
 </sm-modal>
     <div class="ui relaxed divided list searchlist" *ngIf="videoListState.searched && !this.videoListState.notFound">
     <div class="item" *ngFor="let v of videoListState.videoList" [class.playing]="v === videoListState.activeVideo">
-        <app-videolist-item [modal]="myModalNormal" [video]="v"></app-videolist-item>
+        <app-videolist-item [modal]="myModalNormal" [video]="v">
+            <div class="ui active dimmer">
+                <div class="ui text loader">Loading</div>
+            </div>
+            <p></p>
+        </app-videolist-item>
     </div>
 </div>
 

@@ -1,7 +1,12 @@
 <div class='title ui raised segment'>Videos</div>
 <div class="ui relaxed divided list" *ngIf="!notFound">
     <div class="item" *ngFor="let v of playlistState.playList; let i = index">
-        <app-video [playlistitem]="v" [index]="i"></app-video>
+        <app-video [playlistitem]="v" [index]="i">
+        <div class="ui active dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+        <p></p>
+        </app-video>
     </div>
 </div>
 <div *ngIf="notFound" class="notFound">

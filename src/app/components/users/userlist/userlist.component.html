@@ -40,7 +40,12 @@
     </div>
     <div class="ui relaxed divided list users">
         <div class="item" *ngFor="let u of userlistState.userList; let i = index">
-            <app-user [user]="u" [index]="i"></app-user>
+            <app-user [user]="u" [index]="i">
+                <div class="ui active dimmer">
+                    <div class="ui text loader">Loading</div>
+                </div>
+                <p></p>
+            </app-user>
         </div>
     </div>
 

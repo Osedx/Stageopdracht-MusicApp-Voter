@@ -3,11 +3,18 @@
     <main [class.overlay]="isOverlayEnabled">
 
         <!-- Loader -->
+<!--
         <div *ngIf="isRouterChanging" class="margin-top-lg text-center">
             <div class="loader-lg"></div>
             <p class="margin-top text-muted" translate>Pagina laden</p>
         </div>
-
+-->
+        <!-- Loader -->
+        <div *ngIf="isRouterChanging" class="ui active dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+        <p></p>
+       
         <router-outlet></router-outlet>
 
     </main>

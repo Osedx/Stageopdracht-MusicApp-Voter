@@ -8,7 +8,12 @@
 <div class='title ui raised segment'>Own videos</div>
 <div class="ui relaxed divided list">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
-        <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i"></app-personalvideo>
+        <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i">
+        <div class="ui active dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+        <p></p>
+        </app-personalvideo>
     </div>
 </div>
 <div *ngIf="notFound" class="notFound">
