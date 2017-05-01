@@ -10,9 +10,10 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { DataService } from "../../services/data.service";
 import { SocketService } from "../../services/socket.service";
 import { PipesModule } from "../../pipes";
+import { VirtualScrollModule } from "angular2-virtual-scroll";
 
 @NgModule({
-    imports: [ NgSemanticModule, CommonModule, ReactiveFormsModule, FormsModule, PipesModule ],
+    imports: [ NgSemanticModule, CommonModule, ReactiveFormsModule, FormsModule, PipesModule, VirtualScrollModule ],
     providers: [ PlaylistState, DataService, SettingService, SocketService ],
     declarations: [ PlaylistItemComponent, PlaylistPageComponent, PlaylistComponent ],
     exports: [PlaylistPageComponent]

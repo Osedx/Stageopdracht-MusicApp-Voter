@@ -21,6 +21,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     @Input() playlistitem : Playlist;
     @Input() index : number;
     @Input() modal : NgSemanticModule;
+//    index : number;
     rating : Rating;
     _subscription : any;
     thumbsupactive : Boolean = false;
@@ -38,6 +39,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     }
 
     ngOnInit() {
+            this.index = this.playlistState.playList.indexOf(this.playlistitem);
             if (typeof this.afService.uid !== "undefined") {
             this.getRatings(this.afService.uid, this.playlistitem._id);
             }
