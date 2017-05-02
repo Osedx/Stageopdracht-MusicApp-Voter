@@ -41,7 +41,7 @@ export class PlaylistComponent implements OnInit {
             this.getAllRatings(this.afService.uid);
             } else {
             this._subscription = this.afService.changeId.subscribe((userid : string) => {
-            this.getAllRatings(userid);});
+            this.getAllRatings(userid); });
             }
     }
     getPlaylist() {

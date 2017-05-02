@@ -177,7 +177,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         }
     // get the ratings from the logged in user
         getRatings() {
-            this.rating= this.playlistState.ratings.find(r => r.playlistitemid === this.playlistitem._id);
+            this.rating = this.playlistState.ratings.find(r => r.playlistitemid === this.playlistitem._id);
             this.setRating();
         }
     // set thumbs active or disabled
