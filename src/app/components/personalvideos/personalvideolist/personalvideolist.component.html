@@ -17,7 +17,7 @@
     </div>
 </div>
 -->
-<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event">
+<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event"  [childHeight]="90">
     <div class="item" [class.playing] = "p === playlistState.activeVideo" *ngFor="let p of playlistState.viewPortItems">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p">
         <div class="ui active dimmer">

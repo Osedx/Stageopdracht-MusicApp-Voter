@@ -10,7 +10,7 @@
     </div>
 </div>
 -->
-<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event" *ngIf="!notFound">
+<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event" *ngIf="!notFound"  [childHeight]="90">
     <div class="item" *ngFor="let v of playlistState.viewPortItems">
         <app-video [playlistitem]="v">
         <div class="ui active dimmer">

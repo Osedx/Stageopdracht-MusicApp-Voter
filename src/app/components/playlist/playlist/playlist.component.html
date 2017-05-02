@@ -26,7 +26,7 @@ Playlist
 </div>
 -->
 
-<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event" [ngClass]="{'messageUpdate': messageUpdate}">
+<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event" [ngClass]="{'messageUpdate': messageUpdate}" [childHeight]="90">>
     <div class="item" [class.playing] = "p === playlistState.activeVideo" *ngFor="let p of playlistState.viewPortItems">
     <app-playlist-item [playlistitem]="p" [modal]="myModalNormal" ></app-playlist-item>
     </div>
