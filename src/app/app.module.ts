@@ -13,6 +13,8 @@ import { PipesModule } from "./pipes";
 import { AppComponent } from "./app.component";
 import { APP_CONFIG, AppConfig } from "./app.config";
 
+import { VirtualScrollModule } from "angular2-virtual-scroll";
+
 @NgModule({
     imports: [
         CoreModule,
@@ -23,6 +25,7 @@ import { APP_CONFIG, AppConfig } from "./app.config";
         // ComponentsModule,
         DirectivesModule,
         PipesModule,
+        VirtualScrollModule
     ],
     declarations: [
         AppComponent

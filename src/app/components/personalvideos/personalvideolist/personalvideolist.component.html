@@ -1,21 +1,31 @@
 <sm-modal #myModalNormal>
     <modal-content>
-        <iframe *ngIf="playlistState.activeVideo" #playlistplayer width="560" height="315" frameborder="0" allowfullscreen allowscriptaccess="always" [src]="playlistState.activeVideo?._id +'?enablejsapi=1&version=3&playerapiid=ytplayer' | youtubeSafeUrl">
+        <iframe *ngIf="playlistState.activeVideo" #playlistplayer width="560" height="315" frameborder="0" allowfullscreen allowscriptaccess="always" [src]="playlistState.activeVideo?._id +'?enablejsapi=1&rel=0&autoplay=0&showinfo=0&version=3&playerapiid=ytplayer' | youtubeSafeUrl">
         </iframe>
         <i (click)="stop()" (click)="myModalNormal.hide()" class="fa fa-times fa-2x" aria-hidden="true"></i>
     </modal-content>
 </sm-modal>
 <div class='title ui raised segment'>Own videos</div>
+<!--
 <div class="ui relaxed divided list">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i">
         <div class="ui active dimmer">
             <div class="ui text loader">Loading</div>
         </div>
-        <p></p>
         </app-personalvideo>
     </div>
 </div>
+-->
+<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event">
+    <div class="item" [class.playing] = "p === playlistState.activeVideo" *ngFor="let p of playlistState.viewPortItems">
+        <app-personalvideo [modal]="myModalNormal" [playlistitem]="p">
+        <div class="ui active dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+        </app-personalvideo>
+    </div>
+</virtual-scroll>
 <div *ngIf="notFound" class="notFound">
     No added music videos found.
 </div>

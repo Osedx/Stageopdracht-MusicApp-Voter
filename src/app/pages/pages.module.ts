@@ -28,6 +28,8 @@ import { NgSemanticModule } from "ng-semantic";
 import { CanActivateAdminViaAuthGuard } from "../providers/admin-activate.guard";
 import { CanActivateLoginViaAuthGuard } from "../providers/login-activate.guard";
 
+import { VirtualScrollModule } from "angular2-virtual-scroll";
+
 // Must export the config
 export const firebaseConfig = {
     apiKey: "AIzaSyAfaYe3oXq9-zwqZElMuFV9iwwIaduRU0A",
@@ -49,7 +51,7 @@ export const firebaseConfig = {
         VideolistPageModule,
         UserlistPageModule,
         AngularFireModule.initializeApp(firebaseConfig),
-
+        VirtualScrollModule,
 //        ComponentsModule,
         DirectivesModule,
         PipesModule

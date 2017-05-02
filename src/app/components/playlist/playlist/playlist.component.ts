@@ -60,6 +60,8 @@ export class PlaylistComponent implements OnInit {
     refreshList() {
         this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
+        this.playlistState.ratings = [];
+        this.getAllRatings(this.afService.uid);
         this.getPlaylist();
     }
     // get the ratings from the logged in user
@@ -71,6 +73,5 @@ export class PlaylistComponent implements OnInit {
                 },
                 error => { console.log(error); }
             );
-
         }
 }

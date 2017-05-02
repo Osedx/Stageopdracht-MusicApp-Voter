@@ -1,5 +1,5 @@
 <div class="playlistflexcontainer">
-    <img class="ui tiny left floated image playlistimage" src="{{playlistitem.thumbnailurl}}" (click)="modal.show()" (click)="onClickThumb()">
+    <img class="ui tiny left floated image admin playlistimage" src="{{playlistitem.thumbnailurl}}">
     <div class="infocontainer">
         <div class="content">
             <div class="header">
@@ -25,7 +25,10 @@
                 <div class="description dislike" *ngIf="playlistitem.rating < -1">{{playlistitem.rating | absolute}} Dislikes</div>
             </div>
         </div>
-        <div class="thumbscontainer">
+        <div class="thumbscontainer" *ngIf="!isDeleted">
             <i class="fa fa-trash fa-2x delete" aria-hidden="true" (click)="deletePlaylistItem()"></i>
+        </div>
+        <div class="thumbscontainer" *ngIf="isDeleted">
+            <div class="deletedtext">(deleted)</div>
         </div>
 </div>

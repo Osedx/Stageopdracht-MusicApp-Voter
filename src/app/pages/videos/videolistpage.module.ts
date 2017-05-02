@@ -5,9 +5,10 @@ import { VideolistPageComponent } from "./videolistpage.component";
 import { VideolistComponent } from "../../components/videolist/videolist/videolist.component";
 import { VideoComponent } from "../../components/videolist/video/video.component";
 import { PipesModule } from "../../pipes";
+import { VirtualScrollModule } from "angular2-virtual-scroll";
 
 @NgModule({
-    imports: [ CommonModule, PipesModule ],
+    imports: [ CommonModule, PipesModule, VirtualScrollModule ],
     providers: [ DataService ],
     declarations: [ VideolistPageComponent, VideolistComponent, VideoComponent ],
     exports: [ VideolistPageComponent ]

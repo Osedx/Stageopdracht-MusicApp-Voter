@@ -1,14 +1,25 @@
 <div class='title ui raised segment'>Videos</div>
+<!--
 <div class="ui relaxed divided list" *ngIf="!notFound">
     <div class="item" *ngFor="let v of playlistState.playList; let i = index">
         <app-video [playlistitem]="v" [index]="i">
         <div class="ui active dimmer">
             <div class="ui text loader">Loading</div>
         </div>
-        <p></p>
         </app-video>
     </div>
 </div>
+-->
+<virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event" *ngIf="!notFound">
+    <div class="item" *ngFor="let v of playlistState.viewPortItems">
+        <app-video [playlistitem]="v">
+        <div class="ui active dimmer">
+            <div class="ui text loader">Loading</div>
+        </div>
+        </app-video>
+    </div>
+</virtual-scroll>
+
 <div *ngIf="notFound" class="notFound">
         No music videos found.
 </div>

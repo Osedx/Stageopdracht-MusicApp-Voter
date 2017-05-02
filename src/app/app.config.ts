@@ -11,9 +11,8 @@ export interface IAppConfig {
     addToToplist : number;
     maxSongSearch : number;
 }
-
 export const AppConfig : IAppConfig = {
     removeAfterDislikes : 3,
     addToToplist : 3,
-    maxSongSearch : 20 // Uneven numbers will be one higher.
+    maxSongSearch : 50 // Uneven numbers will be one higher.
 };

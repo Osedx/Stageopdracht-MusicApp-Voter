@@ -19,11 +19,12 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     private host : string = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
     clicked : boolean;
     @Input() playlistitem : Playlist;
-    @Input() index : number;
+//    @Input() index : number;
     @Input() modal : NgSemanticModule;
-//    index : number;
+    index : number;
     rating : Rating;
     _subscription : any;
+    _subscriptionUID : any;
     thumbsupactive : Boolean = false;
     thumbsupdisabled : Boolean = true;
     thumbsdownactive : Boolean = false;
@@ -36,10 +37,11 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
 
     ngOnDestroy() {
             if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
+            if (typeof this._subscriptionUID !== "undefined") this._subscriptionUID.unsubscribe();
     }
 
     ngOnInit() {
-//            this.index = this.playlistState.playList.indexOf(this.playlistitem);
+            this.index = this.playlistState.playList.indexOf(this.playlistitem);
 //            if (typeof this.afService.uid !== "undefined") {
 //            this.getRatings(this.afService.uid, this.playlistitem._id);
 //            }
@@ -47,7 +49,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
 //            this._subscription = this.afService.changeId.subscribe((userid : string) => {
 //            this.getRatings(userid, this.playlistitem._id);
 //            }); }
-            if (typeof this.playlistState.ratings !== "undefined") {
+            if (this.playlistState.ratings.length !== 0) {
             this.getRatings();
             }
             else {
@@ -130,7 +132,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
             this.dataService.addRating({ "userid" : this.afService.uid, "playlistitemid" : this.playlistitem._id, "rating" : rating }).subscribe(
             res => {
                 this.rating = res.json();
-                console.log(this.rating);
+//                console.log(this.rating);
                 console.log("rating successfully added to database.", "success");
           },
           error => console.log(error)
@@ -157,7 +159,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         deleteRatings(id : string) {
              this.dataService.deleteRatings(id).subscribe(
                 res => {
-                console.log(this.rating);
+//                console.log(this.rating);
                 console.log("ratings succesfully deleted from database.", "success");
                 },
                 error => { console.log(error); }
@@ -178,10 +180,21 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     // get the ratings from the logged in user
         getRatings() {
             this.rating = this.playlistState.ratings.find(r => r.playlistitemid === this.playlistitem._id);
-            this.setRating();
+            this.checkSetRating();
         }
+    // check if userid exist before setting ratings
+        checkSetRating() {
+            if (typeof this.afService.uid !== "undefined") {
+                this.setRating();
+            } else {
+                this._subscriptionUID = this.afService.changeId.subscribe((userid : string) => {
+                this.setRating();
+            }); }
+        }
+
     // set thumbs active or disabled
         setRating() {
+        if (this.playlistitem.uploaderid === this.afService.uid) return;
         if (this.rating != null) {
             if (typeof this.rating.rating === "string" || this.rating.rating instanceof String) {
                     if (this.rating.rating === "liked") {
