@@ -37,12 +37,13 @@ export class PlaylistComponent implements OnInit {
     ngOnInit() {
         this.getPlaylist();
         this.playlistState.activeVideo = undefined;
-            if (typeof this.afService.uid !== "undefined") {
+        this.playlistState.ratings = [];
+        if (typeof this.afService.uid !== "undefined") {
             this.getAllRatings(this.afService.uid);
-            } else {
+        } else {
             this._subscription = this.afService.changeId.subscribe((userid : string) => {
             this.getAllRatings(userid); });
-            }
+        }
     }
     getPlaylist() {
         this.dataservice.getPlaylist().subscribe(
