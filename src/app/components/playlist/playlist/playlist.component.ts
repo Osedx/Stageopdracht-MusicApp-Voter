@@ -16,6 +16,7 @@ export class PlaylistComponent implements OnInit {
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
     messageUpdate = false;
     notFound = false;
+    _subscription : any;
     constructor( private playlistState : PlaylistState, private dataservice : DataService,
     private socketService : SocketService, private afService : AF ) {
         this.playlistState.isPlaying = false;
@@ -36,6 +37,12 @@ export class PlaylistComponent implements OnInit {
     ngOnInit() {
         this.getPlaylist();
         this.playlistState.activeVideo = undefined;
+            if (typeof this.afService.uid !== "undefined") {
+            this.getAllRatings(this.afService.uid);
+            } else {
+            this._subscription = this.afService.changeId.subscribe((userid : string) => {
+            this.getAllRatings(userid);});
+            }
     }
     getPlaylist() {
         this.dataservice.getPlaylist().subscribe(
@@ -55,4 +62,15 @@ export class PlaylistComponent implements OnInit {
         this.messageUpdate = false;
         this.getPlaylist();
     }
+    // get the ratings from the logged in user
+    getAllRatings(userid : string) {
+        this.dataservice.getAllRatingsUser(userid).subscribe(
+                data => {
+                this.playlistState.ratings = data.json();
+                this.playlistState.ratingsLoaded.next("ready");
+                },
+                error => { console.log(error); }
+            );
+
+        }
 }

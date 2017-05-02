@@ -1,7 +1,7 @@
 // src/app/providers/af.ts
 import { Injectable, Inject } from "@angular/core";
 import { AngularFire, AuthProviders, AuthMethods, FirebaseApp  } from "angularfire2";
-import { Subject }    from "rxjs/Subject";
+import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class AF {

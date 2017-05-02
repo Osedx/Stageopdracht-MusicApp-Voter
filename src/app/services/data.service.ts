@@ -83,6 +83,10 @@ export class DataService {
   getRatings(userid : string, playlistitemid : string) : Observable<any> {
         return this.http.get(`/api/rating/${userid}/${playlistitemid}`, this.options);
     }
+    
+  getAllRatingsUser(userid : string) : Observable<any> {
+        return this.http.get(`/api/ratings/${userid}`, this.options);
+    }
 
   getUser(id : string) : Observable<any> {
         return this.http.get(`/api/user/${id}`, this.options);

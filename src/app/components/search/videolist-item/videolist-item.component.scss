@@ -1,6 +1,6 @@
 @import "../../../utilities/variables.scss";
 
-.ui.list>.item .header {
+.ui.list .item .header {
     overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
@@ -12,10 +12,10 @@
     padding:2px;
     color: white;
 }
-.ui.list>.item .description {
+.ui.list .item .description {
     color: #e7e7e7;
 }
-.ui.divided.list>.item{
+.ui.divided.list .item{
     padding: 0.4em;
     border-top: white 1px solid;
 }

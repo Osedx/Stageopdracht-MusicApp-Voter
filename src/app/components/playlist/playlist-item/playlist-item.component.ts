@@ -19,9 +19,9 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     private host : string = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
     clicked : boolean;
     @Input() playlistitem : Playlist;
-    @Input() index : number;
+//    @Input() index : number;
     @Input() modal : NgSemanticModule;
-//    index : number;
+    index : number;
     rating : Rating;
     _subscription : any;
     thumbsupactive : Boolean = false;
@@ -39,13 +39,22 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     }
 
     ngOnInit() {
-            if (typeof this.afService.uid !== "undefined") {
-            this.getRatings(this.afService.uid, this.playlistitem._id);
+            this.index = this.playlistState.playList.indexOf(this.playlistitem);
+//            if (typeof this.afService.uid !== "undefined") {
+//            this.getRatings(this.afService.uid, this.playlistitem._id);
+//            }
+//            else {
+//            this._subscription = this.afService.changeId.subscribe((userid : string) => {
+//            this.getRatings(userid, this.playlistitem._id);
+//            }); }
+            if (typeof this.playlistState.ratings !== "undefined") {
+            this.getRatings();
             }
             else {
-            this._subscription = this.afService.changeId.subscribe((userid : string) => {
-            this.getRatings(userid, this.playlistitem._id);
-            }); }}
+            this._subscription = this.playlistState.ratingsLoaded.subscribe((state) => {
+            this.getRatings();
+            }); }
+    }
 
         onClickThumb() {
         this.playlistState.activeVideo = this.playlistitem;
@@ -167,15 +176,9 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
               );
         }
     // get the ratings from the logged in user
-        getRatings(userid : string, playlistitemid : string) {
-        this.dataService.getRatings(userid, playlistitemid).subscribe(
-                data => {
-                this.rating = data.json();
-                this.setRating();
-                },
-                error => { console.log(error); }
-            );
-
+        getRatings() {
+            this.rating= this.playlistState.ratings.find(r => r.playlistitemid === this.playlistitem._id);
+            this.setRating();
         }
     // set thumbs active or disabled
         setRating() {

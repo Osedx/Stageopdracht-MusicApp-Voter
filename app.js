@@ -252,11 +252,21 @@ db.once("open", function () {
         });
     });
 
-    // find rating by id of user
+    // find rating by id of user & playlistitem
     app.get("/api/rating/:userid/:playlistitemid", function (req, res) {
         RatingDatabase.findOne({
             "userid": req.params.userid,
             "playlistitemid": req.params.playlistitemid
+        }, function (err, obj) {
+            if (err) return console.error(err);
+            res.json(obj);
+        });
+    });
+    
+    // find ratings by id of user
+    app.get("/api/ratings/:userid", function (req, res) {
+        RatingDatabase.find({
+            "userid": req.params.userid,
         }, function (err, obj) {
             if (err) return console.error(err);
             res.json(obj);
