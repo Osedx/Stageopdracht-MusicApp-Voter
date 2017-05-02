@@ -19,13 +19,15 @@ export class LoginComponent {
   public error : any;
   public clickedLogin = false;
 
-constructor(public afService : AF, private router : Router, private canActivateLoginViaAuthGuard : CanActivateLoginViaAuthGuard) {}
+constructor(public afService : AF, private router : Router, private canActivateLoginViaAuthGuard : CanActivateLoginViaAuthGuard) {
+if (this.canActivateLoginViaAuthGuard.isLoggedIn) {this.router.navigate(["playlist"]); }
+}
   loginWithGoogle() {
     this.afService.loginWithGoogle().then((data) => {
       // Send them to the homepage if they are logged in
     let district01 = /.*@district01.be/;
     if (district01.test(data.auth.email)) {
-        this.router.navigate([""]);
+        this.router.navigate(["playlist"]);
     }
     else {
         this.canActivateLoginViaAuthGuard.isLoggedIn = false;
@@ -40,7 +42,7 @@ constructor(public afService : AF, private router : Router, private canActivateL
     event.preventDefault();
     this.afService.loginWithEmail(email, password).then(() => {
       // Send them to the homepage if they are logged in
-      this.router.navigate([""]);
+      this.router.navigate(["playlist"]);
     })
       .catch((error) => {
           this.error = error;

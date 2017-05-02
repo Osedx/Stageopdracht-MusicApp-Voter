@@ -28,7 +28,7 @@ ngOnInit() {
       (auth) => {
         if (auth == null) {
         this.canActivateLoginViaAuthGuard.isLoggedIn = false;
-          this.router.navigate(["login"]);
+        this.router.navigate(["login"]);
         }
         else {
           this.allowed = true;

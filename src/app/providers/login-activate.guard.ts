@@ -3,7 +3,7 @@ import { CanActivate } from "@angular/router";
 
 @Injectable()
 export class CanActivateLoginViaAuthGuard implements CanActivate {
-    isLoggedIn : boolean;
+    isLoggedIn : boolean = true;
     canActivate() {
     return this.isLoggedIn;
   }

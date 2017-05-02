@@ -1,8 +1,8 @@
 @import "../../../utilities/variables.scss";
-.ui.list>.scrollable-content .item:first-child {
+.ui.list>.scrollable-content>.item:first-child {
     border-top: 0;
 }
-.ui.list>.scrollable-content .item .header {
+.ui.list>.scrollable-content>.item .header {
     overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
@@ -17,7 +17,7 @@
     font-weight: 700;
 }
 
-.ui.list>.scrollable-content .item .description {
+.ui.list>.scrollable-content>.item .description {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -52,7 +52,10 @@
     align-self: center;
     margin: 0 5px;
 }
-.ui.list>.scrollable-content .item [class*="playlistimage"]{
+.number.rank {
+    width:2em;
+}
+.ui.list>.scrollable-content>.item [class*="playlistimage"]{
     margin: 0 1em 0 5px;
 }
 .playlistflexcontainer{
@@ -116,7 +119,7 @@ b{
     .playlistflexcontainer{
     max-height: 70px;
     }
-    .ui.list .item .header {
+    .ui.list>.item .header {
         line-height: 1.3em;
     }
     .number{ 

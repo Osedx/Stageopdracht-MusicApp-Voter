@@ -8,10 +8,10 @@ import { VideolistPageComponent }  from "./videos/videolistpage.component";
 import { UserlistPageComponent }  from "./users/userlistpage.component";
 import { CanActivateAdminViaAuthGuard } from "../providers/admin-activate.guard";
 import { CanActivateLoginViaAuthGuard } from "../providers/login-activate.guard";
+import { NoContentComponent } from "./no-content/no-content.component";
 
 let pagesRoutes : Routes = [
-    { path : "", component : PlaylistPageComponent },
-    { path : "playlist", redirectTo : "",
+    { path : "playlist", component : PlaylistPageComponent,
     canActivate: [ CanActivateLoginViaAuthGuard ] },
     { path : "personal", component : PersonalComponent,
     canActivate: [ CanActivateLoginViaAuthGuard ] },
@@ -21,7 +21,9 @@ let pagesRoutes : Routes = [
     { path : "videos", component : VideolistPageComponent,
     canActivate: [ CanActivateLoginViaAuthGuard,  CanActivateAdminViaAuthGuard] },
     { path : "users", component : UserlistPageComponent,
-    canActivate: [ CanActivateLoginViaAuthGuard,  CanActivateAdminViaAuthGuard] }
+    canActivate: [ CanActivateLoginViaAuthGuard,  CanActivateAdminViaAuthGuard] },
+    { path : "", pathMatch: "full", redirectTo : "playlist"},
+    { path : "**", component : NoContentComponent },
 ];
 
 export const PagesRoutes = RouterModule.forRoot(pagesRoutes);

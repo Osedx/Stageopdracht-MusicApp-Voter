@@ -8,7 +8,7 @@
   "description": "Music app",
   "main": "app.js",
   "scripts": {
-    "default": "set NODE_ENV=local&& node npm_scripts/start.js",
+    "default": "set NODE_ENV=server&& node npm_scripts/start.js",
     "extract_pot": "node npm_scripts/extract_pot.js",
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
@@ -42,7 +42,6 @@
     "angular2-load-children-loader": "~0.1.3",
     "angular2-masonry": "~0.3.1",
     "angular2-template-loader": "^0.4.0",
-    "angular2-virtual-scroll": "^0.1.5",
     "angularfire2": "^2.0.0-beta.8",
     "awesome-typescript-loader": "^2.2.4",
     "body-parser": "^1.17.1",

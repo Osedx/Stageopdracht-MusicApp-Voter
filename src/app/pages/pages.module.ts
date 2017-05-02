@@ -17,6 +17,8 @@ import { UserlistPageModule } from "./users/userlistpage.module";
 
 import { PagesRoutingModule } from "./pages.routing.module";
 
+import { NoContentComponent } from "./no-content/no-content.component";
+
 // FireBase authentication
 import { AngularFireModule } from "angularfire2";
 import {AF} from "../providers/af";
@@ -54,6 +56,7 @@ export const firebaseConfig = {
     ],
     declarations: [
         LoginComponent,
+        NoContentComponent
     ],
     providers: [AF, CanActivateLoginViaAuthGuard, CanActivateAdminViaAuthGuard],
     exports: [

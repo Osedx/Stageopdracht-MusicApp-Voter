@@ -39,7 +39,6 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     }
 
     ngOnInit() {
-            this.index = this.playlistState.playList.indexOf(this.playlistitem);
             if (typeof this.afService.uid !== "undefined") {
             this.getRatings(this.afService.uid, this.playlistitem._id);
             }

@@ -17,7 +17,7 @@ Playlist
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-playlist-item [modal]="myModalNormal" [playlistitem]="p" [index]="i">
         <div class="ui active dimmer">
-            <div class="ui text loader">Loading</div>
+            <div class="ui text loader">Loading...</div>
         </div>
         <p></p>
         </app-playlist-item>

@@ -24,7 +24,7 @@ module.exports = function(app) {
 
     // Fallback route
     app.route(["/", "/*"]).all(function(req, res, next) {
-        res.set("Content-Type", "text/html");
+//        res.set("Content-Type", "text/html");
         var indexStream = fs.createReadStream(path.join(config.server.indexLocation, "index.html"));
 
         indexStream.on("error", function(err) {
