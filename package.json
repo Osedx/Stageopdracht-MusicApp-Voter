@@ -8,7 +8,7 @@
   "description": "Music app",
   "main": "app.js",
   "scripts": {
-    "default": "set NODE_ENV=server&& node npm_scripts/start.js",
+    "default": "set NODE_ENV=local&& node npm_scripts/start.js",
     "extract_pot": "node npm_scripts/extract_pot.js",
     "build": "node ./npm_scripts/build.js",
     "test": "./node_modules/.bin/nps test",
