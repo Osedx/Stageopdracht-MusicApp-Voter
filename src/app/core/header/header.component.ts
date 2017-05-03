@@ -33,27 +33,25 @@ ngOnInit() {
         else {
           this.allowed = true;
           // Set the Display Name and Email show it
-          if (auth.google) {
+        if (auth.google) {
+            if (!this.district01.test(auth.auth.email)) {this.allowed = false; }
             this.afService.displayName = auth.auth.displayName;
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
             this.user = this.afService.displayName.split(" ", 1)[0];
-            if (!this.district01.test(auth.auth.email)) this.allowed = false;
-          }
-          else {
+          } else {
             this.afService.displayName = auth.auth.displayName;
             if (this.afService.displayName) {
                 this.user = this.afService.displayName.split(" ", 1)[0];
-            }
-            else {
+            } else {
               this.user = "Anonymous";
             }
             this.afService.email = auth.auth.email;
             this.afService.uid = auth.auth.uid;
             this.afService.changeId.next(this.afService.uid);
-            }
-            if (this.allowed) {
+        }
+        if (this.allowed) {
             const comp = this;
             auth.auth.getToken(true).then(function(idToken) {
                 comp.getUser(idToken);
@@ -62,10 +60,8 @@ ngOnInit() {
                 console.log(error);
             });
             this.canActivateLoginViaAuthGuard.isLoggedIn = true;
-            }
         }
-        }
-        );
+        }});
     }
     // get user from database with role
     getUser(idToken : string) {
