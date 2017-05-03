@@ -6,7 +6,6 @@
     </modal-content>
 </sm-modal>
 <div class='title ui raised segment'>Own videos</div>
-<!--
 <div class="ui relaxed divided list">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i">
@@ -16,7 +15,7 @@
         </app-personalvideo>
     </div>
 </div>
--->
+<!--
 <virtual-scroll class="ui relaxed divided list" style="display:block" [items]="playlistState.playList" (update)="playlistState.viewPortItems = $event"  [childHeight]="90">
     <div class="item" [class.playing] = "p === playlistState.activeVideo" *ngFor="let p of playlistState.viewPortItems">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p">
@@ -26,6 +25,7 @@
         </app-personalvideo>
     </div>
 </virtual-scroll>
+-->
 <div *ngIf="notFound" class="notFound">
     No added music videos found.
 </div>

@@ -1,8 +1,8 @@
 @import "../../../utilities/variables.scss";
-.ui.list>.scrollable-content .item:first-child {
+.ui.list>.item:first-child {
     border-top: 0;
 }
-.ui.list>.scrollable-content .item .header {
+.ui.list>.item .header {
     overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
@@ -15,9 +15,10 @@
     color: white;
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 700;
+    line-height: 1.3em;
 }
 
-.ui.list>.scrollable-content .item .description {
+.ui.list>.item .description {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -55,7 +56,7 @@
 .number.rank {
     width:2em;
 }
-.ui.list>.scrollable-content .item [class*="playlistimage"]{
+.ui.list>.item [class*="playlistimage"]{
     margin: 0 1em 0 5px;
 }
 .playlistflexcontainer{
@@ -110,6 +111,9 @@ b{
     margin-right: 1em;
 }
 @media (max-width: 400px) {
+    .playlistflexcontainer {
+        height: 65px;
+    }
    .ui.tiny.playlistimage {
     width: 65px;
     height: 50px;
@@ -124,22 +128,21 @@ b{
     .ui.list .itemZZ .header {
         line-height: 1.3em;
     }
-    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
         max-width: 150px;
     }
-    .ui.list>.scrollable-content .item [class*="playlistimage"]{
+    .ui.list>.item [class*="playlistimage"]{
     margin: 0 0.5em 0 0;
 }
 }
 @media (max-width: 350px) {
-
-    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
         max-width: 121px;
     }
 }
 @media (max-width: 325px) {
 
-    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
         max-width: 95px;
     }
 }

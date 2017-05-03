@@ -14,15 +14,15 @@ import { SocketService } from "../../../services/socket.service";
 })
 export class PersonalVideoComponent implements OnInit {
     @Input() playlistitem : Playlist;
-//    @Input() index : number;
+    @Input() index : number;
     @Input() modal : NgSemanticModule;
-    index : number;
+//    index : number;
     isDeleted : boolean = false;
 
     constructor( private playlistState : PlaylistState, private dataService : DataService, private socketService : SocketService ) {}
 
     ngOnInit() {
-        this.index = this.playlistState.playList.indexOf(this.playlistitem);
+//        this.index = this.playlistState.playList.indexOf(this.playlistitem);
     }
 
     deletePlaylistItem() {

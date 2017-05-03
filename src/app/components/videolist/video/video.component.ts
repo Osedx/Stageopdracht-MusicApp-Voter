@@ -13,15 +13,15 @@ import { AF } from "../../../providers/af";
 })
 export class VideoComponent implements OnInit {
     @Input() playlistitem : Playlist;
-//    @Input() index : number;
-    index : number;
+    @Input() index : number;
+//    index : number;
     isDeleted : boolean = false;
 
     constructor( private dataService : DataService, private socketService : SocketService,
     private playlistState : PlaylistState, private afService : AF) {}
 
     ngOnInit() {
-        this.index = this.playlistState.playList.indexOf(this.playlistitem);
+//        this.index = this.playlistState.playList.indexOf(this.playlistitem);
     }
 
     deletePlaylistItem() {
