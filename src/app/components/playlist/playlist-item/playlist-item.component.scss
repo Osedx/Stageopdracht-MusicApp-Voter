@@ -7,15 +7,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-   -webkit-line-clamp: 2; 
-   -webkit-box-orient: vertical;
-    width:100%;
-    padding:2px;
-    max-height: 2.9em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    padding: 2px;
+    max-height: 2.4em;
     color: white;
-    font-family: 'Didact Gothic', sans-serif;
     font-weight: bold;
-    line-height: 1.2em;
+    line-height: 1.1em;
 }
 
 .ui.list>.item .description {
