@@ -14,8 +14,8 @@ import { AF } from "../../../providers/af";
 export class PlaylistComponent implements OnInit {
 
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
-    messageUpdate = false;
-    notFound = false;
+    messageUpdate : boolean;
+    notFound : boolean;
     _subscription : any;
     constructor( private playlistState : PlaylistState, private dataservice : DataService,
     private socketService : SocketService, private afService : AF ) {
@@ -35,6 +35,8 @@ export class PlaylistComponent implements OnInit {
     }}}});
     }
     ngOnInit() {
+        this.messageUpdate = false;
+        this.notFound = false;
         this.getPlaylist();
         this.playlistState.activeVideo = undefined;
         this.playlistState.ratings = [];

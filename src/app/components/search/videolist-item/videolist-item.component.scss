@@ -31,7 +31,7 @@
     }
 }
 .addcontainer {
-    margin: 0 0 0 1em;
+    margin: 0 0 0 0.5em;
     display: flex;
 }
 .info{
@@ -40,6 +40,7 @@
 }
 .ui.tiny.image{
     width: 105px;
+    margin-bottom: 0;
 }
 .ui.tiny.image:hover{
     filter: brightness(1) invert(0.2);

@@ -21,8 +21,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    font-size: 1em;
-    line-height: 1.2em;
+    font-size: 0.9em;
+    line-height: 1.1em;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     color: #e7e7e7;
@@ -37,7 +37,7 @@
 }
 
 .info{
-    width: 75%;
+    width: 100%;
     display: inline;
 }
 .ui.tiny.image:hover{
@@ -111,7 +111,7 @@ b{
 }
 @media (max-width: 400px) {
    .ui.tiny.playlistimage {
-    width: 75px;
+    width: 55px;
     height: 50px;
     align-self: center;
     }
@@ -124,4 +124,23 @@ b{
     .ui.list .itemZZ .header {
         line-height: 1.3em;
     }
+    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+        max-width: 150px;
+    }
+    .ui.list>.scrollable-content .item [class*="playlistimage"]{
+    margin: 0 0.5em 0 0;
 }
+}
+@media (max-width: 350px) {
+
+    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+        max-width: 121px;
+    }
+}
+@media (max-width: 325px) {
+
+    .ui.list>.scrollable-content .item.searchinfo .description, .ui.list>.scrollable-content .item.searchinfo .header {
+        max-width: 95px;
+    }
+}
+

@@ -1,13 +1,18 @@
 @import "../../../utilities/variables.scss";
 
-.ui.list:last-child, .ui.list.searchlist {
+.ui.list:last-child {
     border-left: 5px solid #555555;
     border-right: 5px solid #555555;
     border-radius: 5px;
     margin-bottom: 0;
     background: black;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 127px);
     overflow-y: scroll;
+}
+
+.ui.list.searchlist {
+    margin-top:0;
+    height: calc(100vh - 137px);
 }
 .ui.list:first-child {
     margin: 0;
@@ -84,10 +89,7 @@
     top:0;
     right:0;
 }
-.ui.list.searchlist {
-    margin-top:0;
-    height: calc(100vh - 135px);
-}
+
 
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
