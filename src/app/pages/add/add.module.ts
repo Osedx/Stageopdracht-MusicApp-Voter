@@ -13,10 +13,8 @@ import { DataService } from "../../services/data.service";
 import { PipesModule } from "../../pipes";
 import { SocketService } from "../../services/socket.service";
 
-import { VirtualScrollModule } from "angular2-virtual-scroll";
-
 @NgModule({
-    imports: [ NgSemanticModule, CommonModule, ReactiveFormsModule, FormsModule, PipesModule, VirtualScrollModule ],
+    imports: [ NgSemanticModule, CommonModule, ReactiveFormsModule, FormsModule, PipesModule ],
     providers: [ VideoListState, DataService,  SearchService, SocketService ],
     declarations: [ AddComponent, SearchbarComponent, VideoListComponent, VideoListItemComponent ],
     exports: [AddComponent]
