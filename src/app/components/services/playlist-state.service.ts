@@ -8,7 +8,7 @@ import { Subject } from "rxjs/Subject";
 export class PlaylistState {
 
     playList : Playlist[] = [];
-    ratings : Rating[] = [];
+    ratings : Rating[] = undefined;
     activeVideo : Playlist;
     isPlaying = false;
     showUpdateButton = false;

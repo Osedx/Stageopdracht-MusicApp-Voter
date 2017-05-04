@@ -31,9 +31,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     thumbsdowndisabled : Boolean = true;
     deleted = false;
 
-
-    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF, private settingService : SettingService, private socketService : SocketService ) {
-    }
+    constructor(private playlistState : PlaylistState, private dataService : DataService, private afService : AF, private settingService : SettingService, private socketService : SocketService ) {}
 
     ngOnDestroy() {
             if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
@@ -49,13 +47,13 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
 //            this._subscription = this.afService.changeId.subscribe((userid : string) => {
 //            this.getRatings(userid, this.playlistitem._id);
 //            }); }
-            if (this.playlistState.ratings.length !== 0) {
+        if (typeof this.playlistState.ratings !== "undefined") {
             this.getRatings();
-            }
-            else {
+        } else {
             this._subscription = this.playlistState.ratingsLoaded.subscribe((state) => {
-            this.getRatings();
-            }); }
+            this.getRatings(); });
+        }
+
     }
 
         onClickThumb() {
@@ -122,7 +120,6 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
                 "channelid" : this.playlistitem.channelid, "description" : this.playlistitem.description}).subscribe(
             res => {
                 const newToplistItem = res.json();
-//                console.log(newToplistItem);
           },
         error => {console.log(error); }
         );
@@ -197,18 +194,17 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
         if (this.playlistitem.uploaderid === this.afService.uid) return;
         if (this.rating != null) {
             if (typeof this.rating.rating === "string" || this.rating.rating instanceof String) {
-                    if (this.rating.rating === "liked") {
-                        this.thumbsupdisabled = false;
-                        this.thumbsupactive = true;
-                    }
-                    else if (this.rating.rating === "disliked") {
-                        this.thumbsdowndisabled = false;
-                        this.thumbsdownactive = true;
-                    }
+                if (this.rating.rating === "liked") {
+                    this.thumbsupdisabled = false;
+                    this.thumbsupactive = true;
+                } else if (this.rating.rating === "disliked") {
+                    this.thumbsdowndisabled = false;
+                    this.thumbsdownactive = true;
                 }
-            } else {
-                this.thumbsupdisabled = false;
-                this.thumbsdowndisabled = false;
             }
+        } else {
+            this.thumbsupdisabled = false;
+            this.thumbsdowndisabled = false;
         }
+    }
 }

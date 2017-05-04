@@ -39,7 +39,7 @@ export class PlaylistComponent implements OnInit {
         this.notFound = false;
         this.getPlaylist();
         this.playlistState.activeVideo = undefined;
-        this.playlistState.ratings = [];
+        this.playlistState.ratings = undefined;
         if (typeof this.afService.uid !== "undefined") {
             this.getAllRatings(this.afService.uid);
         } else {
@@ -63,7 +63,7 @@ export class PlaylistComponent implements OnInit {
     refreshList() {
         this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
-        this.playlistState.ratings = [];
+        this.playlistState.ratings = undefined;
         this.getAllRatings(this.afService.uid);
         this.getPlaylist();
     }
