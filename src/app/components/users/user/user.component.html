@@ -8,7 +8,7 @@
                 </div>
                 <div class="field">
                     <label>Role</label>
-                    <select #role class="ui fluid search dropdown" id="role"  class="form-control" type="select">
+                    <select #role class="ui fluid search dropdown" id="role" class="form-control" type="select">
                         <option value="user">User</option>
                         <option value="admin">Admin</option>
                     </select>
@@ -33,15 +33,14 @@
                 {{user.name}}
             </div>
             <div class="info">
-                <div class="description">{{user.email}}</div>
-                <div class="description">( {{user.role}} )</div>
+                <div class="description user">{{user.email}}</div>
+                <div class="description user">( {{user.role}} )</div>
             </div>
         </div>
         <div class="thumbscontainer">
             <i class="fa fa-pencil fa-2x adminicons" aria-hidden="true" (click)="updateModal.show()"></i>
-            <i class="fa fa-ban fa-2x adminicons" aria-hidden="true" (click)="updateUserStatus()"
-            *ngIf="!isAdmin" [ngClass]="{'blocked': isBlocked}"></i>
+            <i class="fa fa-ban fa-2x adminicons" aria-hidden="true" (click)="updateUserStatus()" *ngIf="!isAdmin" [ngClass]="{'blocked': isBlocked}"></i>
             <i class="fa fa-trash fa-2x adminicons" aria-hidden="true" (click)="removeModal.show()" *ngIf="!isAdmin"></i>
         </div>
-</div>
+    </div>
 </div>

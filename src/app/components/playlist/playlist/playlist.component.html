@@ -6,20 +6,20 @@
     </modal-content>
 </sm-modal>
 <div class='title ui raised segment'>
-Playlist
-<i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true" *ngIf="playlistState.showUpdateButton"></i>
+    Playlist
+    <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true" *ngIf="playlistState.showUpdateButton"></i>
 </div>
 <div class="ui message" *ngIf="messageUpdate">
-  <p>The playlist is no longer up to date.</p>
-  <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
+    <p>The playlist is no longer up to date.</p>
+    <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
 </div>
 <div class="ui relaxed divided list" [ngClass]="{'messageUpdate': messageUpdate}" *ngIf="!notFound">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-playlist-item [modal]="myModalNormal" [playlistitem]="p" [index]="i">
-        <div class="ui active dimmer">
-            <div class="ui text loader">Loading...</div>
-        </div>
-        <p></p>
+            <div class="ui active dimmer">
+                <div class="ui text loader">Loading...</div>
+            </div>
+            <p></p>
         </app-playlist-item>
     </div>
 </div>
@@ -39,4 +39,5 @@ Playlist
 <div *ngIf="notFound" class="notFound">
     No music videos found.
 </div>
-    
+
+<i (click)="myModalNormal.show()" *ngIf="playlistState.isPlaying" class="fa fa-window-maximize fa-3x" aria-hidden="true"></i>
