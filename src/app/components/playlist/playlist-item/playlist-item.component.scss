@@ -2,6 +2,7 @@
 .ui.list>.item:first-child {
     border-top: 0;
 }
+
 .ui.list>.item .header {
     font-size: 1.05em;
     overflow: hidden;
@@ -28,121 +29,164 @@
     color: #e7e7e7;
 }
 
-.ui.button{
-    display:inline;
-    position:relative;
+.ui.button {
+    display: inline;
+    position: relative;
     bottom: 21px;
     background-color: white;
     padding: 10px;
 }
 
-.info{
+.info {
     width: 100%;
     display: inline;
 }
-.ui.tiny.image:hover{
+
+.ui.tiny.image:hover {
     filter: brightness(1) invert(0.2);
     cursor: pointer;
 }
 
-.number{
+.number {
     z-index: 1;
     color: white;
-    float:left;
+    float: left;
     align-self: center;
     margin: 0 5px;
 }
+
 .number.rank {
-    width:2em;
+    width: 2em;
 }
-.ui.list>.item [class*="playlistimage"]{
+
+.ui.list>.item [class*="playlistimage"] {
     margin: 0 1em 0 5px;
 }
-.playlistflexcontainer{
+
+.playlistflexcontainer {
     height: 80px;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     flex-direction: row;
 }
-.infocontainer{
-    display:flex;
+
+.infocontainer {
+    display: flex;
+    align-self: center;
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
 }
-.thumbscontainer{
-    display:flex;
+
+.thumbscontainer {
+    display: flex;
     justify-content: space-around;
     flex-direction: row;
 }
-.thumbs{
+
+.thumbs {
     align-self: center;
     padding: 0 5px
 }
-.thumbscontainer>.thumbsupactive{
+
+.thumbscontainer>.thumbsupactive {
     opacity: 1;
     color: $like;
-        &:active{
+    &:active {
         color: $likeactive;
     }
 }
-.thumbscontainer>.thumbsdownactive{
+
+.thumbscontainer>.thumbsdownactive {
     opacity: 1;
     color: $dislike;
-    &:active{
+    &:active {
         color: $dislikeactive;
     }
 }
-.thumbscontainer>.thumbsdisabled{
+
+.thumbscontainer>.thumbsdisabled {
     opacity: 0.2;
     cursor: default;
 }
-b{
+
+b {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+
 .invisible {
     visibility: hidden;
 }
+
 .deletedtext {
     color: $dislike;
     align-self: center;
     margin-right: 1em;
 }
+
+@media (max-width: 500px) {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
+        max-width: 186px;
+    }
+}
+
+@media (max-width: 475px) {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 450px) {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
+        max-width: 134px;
+    }
+}
+
+@media (max-width: 425px) {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
+        max-width: 123px;
+    }
+}
+
 @media (max-width: 400px) {
     .playlistflexcontainer {
         height: 65px;
     }
-   .ui.tiny.playlistimage {
-    width: 65px;
-    height: 50px;
-    align-self: center;
+    .ui.tiny.playlistimage {
+        width: 65px;
+        height: 50px;
+        align-self: center;
     }
     .infocontainer > .content {
         align-self: center;
     }
     .ui.list {
-    font-size: 1em;
+        font-size: 1em;
     }
-    .ui.list .itemZZ .header {
-        line-height: 1.3em;
+    .ui.list>.item .description,
+    .ui.list>.item .header {
+        max-width: 125px;
     }
-    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
-        max-width: 150px;
+    .ui.list>.item [class*="playlistimage"] {
+        margin: 0 0.5em 0 0;
     }
-    .ui.list>.item [class*="playlistimage"]{
-    margin: 0 0.5em 0 0;
 }
-}
+
 @media (max-width: 350px) {
-    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
         max-width: 121px;
     }
 }
-@media (max-width: 325px) {
 
-    .ui.list>.item.searchinfo .description, .ui.list>.item.searchinfo .header {
+@media (max-width: 325px) {
+    .ui.list>.item .description,
+    .ui.list>.item .header {
         max-width: 95px;
     }
 }
-
