@@ -13,7 +13,7 @@ Playlist
   <p>The playlist is no longer up to date.</p>
   <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
 </div>
-<div class="ui relaxed divided list" [ngClass]="{'messageUpdate': messageUpdate}">
+<div class="ui relaxed divided list" [ngClass]="{'messageUpdate': messageUpdate}" *ngIf="!notFound">
     <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
         <app-playlist-item [modal]="myModalNormal" [playlistitem]="p" [index]="i">
         <div class="ui active dimmer">
@@ -38,5 +38,5 @@ Playlist
 
 <div *ngIf="notFound" class="notFound">
     No music videos found.
-
+</div>
     
