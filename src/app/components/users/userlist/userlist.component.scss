@@ -55,9 +55,10 @@
 .ui.relaxed.divided.list.users {
     height: calc(100vh - 200px);
     overflow-y: scroll;
+    background: none;
 }
 
 .fa-plus-circle {
     position: absolute;
-    right: 1px;
+    right: 15px;
 }
