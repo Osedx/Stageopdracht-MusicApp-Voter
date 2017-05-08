@@ -1,5 +1,5 @@
 <div class="videolistflexcontainer">
-     <img class="ui tiny left floated image" src="{{video.thumbnailUrl}}" (click)="modal.show()" (click)="onClickThumb()">
+     <img class="ui tiny left floated image" src="{{video.thumbnailUrl}}" (click)="modal.show()" (click)="onClickThumb()"/>
     <div class="infocontainer">
        <div content info>
         <div class="header">
@@ -7,11 +7,9 @@
         </div>
         <div class="info">
         <div  class="description">
-          <a href="http://youtube.com/channel/{{video.channelId}}" target="_blank"><b>
-            {{video.channelTitle}}
-              </b></a>
+            <a href="http://youtube.com/channel/{{video.channelId}}" target="_blank"><b>{{video.channelTitle}}</b></a>
         </div>
-        <div  class="description">
+        <div class="description">
           {{video.publishedAt}}
         </div>
         </div>
