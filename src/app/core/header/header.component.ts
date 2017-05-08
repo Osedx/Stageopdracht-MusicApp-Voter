@@ -41,7 +41,7 @@ ngOnInit() {
             if (!this.district01.test(auth.auth.email)) {this.allowed = false; }
             this.afService.displayName = auth.auth.displayName;
             this.afService.email = auth.auth.email;
-            if(auth.auth.uid !== this.afService.uid) {
+            if (auth.auth.uid !== this.afService.uid) {
                 this.afService.uid = auth.auth.uid;
                 this.afService.changeId.next(this.afService.uid);
             }
@@ -54,7 +54,7 @@ ngOnInit() {
               this.user = "Anonymous";
             }
             this.afService.email = auth.auth.email;
-            if(auth.auth.uid !== this.afService.uid) {
+            if (auth.auth.uid !== this.afService.uid) {
                 this.afService.uid = auth.auth.uid;
                 this.afService.changeId.next(this.afService.uid);
             }
@@ -81,7 +81,7 @@ ngOnInit() {
     getUser(idToken : string) {
         this._subscriptionUser = this.dataService.getUser(idToken).subscribe(
             data => {
-                if (data.json() == null) {this.addUser(idToken); 
+                if (data.json() == null) {this.addUser(idToken);
                 } else {
                     this.canActivateAdminViaAuthGuard.role = data.json().role;
                     this.userCheckedID = data.json()._id;
