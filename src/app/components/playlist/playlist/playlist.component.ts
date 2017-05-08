@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit } from "@angular/core";
+import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from "@angular/core";
 import * as moment from "moment";
 import { PlaylistState } from "../../services/playlist-state.service";
 import { NgSemanticModule } from "ng-semantic";
@@ -11,7 +11,7 @@ import { AF } from "../../../providers/af";
   templateUrl: "playlist.component.html",
   styleUrls: ["playlist.component.scss"]
 })
-export class PlaylistComponent implements OnInit {
+export class PlaylistComponent implements OnInit, OnDestroy {
 
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
     messageUpdate : boolean;
@@ -35,6 +35,7 @@ export class PlaylistComponent implements OnInit {
     }}}});
     }
     ngOnInit() {
+        this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
         this.notFound = false;
         this.getPlaylist();
@@ -46,6 +47,9 @@ export class PlaylistComponent implements OnInit {
             this._subscription = this.afService.changeId.subscribe((userid : string) => {
             this.getAllRatings(userid); });
         }
+    }
+    ngOnDestroy() {
+        if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
     }
     getPlaylist() {
         this.dataservice.getPlaylist().subscribe(

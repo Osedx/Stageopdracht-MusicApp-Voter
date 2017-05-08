@@ -24,10 +24,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: "html?-minimize",
-                query: {
-                interpolate: 'require'
-                }
+                loader: "html?-minimize"
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
