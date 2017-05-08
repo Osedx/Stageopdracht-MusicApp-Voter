@@ -42,7 +42,8 @@ ngOnInit() {
             this.afService.displayName = auth.auth.displayName;
             this.afService.email = auth.auth.email;
             if(auth.auth.uid !== this.afService.uid) {
-                this.afService.uid = auth.auth.uid;           this.afService.changeId.next(this.afService.uid);
+                this.afService.uid = auth.auth.uid;
+                this.afService.changeId.next(this.afService.uid);
             }
             this.user = this.afService.displayName.split(" ", 1)[0];
           } else {
@@ -54,18 +55,19 @@ ngOnInit() {
             }
             this.afService.email = auth.auth.email;
             if(auth.auth.uid !== this.afService.uid) {
-                this.afService.uid = auth.auth.uid;           this.afService.changeId.next(this.afService.uid);
+                this.afService.uid = auth.auth.uid;
+                this.afService.changeId.next(this.afService.uid);
             }
-        }
+          }
         if (this.allowed) {
             const comp = this;
-            auth.auth.getToken(true).then(function(idToken) {
             if (comp.userCheckedID !== comp.afService.uid) {
+            auth.auth.getToken(true).then(function(idToken) {
                 comp.getUser(idToken);
                 comp.afService.tokenId = idToken;
-                }}).catch(function(error) {
+                }).catch(function(error) {
                 console.log(error);
-            });
+            }); }
             this.canActivateLoginViaAuthGuard.isLoggedIn = true;
         }
         }});
