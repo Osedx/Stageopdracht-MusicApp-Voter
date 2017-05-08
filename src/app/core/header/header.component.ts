@@ -72,7 +72,7 @@ ngOnInit() {
         }
         }});
     }
-    
+
     ngOnDestroy() {
         if (typeof this._subscriptionAuth !== "undefined") this._subscriptionAuth.unsubscribe();
         if (typeof this._subscriptionUser !== "undefined") this._subscriptionUser.unsubscribe();
