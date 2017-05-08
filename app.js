@@ -95,7 +95,6 @@ db.once("open", function () {
                 UserDatabase.findOne({
                     "_id": uid
                 }, function (err, obj) {
-                    console.log(obj);
                     if (obj.role === "admin") {
                         UserDatabase.find({}, null, function (err, docs) {
                             if (err) return console.error(err);
@@ -300,8 +299,6 @@ db.once("open", function () {
 
     //update user
     app.put("/api/user/:tokenid/:id", function (req, res) {
-        console.log(req.body);
-        console.log(req.params.id);
         admin.auth().verifyIdToken(req.params.tokenid)
             .then(function (decodedToken) {
                 var uid = decodedToken.uid;
@@ -343,7 +340,6 @@ db.once("open", function () {
                         admin.auth().updateUser(req.params.id, {
                             disabled: req.body.disabled,
                         }).then(function (userRecord) {
-                            console.log(userRecord);
                            res.sendStatus(200);
                         }).catch(function(error) {
                             return console.log("Error updating user:", error); });

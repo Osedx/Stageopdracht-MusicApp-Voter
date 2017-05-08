@@ -38,4 +38,4 @@ import { VirtualScrollModule } from "angular2-virtual-scroll";
     ]
 })
 
-export class AppModule { }
+export class AppModule {}
