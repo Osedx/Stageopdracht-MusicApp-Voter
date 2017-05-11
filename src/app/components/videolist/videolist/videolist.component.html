@@ -11,7 +11,7 @@
         <option value="createdAt">Date</option>
     </sm-select>
     </div>
-<div class="ui relaxed divided list videos" *ngIf="!playlistState.notFound">
+<div class="ui relaxed divided list videos" [ngClass]="{'notFoundList': playlistState.notFound}">
     <div class="item" *ngFor="let v of playlistState.playList | myfilter:filterargs | orderBy:orderargs; let i = index">
         <app-video [playlistitem]="v" [index]="i">
         <div class="ui active dimmer">

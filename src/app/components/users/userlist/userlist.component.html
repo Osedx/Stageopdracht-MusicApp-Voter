@@ -48,7 +48,7 @@
         <option value="role">Role</option>
     </sm-select>
     </div>
-    <div class="ui relaxed divided list users" *ngIf="!userlistState.notFound">
+    <div class="ui relaxed divided list users" [ngClass]="{'notFoundList': userlistState.notFound}">
         <div class="item" *ngFor="let u of userlistState.userList | myuserfilter:filterargs | orderBy:orderargs; let i = index">
             <app-user [user]="u" [index]="i">
                 <div class="ui active dimmer">
@@ -58,7 +58,7 @@
             </app-user>
         </div>
     </div>
-    <div *ngIf="userlistState.notFound" class="notFound">
+    <div *ngIf="userlistState.notFound" class="notFoundUser">
         No user found.
     </div>
     <i (click)="myModal.show()" class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>

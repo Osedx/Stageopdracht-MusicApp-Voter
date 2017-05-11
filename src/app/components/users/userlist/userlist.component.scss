@@ -70,3 +70,10 @@
 .ui.list > .item .info > .description.user {
     max-width: none;
 }
+
+.notFoundUser {
+    margin-top: 14px;
+    text-align: center;
+    color: white;
+    height: calc(100vh - 266px);
+}
