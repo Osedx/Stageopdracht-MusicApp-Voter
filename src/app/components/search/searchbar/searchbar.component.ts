@@ -3,7 +3,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { VideoListState } from "../../services/videolist-state.service";
 import { SearchService } from "../../services/search.service";
 import * as moment from "moment";
-import {Video} from "../../models/video.model";
+import { Video } from "../../models/video.model";
 import { FormControl } from "@angular/forms";
 
 @Component({

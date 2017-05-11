@@ -9,13 +9,25 @@
     Playlist
     <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true" *ngIf="playlistState.showUpdateButton"></i>
 </div>
+    <div class="ui icon input searchbar">
+      <input type="text" placeholder="Filter" class="form-control" [formControl]="filterControl">
+      <sm-select
+        [options]="{direction: 'downward'}" 
+        [(model)]="orderargs"
+        class="fluid">
+        <option value="rating">Likes</option>
+        <option value="title">Title</option>
+        <option value="uploader">User</option>
+        <option value="createdAt">Date</option>
+    </sm-select>
+    </div>
 <div class="ui message" *ngIf="messageUpdate">
     <p>The playlist is no longer up to date.</p>
     <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
 </div>
-<div class="ui relaxed divided list" [ngClass]="{'messageUpdate': messageUpdate}" *ngIf="!notFound">
-    <div class="item" *ngFor="let p of playlistState.playList; let i = index" [class.playing]="p === playlistState.activeVideo">
-        <app-playlist-item [modal]="myModalNormal" [playlistitem]="p" [index]="i">
+<div class="ui relaxed divided list playlist" [ngClass]="{'messageUpdate': messageUpdate}">
+    <div class="item" *ngFor="let p of playlistState.playList | myfilter:filterargs | orderBy:orderargs" [class.playing]="p === playlistState.activeVideo">
+        <app-playlist-item [modal]="myModalNormal" [playlistitem]="p">
             <div class="ui active dimmer">
                 <div class="ui text loader">Loading...</div>
             </div>
@@ -36,7 +48,7 @@
 </virtual-scroll>
 -->
 
-<div *ngIf="notFound" class="notFound">
+<div *ngIf="playlistState.notFound" class="notFound">
     No music videos found.
 </div>
 

@@ -6,9 +6,11 @@ import { UserlistComponent } from "../../components/users/userlist/userlist.comp
 import { UserComponent } from "../../components/users/user/user.component";
 import { NgSemanticModule } from "ng-semantic";
 import { UserListState} from "../../components/services/userlist-state.service";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { PipesModule } from "../../pipes";
 
 @NgModule({
-    imports: [ CommonModule, NgSemanticModule ],
+    imports: [ CommonModule, NgSemanticModule, ReactiveFormsModule, FormsModule, PipesModule ],
     providers: [ DataService, UserListState ],
     declarations: [ UserlistPageComponent, UserlistComponent, UserComponent ],
     exports: [ UserlistPageComponent ]

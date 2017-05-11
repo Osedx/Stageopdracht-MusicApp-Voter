@@ -5,6 +5,7 @@ import { NgSemanticModule } from "ng-semantic";
 import { DataService } from "../../../services/data.service";
 import { SocketService } from "../../../services/socket.service";
 import { AF } from "../../../providers/af";
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-playlist",
@@ -12,13 +13,15 @@ import { AF } from "../../../providers/af";
   styleUrls: ["playlist.component.scss"]
 })
 export class PlaylistComponent implements OnInit, OnDestroy {
-
+    filterControl = new FormControl();
     @ViewChild("playlistplayer") playlistplayer : ElementRef;
     messageUpdate : boolean;
-    notFound : boolean;
     _subscription : any;
+    filterargs : any;
+    orderargs = "rating";
     constructor( private playlistState : PlaylistState, private dataservice : DataService,
     private socketService : SocketService, private afService : AF ) {
+        this.playlistState.notFound = false;
         this.playlistState.isPlaying = false;
         this.playlistState.playList = [];
         socketService.socket.on("playlistisupdated", (userid) => {
@@ -37,7 +40,6 @@ export class PlaylistComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
-        this.notFound = false;
         this.getPlaylist();
         this.playlistState.activeVideo = undefined;
         this.playlistState.ratings = undefined;
@@ -47,6 +49,8 @@ export class PlaylistComponent implements OnInit, OnDestroy {
             this._subscription = this.afService.changeId.subscribe((userid : string) => {
             this.getAllRatings(userid); });
         }
+       this.filterControl.valueChanges
+       .subscribe(newValue => this.filterargs = new RegExp(newValue, "i"));
     }
     ngOnDestroy() {
         if (typeof this._subscription !== "undefined") this._subscription.unsubscribe();
@@ -55,8 +59,8 @@ export class PlaylistComponent implements OnInit, OnDestroy {
         this.dataservice.getPlaylist().subscribe(
             data => {
             this.playlistState.playList = data;
-            if (this.playlistState.playList.length === 0) this.notFound = true;
-            else this.notFound = false;
+            if (this.playlistState.playList.length === 0) this.playlistState.notFound = true;
+            else this.playlistState.notFound = false;
             },
     error => { console.log(error); } ); }
     stop() {
@@ -65,6 +69,7 @@ export class PlaylistComponent implements OnInit, OnDestroy {
         this.playlistState.isPlaying = false;
     }
     refreshList() {
+        this.orderargs = "rating";
         this.playlistState.showUpdateButton = false;
         this.messageUpdate = false;
         this.playlistState.ratings = undefined;

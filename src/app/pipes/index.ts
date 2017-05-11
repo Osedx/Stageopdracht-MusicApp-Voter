@@ -4,3 +4,6 @@ export * from "./safeDate.pipe";
 export * from "./capitalize.pipe";
 export * from "./youtube-safe-url.pipe";
 export * from "./absoluteValue.pipe";
+export * from "./myfilter.pipe";
+export * from "./orderby.pipe";
+export * from "./myuserfilter.pipe";

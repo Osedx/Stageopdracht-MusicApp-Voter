@@ -8,6 +8,7 @@ import { PlaylistState} from "../../components/services/playlist-state.service";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { DataService } from "../../services/data.service";
 import { PipesModule } from "../../pipes";
+
 // import { VirtualScrollModule } from "angular2-virtual-scroll";
 
 @NgModule({

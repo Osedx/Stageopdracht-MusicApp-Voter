@@ -5,6 +5,9 @@ import { SafeDatePipe } from "./safeDate.pipe";
 import { CapitalizePipe } from "./capitalize.pipe";
 import { YoutubeSafeUrlPipe } from "./youtube-safe-url.pipe";
 import { AbsoluteValuePipe } from "./absoluteValue.pipe";
+import { MyFilterPipe } from "./myfilter.pipe";
+import { OrderBy } from "./orderby.pipe";
+import { MyUserFilterPipe } from "./myuserfilter.pipe";
 
 @NgModule({
     imports: [],
@@ -13,21 +16,30 @@ import { AbsoluteValuePipe } from "./absoluteValue.pipe";
         SafeDatePipe,
         CapitalizePipe,
         YoutubeSafeUrlPipe,
-        AbsoluteValuePipe
+        AbsoluteValuePipe,
+        MyFilterPipe,
+        MyUserFilterPipe,
+        OrderBy
     ],
     providers: [
         FilesizePipe,
         SafeDatePipe,
         CapitalizePipe,
         YoutubeSafeUrlPipe,
-        AbsoluteValuePipe
+        AbsoluteValuePipe,
+        MyFilterPipe,
+        MyUserFilterPipe,
+        OrderBy
     ],
     exports: [
         FilesizePipe,
         SafeDatePipe,
         CapitalizePipe,
         YoutubeSafeUrlPipe,
-        AbsoluteValuePipe
+        AbsoluteValuePipe,
+        MyFilterPipe,
+        MyUserFilterPipe,
+        OrderBy
     ]
 })
 

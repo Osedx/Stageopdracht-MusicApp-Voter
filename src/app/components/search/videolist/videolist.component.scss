@@ -3,16 +3,15 @@
 .ui.list{
     border-left: 5px solid #555555;
     border-right: 5px solid #555555;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 0;
     background: black;
-    height: calc(100vh - 127px);
     overflow-y: scroll;
+    margin-top:0;
 }
 
 .ui.list.searchlist {
-    margin-top:0;
-    height: calc(100vh - 137px);
+    max-height: calc(100vh - 165px);
 }
 .ui.list:first-child {
     margin:0;

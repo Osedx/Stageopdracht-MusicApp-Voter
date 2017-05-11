@@ -3,6 +3,7 @@ import { DataService } from "../../../services/data.service";
 import { AF } from "../../../providers/af";
 import { NgSemanticModule } from "ng-semantic";
 import { UserListState } from "../../services/userlist-state.service";
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-userlist",
@@ -11,20 +12,28 @@ import { UserListState } from "../../services/userlist-state.service";
 })
 export class UserlistComponent implements OnInit {
 //    messageSuccess = false;
+    filterControl = new FormControl();
+    filterargs : any;
+    orderargs = "name";
     messageFailed = false;
     message : string;
     @ViewChild("name") name : ElementRef;
     @ViewChild("email") email : ElementRef;
     @ViewChild("password") password : ElementRef;
 constructor( private dataservice : DataService, private afService : AF, private userlistState : UserListState ) {
+    this.userlistState.notFound = false;
     this.getAllUsers();
 }
     ngOnInit() {
+       this.filterControl.valueChanges
+       .subscribe(newValue => this.filterargs = new RegExp(newValue, "i"));
     }
     getAllUsers() {
         this.dataservice.getAllUsers(this.afService.tokenId).subscribe(
             data => {
             this.userlistState.userList = data;
+            if (this.userlistState.userList.length === 0) this.userlistState.notFound = true;
+            else this.userlistState.notFound = false;
 //            console.log("Users " + data);
             },
     error => { console.log(error); } ); }

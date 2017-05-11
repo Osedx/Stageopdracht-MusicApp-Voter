@@ -5,10 +5,13 @@ import { VideolistPageComponent } from "./videolistpage.component";
 import { VideolistComponent } from "../../components/videolist/videolist/videolist.component";
 import { VideoComponent } from "../../components/videolist/video/video.component";
 import { PipesModule } from "../../pipes";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { NgSemanticModule } from "ng-semantic";
+
 // import { VirtualScrollModule } from "angular2-virtual-scroll";
 
 @NgModule({
-    imports: [ CommonModule, PipesModule ],
+    imports: [ CommonModule, PipesModule, ReactiveFormsModule, FormsModule, NgSemanticModule ],
     providers: [ DataService ],
     declarations: [ VideolistPageComponent, VideolistComponent, VideoComponent ],
     exports: [ VideolistPageComponent ]

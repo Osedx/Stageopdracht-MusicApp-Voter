@@ -1,6 +1,18 @@
 <div class='title ui raised segment'>Videos</div>
-<div class="ui relaxed divided list" *ngIf="!notFound">
-    <div class="item" *ngFor="let v of playlistState.playList; let i = index">
+    <div class="ui icon input searchbar">
+      <input type="text" placeholder="Filter" class="form-control" [formControl]="filterControl">
+      <sm-select
+        [options]="{direction: 'downward'}" 
+        [(model)]="orderargs"
+        class="fluid">
+        <option value="rating">Likes</option>
+        <option value="title">Title</option>
+        <option value="uploader">User</option>
+        <option value="createdAt">Date</option>
+    </sm-select>
+    </div>
+<div class="ui relaxed divided list videos">
+    <div class="item" *ngFor="let v of playlistState.playList | myfilter:filterargs | orderBy:orderargs; let i = index">
         <app-video [playlistitem]="v" [index]="i">
         <div class="ui active dimmer">
             <div class="ui text loader">Loading</div>
@@ -20,6 +32,6 @@
 </virtual-scroll>
 -->
 
-<div *ngIf="notFound" class="notFound">
+<div *ngIf="playlistState.notFound" class="notFound">
         No music videos found.
 </div>

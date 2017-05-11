@@ -38,8 +38,18 @@
         </div>
         <p>{{message}}</p>
     </div>
+    <div class="ui icon input searchbar">
+      <input type="text" placeholder="Filter" class="form-control" [formControl]="filterControl">
+      <sm-select
+        [options]="{direction: 'downward'}" 
+        [(model)]="orderargs"
+        class="fluid">
+        <option value="name">Name</option>
+        <option value="role">Role</option>
+    </sm-select>
+    </div>
     <div class="ui relaxed divided list users">
-        <div class="item" *ngFor="let u of userlistState.userList; let i = index">
+        <div class="item" *ngFor="let u of userlistState.userList | myuserfilter:filterargs | orderBy:orderargs; let i = index">
             <app-user [user]="u" [index]="i">
                 <div class="ui active dimmer">
                     <div class="ui text loader">Loading</div>
@@ -48,6 +58,8 @@
             </app-user>
         </div>
     </div>
-
+    <div *ngIf="userlistState.notFound" class="notFound">
+        No user found.
+    </div>
     <i (click)="myModal.show()" class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 </div>

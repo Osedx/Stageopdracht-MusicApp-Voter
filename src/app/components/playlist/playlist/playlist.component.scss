@@ -29,10 +29,27 @@
 .notFound {
     text-align: center;
     color: white;
+    margin-bottom: 125px;
 }
 .ui.message, .ui.message p {
     margin: 0;
 }
-.ui.relaxed.divided.list.messageUpdate {
-    height: calc(100vh - 173px);
+.ui.relaxed.divided.list.playlist.messageUpdate {
+    max-height: calc(100vh - 212px);
+}
+.notFoundSongs {
+    display: none;
+}
+.ui.relaxed.divided.list.playlist {
+    max-height: calc(100vh - 165px);
+}
+.ui.input input {
+    border-radius: 2px 0 0 2px;
+}
+.ui.selection.dropdown {
+    width: 80px;
+    border-radius: 0 2px 2px 0;
+}
+.ui.selection.dropdown .menu{
+    max-height: none;
 }

@@ -133,7 +133,6 @@ db.once("open", function () {
                     if (obj.role === "admin") {
                         admin.auth().getUser(req.params.id)
                           .then(function(userRecord) {
-                            console.log(userRecord);
                             res.status(200).json(userRecord.disabled);
                             console.log("Successfully fetched user data:", userRecord.disabled);
                           })
@@ -207,9 +206,6 @@ db.once("open", function () {
                 }, function (err, obj) {
                     if (err) return console.error(err);
                     else if (obj.role === "admin") {
-                        console.log(req.body.name);
-                        console.log(req.body.email);
-                        console.log(req.body.password);
                         admin.auth().createUser({
                             email: req.body.email,
                             displayName: req.body.name,
@@ -314,7 +310,6 @@ db.once("open", function () {
                                 _id: req.params.id
                             }, req.body, function (err, obj) {
                                 if (err) return console.error(err);
-                                console.log("succesfully updated" + obj);
                                 res.sendStatus(200);
                             });
                         }).catch(function(error) {
@@ -328,7 +323,6 @@ db.once("open", function () {
 
     // update user blocked status
     app.put("/api/userstatus/:tokenid/:id", function (req, res) {
-        console.log(req.body);
         admin.auth().verifyIdToken(req.params.tokenid)
             .then(function (decodedToken) {
                 var uid = decodedToken.uid;

@@ -19,9 +19,9 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     private host : string = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
     clicked : boolean;
     @Input() playlistitem : Playlist;
-    @Input() index : number;
+//    @Input() index : number;
     @Input() modal : NgSemanticModule;
-//    index : number;
+    index : number;
     rating : Rating;
     _subscription : any;
     _subscriptionUID : any;
@@ -39,7 +39,7 @@ export class PlaylistItemComponent implements OnDestroy, OnInit {
     }
 
     ngOnInit() {
-//            this.index = this.playlistState.playList.indexOf(this.playlistitem);
+            this.index = this.playlistState.playList.indexOf(this.playlistitem);
 //            if (typeof this.afService.uid !== "undefined") {
 //            this.getRatings(this.afService.uid, this.playlistitem._id);
 //            }

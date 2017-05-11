@@ -12,6 +12,7 @@ export class PlaylistState {
     activeVideo : Playlist;
     isPlaying = false;
     showUpdateButton = false;
+    notFound : boolean;
     public ratingsLoaded : Subject<string> = new Subject<string>();
 
   constructor() {

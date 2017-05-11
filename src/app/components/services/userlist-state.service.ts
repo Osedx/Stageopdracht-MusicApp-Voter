@@ -5,6 +5,7 @@ import { User } from "../models/user.model";
 @Injectable()
 export class UserListState {
     userList : User[] = [];
+    notFound : boolean;
   constructor() {
   }
 
