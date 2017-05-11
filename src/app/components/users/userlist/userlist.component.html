@@ -48,7 +48,7 @@
         <option value="role">Role</option>
     </sm-select>
     </div>
-    <div class="ui relaxed divided list users">
+    <div class="ui relaxed divided list users" *ngIf="!userlistState.notFound">
         <div class="item" *ngFor="let u of userlistState.userList | myuserfilter:filterargs | orderBy:orderargs; let i = index">
             <app-user [user]="u" [index]="i">
                 <div class="ui active dimmer">

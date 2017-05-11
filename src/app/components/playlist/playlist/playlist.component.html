@@ -25,7 +25,7 @@
     <p>The playlist is no longer up to date.</p>
     <i (click)="refreshList()" class="fa fa-refresh fa-2x" aria-hidden="true"></i>
 </div>
-<div class="ui relaxed divided list playlist" [ngClass]="{'messageUpdate': messageUpdate}">
+<div class="ui relaxed divided list playlist" [ngClass]="{'messageUpdate': messageUpdate}" *ngIf="!playlistState.notFound">
     <div class="item" *ngFor="let p of playlistState.playList | myfilter:filterargs | orderBy:orderargs" [class.playing]="p === playlistState.activeVideo">
         <app-playlist-item [modal]="myModalNormal" [playlistitem]="p">
             <div class="ui active dimmer">

@@ -18,7 +18,7 @@
     </sm-select>
     </div>
 <div class="ui relaxed divided list videos">
-    <div class="item" *ngFor="let p of playlistState.playList | myfilter:filterargs | orderBy:orderargs; let i = index" [class.playing]="p === playlistState.activeVideo">
+    <div class="item" *ngFor="let p of playlistState.playList | myfilter:filterargs | orderBy:orderargs; let i = index" [class.playing]="p === playlistState.activeVideo" *ngIf="!playlistState.notFound">
         <app-personalvideo [modal]="myModalNormal" [playlistitem]="p" [index]="i">
         <div class="ui active dimmer">
             <div class="ui text loader">Loading</div>
